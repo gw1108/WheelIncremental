@@ -31,7 +31,7 @@ https://miro.com/app/board/ - None
 https://trello.com/invite/b/69990f21ba569e1483ee5b3a/ATTI33ceac27673dba72550b2c032f5d50694F769353/wheel-incremental
 
 ## Google GDD
-https://docs.google.com/document/d/ - None
+[https://docs.google.com/document/d/ - None](https://docs.google.com/document/d/168yZf0mwE-Zya1kK4jY4vdEhWhTwyj3SoShVhwLI2mc/edit?usp=sharing)
 
 ## Contact
 navac@outlook.com - Christian Nava
@@ -47,3 +47,4 @@ https://freesound.org/
 
 ## Art Sources
 https://assetstore.unity.com/packages/2d/gui/fantasy-wooden-gui-free-103811
+
