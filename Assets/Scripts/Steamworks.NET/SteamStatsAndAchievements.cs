@@ -3,11 +3,9 @@
 #endif
 
 using UnityEngine;
-using System.Linq;
 
 #if !DISABLESTEAMWORKS
 using Steamworks;
-using System.Collections.Generic;
 #endif
 
 // This is a port of StatsAndAchievements.cpp from SpaceWar, the official Steamworks Example.

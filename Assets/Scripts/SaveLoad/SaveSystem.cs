@@ -16,18 +16,16 @@ public class SaveSystem
 
     public static string GetSaveFilePath()
     {
-        string path = Application.persistentDataPath;
-
 #if PLATFORM_WEBGL
-        path = "idbfs/WheelIncremental";
+        string path = "idbfs/WheelIncremental";
+#else
+        string path = Application.persistentDataPath;
 #endif
 
 #if !DISABLESTEAMWORKS
-        string steamPath;
         try
         {
-            steamPath = SteamUser.GetSteamID().ToString(); // {64BitSteamID}
-            path += "/" + steamPath;
+            path += "/" + SteamUser.GetSteamID().ToString(); // {64BitSteamID}
         }
         catch
         {
@@ -46,7 +44,6 @@ public class SaveSystem
     public SaveSystem()
     {
         string path = GetSaveFilePath();
-        Debug.Log("Saving player save/load to : " + path + " filename: player_data.json");
         _saveFilePath = Path.Combine(path, saveFileName);
     }
 

@@ -61,7 +61,6 @@ public class ServiceLocator : SingletonMonoBehaviour<ServiceLocator>
             SaveSystem = new SaveSystem();
 
             string path = SaveSystem.GetSaveFilePath();
-            Debug.Log("Saving to path : " + path + " filename: " + SaveSystem.saveFileName);
 
             FBPP.Start(new FBPPConfig()
             {
