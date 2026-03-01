@@ -19,7 +19,13 @@ public class ServiceLocator : SingletonMonoBehaviour<ServiceLocator>
     /// <summary>
     /// Set to true if this is steam demo.
     /// </summary>
-    public static bool IsSteamDemo = false;
+    public static bool IsSteamDemo
+    {
+        get
+        {
+            return false;
+        }
+    }
     /// <summary>
     /// Better to use SteamWorks.IsInitialized, but this returns true if you are compatible with Steam like UNITY_STANDALONE
     /// </summary>

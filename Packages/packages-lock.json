@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "com.bezi.sidekick": {
+      "version": "file:com.bezi.sidekick",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+      }
+    },
     "com.richtools.filebasedplayerprefs": {
       "version": "https://github.com/richardelms/FileBasedPlayerPrefs.git",
       "depth": 0,
@@ -15,6 +23,12 @@
         "com.unity.modules.imgui": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "com.unity.2d.sprite": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
     },
     "com.unity.addressables": {
       "version": "2.8.1",
