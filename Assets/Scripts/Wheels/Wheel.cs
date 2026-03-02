@@ -24,6 +24,8 @@ namespace Wheels
         private float _currentRotation = 0f;
         private Coroutine _spinCoroutine;
 
+        private float FinalRotationSpeed = 10f;
+
         private void Start()
         {
             _segments.AddRange(initialSegments);
@@ -147,10 +149,24 @@ namespace Wheels
                 yield return null;
             }
 
-            float targetAngle = Mathf.Round(_currentRotation / 45f) * 45f;
-            while (Mathf.Abs(_currentRotation - targetAngle) > 0.1f)
+            // Lock in the winning segment, then compute the rotation that centres the pointer on it.
+            int selectedIndex = DetermineSelectedSegment();
+            float segmentCenterAngle = CalculateSegmentCenterAngle(selectedIndex);
+
+            // Invert the pointer formula: pointerAngle = (450 - normalizedRotation) % 360
+            // => normalizedRotation = (450 - segmentCenterAngle + 360) % 360
+            float desiredNormalized = (450f - segmentCenterAngle + 360f) % 360f;
+            float currentNormalized = (_currentRotation % 360f + 360f) % 360f;
+
+            float delta = desiredNormalized - currentNormalized;
+            if (delta > 180f) delta -= 360f;
+            if (delta < -180f) delta += 360f;
+
+            float targetAngle = _currentRotation + delta;
+
+            while (Mathf.Abs(_currentRotation - targetAngle) > 0.05f)
             {
-                _currentRotation = Mathf.Lerp(_currentRotation, targetAngle, Time.deltaTime * 5f);
+                _currentRotation = Mathf.Lerp(_currentRotation, targetAngle, Time.deltaTime * FinalRotationSpeed);
                 transform.rotation = Quaternion.Euler(0, 0, _currentRotation);
                 yield return null;
             }
@@ -158,12 +174,32 @@ namespace Wheels
             _currentRotation = targetAngle;
             transform.rotation = Quaternion.Euler(0, 0, _currentRotation);
 
-            int selectedIndex = DetermineSelectedSegment();
             Debug.Log($"Landed on: {_segments[selectedIndex].prizeName}");
 
             _spinCoroutine = null;
 
             OnWheelSpinCompleted?.Invoke(this, _segments[selectedIndex].cashPrize);
+        }
+
+        /// <summary>
+        /// Returns the midpoint angle (in segment-space degrees) of the segment at the given index.
+        /// </summary>
+        private float CalculateSegmentCenterAngle(int segmentIndex)
+        {
+            float totalWeight = CalculateTotalWeight();
+            float currentAngle = 0f;
+
+            for (int i = 0; i < _segments.Count; i++)
+            {
+                float sweepAngle = 360f * (_segments[i].weight / totalWeight);
+                if (i == segmentIndex)
+                {
+                    return currentAngle + sweepAngle / 2f;
+                }
+                currentAngle += sweepAngle;
+            }
+
+            return 0f;
         }
 
         private int DetermineSelectedSegment()

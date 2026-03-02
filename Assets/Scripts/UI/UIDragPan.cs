@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Enables panning of a RectTransform by holding left mouse button and dragging,
-/// and zooming with the mouse scroll wheel. Attach to a UI element that fills the
-/// pannable area (e.g. a background Image). Assign panTarget to the RectTransform
-/// that should move and scale. IDragHandler and IScrollHandler both bubble up the
-/// hierarchy, so interaction works whether the pointer is over empty space or a child.
+/// pressing the arrow keys, and zooming with the mouse scroll wheel.
+/// Attach to a UI element that fills the pannable area (e.g. a background Image).
+/// Assign panTarget to the RectTransform that should move and scale.
+/// IDragHandler and IScrollHandler both bubble up the hierarchy, so interaction
+/// works whether the pointer is over empty space or a child element.
 /// </summary>
 public class UIDragPan : MonoBehaviour, IDragHandler, IScrollHandler
 {
@@ -15,6 +17,9 @@ public class UIDragPan : MonoBehaviour, IDragHandler, IScrollHandler
     [Tooltip("Minimum pixels of panTarget that must remain visible inside the viewport on each edge.")]
     [SerializeField] private float edgePaddingX = 100f;
     [SerializeField] private float edgePaddingY = 100f;
+
+    [Tooltip("Pixels per second the panTarget moves while an arrow key is held.")]
+    [SerializeField] private float keyPanSpeed = 400f;
 
     [Tooltip("Scale change applied per scroll unit.")]
     [SerializeField] private float zoomSpeed = 0.02f;
@@ -34,6 +39,29 @@ public class UIDragPan : MonoBehaviour, IDragHandler, IScrollHandler
 
         var canvas = GetComponentInParent<Canvas>();
         canvasCamera = canvas != null ? canvas.worldCamera : null;
+    }
+
+    /// <summary>
+    /// Reads held arrow keys each frame and translates the panTarget accordingly,
+    /// then clamps the position so the panTarget cannot be moved completely off screen.
+    /// </summary>
+    private void Update()
+    {
+        var keyboard = Keyboard.current;
+        if (keyboard == null) return;
+
+        var direction = Vector2.zero;
+
+        if (keyboard.leftArrowKey.isPressed || keyboard.aKey.isPressed) direction.x -= 1f;
+        if (keyboard.rightArrowKey.isPressed || keyboard.dKey.isPressed) direction.x += 1f;
+        if (keyboard.downArrowKey.isPressed || keyboard.sKey.isPressed) direction.y -= 1f;
+        if (keyboard.upArrowKey.isPressed || keyboard.wKey.isPressed) direction.y += 1f;
+
+        if (direction != Vector2.zero)
+        {
+            panTarget.anchoredPosition += direction * (keyPanSpeed * Time.deltaTime);
+            ClampToViewport();
+        }
     }
 
     /// <summary>
@@ -114,3 +142,4 @@ public class UIDragPan : MonoBehaviour, IDragHandler, IScrollHandler
         panTarget.anchoredPosition = pos;
     }
 }
+

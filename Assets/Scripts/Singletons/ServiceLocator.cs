@@ -13,6 +13,9 @@ public class ServiceLocator : SingletonMonoBehaviour<ServiceLocator>
     [HideInInspector]
     public SaveSystem SaveSystem;
 
+    [HideInInspector]
+    public OverlayScreenManager OverlayScreenManager;
+
     #region platformAndSteamRelatedStuff
     [HideInInspector]
     public SteamStatsAndAchievements SteamStatsAndAchievements;
@@ -26,6 +29,7 @@ public class ServiceLocator : SingletonMonoBehaviour<ServiceLocator>
             return false;
         }
     }
+
     /// <summary>
     /// Better to use SteamWorks.IsInitialized, but this returns true if you are compatible with Steam like UNITY_STANDALONE
     /// </summary>
@@ -124,5 +128,10 @@ public class ServiceLocator : SingletonMonoBehaviour<ServiceLocator>
     public void Register(SteamStatsAndAchievements steamStatsAndAchievements)
     {
         SteamStatsAndAchievements = steamStatsAndAchievements;
+    }
+
+    public void Register(OverlayScreenManager overlayScreenManager)
+    {
+        OverlayScreenManager = overlayScreenManager;
     }
 }
