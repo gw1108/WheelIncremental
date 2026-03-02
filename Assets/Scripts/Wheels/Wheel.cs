@@ -16,8 +16,7 @@ namespace Wheels
         [Tooltip("Fill this in with the initial segments this wheel will have on Start.")]
         [SerializeField] private List<WheelSegmentData> initialSegments = new List<WheelSegmentData>();
 
-        // TODO: Better event system, better payload, etc
-        public Action<Wheel, int> OnWheelSpinCompleted;
+        public Action<Wheel, WheelSegmentData> OnWheelSpinCompleted;
 
         private readonly List<WheelSegmentData> _segments = new List<WheelSegmentData>();
         private readonly List<WheelSegmentVisual> _segmentVisuals = new List<WheelSegmentVisual>();
@@ -124,10 +123,15 @@ namespace Wheels
             }
         }
 
+        public bool IsSpinning()
+        {
+            return _spinCoroutine != null;
+        }
+
         public void SpinWheel(float spinSpeed = 720f)
         {
             // Don't spin if you're already spinning
-            if (_spinCoroutine != null)
+            if (IsSpinning())
             {
                 return;
             }
@@ -178,7 +182,8 @@ namespace Wheels
 
             _spinCoroutine = null;
 
-            OnWheelSpinCompleted?.Invoke(this, _segments[selectedIndex].cashPrize);
+            OnWheelSpinCompleted?.Invoke(this, _segments[selectedIndex]);
+            Player.Instance.OnWheelSpinComplete(_segments[selectedIndex]);
         }
 
         /// <summary>

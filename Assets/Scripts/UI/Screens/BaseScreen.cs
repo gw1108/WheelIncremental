@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(CanvasGroup))]
 public class BaseScreen : MonoBehaviour
 {
     [SerializeField]
@@ -31,13 +32,12 @@ public class BaseScreen : MonoBehaviour
         ServiceLocator.Instance.OverlayScreenManager.HideActiveScreen();
     }
 
-    // TODO: Add animations and shit
     public void Show()
     {
         Container.SetActive(true);
-        MainContentRoot.transform.localScale = Vector3.zero;
-        MainContentRoot.transform.DOScale(Vector3.one, 0.25f);
-        CanvasGroup.DOFade(1, 0.25f).From(0.0f);
+        MainContentRoot.transform.localScale = Vector3.one * 0.5f;
+        MainContentRoot.transform.DOScale(Vector3.one, 0.55f);
+        CanvasGroup.DOFade(1, 0.55f).From(0f);
 
         OnShow();
     }

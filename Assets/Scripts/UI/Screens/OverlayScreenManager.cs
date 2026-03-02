@@ -1,8 +1,8 @@
-﻿using AYellowpaper.SerializedCollections;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
 
 public class OverlayScreenManager : SingletonMonoBehaviour<OverlayScreenManager>
 {
@@ -13,10 +13,13 @@ public class OverlayScreenManager : SingletonMonoBehaviour<OverlayScreenManager>
         Settings,
         MainMenu,
         SteamDemoUpsell,
+        GameOver,
     }
 
-    [SerializedDictionary("Screen Type", "Screen")]
-    public SerializedDictionary<ScreenType, BaseScreen> Screens;
+    [Serializable]
+    public class ScreenTypeToScreenDictionary : UnitySerializedDictionary<ScreenType, BaseScreen> { }
+
+    public ScreenTypeToScreenDictionary Screens;
 
     public GameObject inputBlocker;
 
@@ -100,6 +103,12 @@ public class OverlayScreenManager : SingletonMonoBehaviour<OverlayScreenManager>
         {
             Screen.Hide();
         }
+    }
+
+    public void HideAllScreensThenShowScreen(int screenTypeAsInt)
+    {
+        HideAllScreens();
+        RequestShowScreen((ScreenType)screenTypeAsInt);
     }
 
     /*public void RequestConfirmationScreen(Action callback, string title, string message)

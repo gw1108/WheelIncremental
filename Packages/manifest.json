@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "ayellowpaper.serialized-dictionary": "https://github.com/ayellowpaper/SerializedDictionary.git",
     "com.richtools.filebasedplayerprefs": "https://github.com/richardelms/FileBasedPlayerPrefs.git",
     "com.unity.2d.pixel-perfect": "5.1.1",
     "com.unity.2d.sprite": "1.0.0",

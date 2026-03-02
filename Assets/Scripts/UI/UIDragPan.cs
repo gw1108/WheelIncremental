@@ -52,10 +52,10 @@ public class UIDragPan : MonoBehaviour, IDragHandler, IScrollHandler
 
         var direction = Vector2.zero;
 
-        if (keyboard.leftArrowKey.isPressed || keyboard.aKey.isPressed) direction.x -= 1f;
-        if (keyboard.rightArrowKey.isPressed || keyboard.dKey.isPressed) direction.x += 1f;
-        if (keyboard.downArrowKey.isPressed || keyboard.sKey.isPressed) direction.y -= 1f;
-        if (keyboard.upArrowKey.isPressed || keyboard.wKey.isPressed) direction.y += 1f;
+        if (keyboard.leftArrowKey.isPressed || keyboard.aKey.isPressed) direction.x += 1f;
+        if (keyboard.rightArrowKey.isPressed || keyboard.dKey.isPressed) direction.x -= 1f;
+        if (keyboard.downArrowKey.isPressed || keyboard.sKey.isPressed) direction.y += 1f;
+        if (keyboard.upArrowKey.isPressed || keyboard.wKey.isPressed) direction.y -= 1f;
 
         if (direction != Vector2.zero)
         {

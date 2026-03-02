@@ -14,6 +14,9 @@ namespace Wheels
         public string prizeName = "Unknown Prize";
         public int cashPrize = 1;
         public Color segmentColor = Color.white;
+        /// <summary>
+        /// Thickness of this segment. Higher number is higher chance of picking this.
+        /// </summary>
         public float weight = 1f;
 
         /*

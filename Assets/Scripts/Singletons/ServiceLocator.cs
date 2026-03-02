@@ -16,9 +16,10 @@ public class ServiceLocator : SingletonMonoBehaviour<ServiceLocator>
     [HideInInspector]
     public OverlayScreenManager OverlayScreenManager;
 
-    #region platformAndSteamRelatedStuff
     [HideInInspector]
     public SteamStatsAndAchievements SteamStatsAndAchievements;
+
+    #region platformAndSteamRelatedStuff
     /// <summary>
     /// Set to true if this is steam demo.
     /// </summary>
