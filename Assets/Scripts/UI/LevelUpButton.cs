@@ -2,15 +2,10 @@ using UnityEngine;
 
 public class LevelUpButton : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [Tooltip("The parent LevelUpButton in the skill tree hierarchy. " +
+             "Leave null for the root/origin node.")]
+    public LevelUpButton parentButton;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [Tooltip("Unique identifier that matches the nodeId in SkillTreeData.")]
+    public string nodeId;
 }

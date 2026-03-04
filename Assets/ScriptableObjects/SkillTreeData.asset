@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f8e5836eab3375438aad56fa666140d, type: 3}
+  m_Name: SkillTreeData
+  m_EditorClassIdentifier: Assembly-CSharp::SkillTreeData
+  nodes:
+  - nodeId: node_0
+    displayName: Skill 0
+    gridPosition: {x: 0, y: 0}
+    parentNodeId: 
+  - nodeId: node_1
+    displayName: Skill 1
+    gridPosition: {x: 0, y: 0}
+    parentNodeId: node_2
+  - nodeId: node_2
+    displayName: Skill 2
+    gridPosition: {x: 1, y: 1}
+    parentNodeId: node_6
+  - nodeId: node_3
+    displayName: Skill 3
+    gridPosition: {x: 1, y: 0}
+    parentNodeId: node_0
+  - nodeId: node_4
+    displayName: Skill 4
+    gridPosition: {x: 0, y: 0}
+    parentNodeId: 
+  - nodeId: node_5
+    displayName: Skill 5
+    gridPosition: {x: 0, y: 3}
+    parentNodeId: node_3
+  - nodeId: node_6
+    displayName: Skill 6
+    gridPosition: {x: 2, y: 0}
+    parentNodeId: node_5
