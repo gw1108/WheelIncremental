@@ -8,10 +8,10 @@ using UnityEngine.UI;
 [RequireComponent(typeof(CanvasRenderer))]
 public class UILine : Graphic
 {
-    [Tooltip("Start point of the line (typically the parent node button).")]
+    [Tooltip("Start point of the line (typically the outer node button).")]
     public RectTransform from;
 
-    [Tooltip("End point of the line (typically the child node button).")]
+    [Tooltip("End point of the line (typically the parent node button).")]
     public RectTransform to;
 
     [Tooltip("Thickness of the rendered line in pixels.")]

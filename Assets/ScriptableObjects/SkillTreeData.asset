@@ -84,7 +84,7 @@ MonoBehaviour:
     displayDescription: 
     gridPositionX: 1
     gridPositionY: 5
-    parentNodeId: node_0_4
+    parentNodeId: node_1_4
     cost: 19
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
     displayDescription: 
     gridPositionX: 2
     gridPositionY: 2
-    parentNodeId: node_1_5
+    parentNodeId: node_1_2
     cost: 21
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0

@@ -372,16 +372,8 @@ public class SkillTreeEditorWindow : EditorWindow
 
         ClearGeneratedNodes(buttonsGO);
 
-        // Ensure Lines container
-        //GameObject linesContainer = new GameObject(LinesContainerName);
-        //Undo.RegisterCreatedObjectUndo(linesContainer, "Create Lines Container");
-        //linesContainer.transform.SetParent(buttonsGO.transform, false);
-        //RectTransform linesRect = linesContainer.AddComponent<RectTransform>();
-        //StretchToFill(linesRect);
-
         // Instantiate buttons
         Dictionary<string, LevelUpButton> spawnedButtons = new Dictionary<string, LevelUpButton>();
-
         foreach (SkillTreeNodeEntry nodeEntry in skillTreeData.nodes)
         {
             GameObject instance = (GameObject)PrefabUtility.InstantiatePrefab(prefab, buttonsGO.transform);
@@ -397,10 +389,13 @@ public class SkillTreeEditorWindow : EditorWindow
             spawnedButtons[nodeEntry.nodeId] = levelUpButton;
         }
 
-        // Wire parent references and create lines
         foreach (SkillTreeNodeEntry nodeEntry in skillTreeData.nodes)
         {
-            if (string.IsNullOrEmpty(nodeEntry.parentNodeId)) continue;
+            if (string.IsNullOrEmpty(nodeEntry.parentNodeId))
+            {
+                Debug.Log(nodeEntry.nodeId + "," + nodeEntry.displayName + ": has no parentId: " + nodeEntry.parentNodeId);
+                continue;
+            }
 
             if (!spawnedButtons.TryGetValue(nodeEntry.nodeId, out LevelUpButton childButton)) continue;
             if (!spawnedButtons.TryGetValue(nodeEntry.parentNodeId, out LevelUpButton parentButton)) continue;
@@ -409,6 +404,19 @@ public class SkillTreeEditorWindow : EditorWindow
             EditorUtility.SetDirty(childButton);
 
             CreateLine(childButton, parentButton, nodeEntry.nodeId);
+        }
+
+        // set us up the distance from origin.
+        foreach (SkillTreeNodeEntry nodeEntry in skillTreeData.nodes)
+        {
+            if (string.IsNullOrEmpty(nodeEntry.parentNodeId))
+            {
+                nodeEntry.distanceFromOrigin = 0;
+            }
+            else
+            {
+                nodeEntry.distanceFromOrigin = 1 + spawnedButtons[nodeEntry.nodeId].node.distanceFromOrigin;
+            }
         }
 
         EditorSceneManager.MarkSceneDirty(buttonsGO.scene);
@@ -440,7 +448,7 @@ public class SkillTreeEditorWindow : EditorWindow
     {
         GameObject lineGO = new GameObject($"{nodeId}{LineSuffix}");
         Undo.RegisterCreatedObjectUndo(lineGO, "Create UILine");
-        lineGO.transform.SetParent(to.transform, false);
+        lineGO.transform.SetParent(from.transform, false);
 
         RectTransform rt = lineGO.AddComponent<RectTransform>();
         StretchToFill(rt);
@@ -448,8 +456,8 @@ public class SkillTreeEditorWindow : EditorWindow
         UILine line = lineGO.AddComponent<UILine>();
         line.color = lineColor;
         line.lineWidth = lineWidth;
-        line.from = to.GetComponent<RectTransform>();
-        line.to = from.GetComponent<RectTransform>();
+        line.from = from.GetComponent<RectTransform>();
+        line.to = to.GetComponent<RectTransform>();
         line.raycastTarget = false;
     }
 
