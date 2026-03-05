@@ -13,31 +13,652 @@ MonoBehaviour:
   m_Name: SkillTreeData
   m_EditorClassIdentifier: Assembly-CSharp::SkillTreeData
   nodes:
-  - nodeId: node_0
-    displayName: Skill 0
-    gridPosition: {x: 0, y: 0}
+  - nodeId: node_0_0
+    displayName: The beginning
+    displayDescription: Start your wheel spinning journey.
+    gridPositionX: 0
+    gridPositionY: 0
     parentNodeId: 
-  - nodeId: node_1
-    displayName: Skill 1
-    gridPosition: {x: 0, y: 0}
-    parentNodeId: node_2
-  - nodeId: node_2
-    displayName: Skill 2
-    gridPosition: {x: 1, y: 1}
-    parentNodeId: node_6
-  - nodeId: node_3
-    displayName: Skill 3
-    gridPosition: {x: 1, y: 0}
-    parentNodeId: node_0
-  - nodeId: node_4
-    displayName: Skill 4
-    gridPosition: {x: 0, y: 0}
-    parentNodeId: 
-  - nodeId: node_5
-    displayName: Skill 5
-    gridPosition: {x: 0, y: 3}
-    parentNodeId: node_3
-  - nodeId: node_6
-    displayName: Skill 6
-    gridPosition: {x: 2, y: 0}
-    parentNodeId: node_5
+    cost: 0
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_0_1
+    displayName: 
+    displayDescription: 
+    gridPositionX: 0
+    gridPositionY: 1
+    parentNodeId: node_0_0
+    cost: 10
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_1_2
+    displayName: 
+    displayDescription: 
+    gridPositionX: 1
+    gridPositionY: 2
+    parentNodeId: node_0_1
+    cost: 11
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_1_3
+    displayName: 
+    displayDescription: 
+    gridPositionX: 1
+    gridPositionY: 3
+    parentNodeId: node_1_2
+    cost: 13
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_1_4
+    displayName: 
+    displayDescription: 
+    gridPositionX: 1
+    gridPositionY: 4
+    parentNodeId: node_1_3
+    cost: 15
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_0_4
+    displayName: 
+    displayDescription: 
+    gridPositionX: 0
+    gridPositionY: 4
+    parentNodeId: node_1_4
+    cost: 17
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_1_5
+    displayName: 
+    displayDescription: 
+    gridPositionX: 1
+    gridPositionY: 5
+    parentNodeId: node_0_4
+    cost: 19
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_2_2
+    displayName: 
+    displayDescription: 
+    gridPositionX: 2
+    gridPositionY: 2
+    parentNodeId: node_1_5
+    cost: 21
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_2_3
+    displayName: 
+    displayDescription: 
+    gridPositionX: 2
+    gridPositionY: 3
+    parentNodeId: node_2_2
+    cost: 24
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_2_4
+    displayName: 
+    displayDescription: 
+    gridPositionX: 2
+    gridPositionY: 4
+    parentNodeId: node_2_3
+    cost: 27
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_2_5
+    displayName: 
+    displayDescription: 
+    gridPositionX: 2
+    gridPositionY: 5
+    parentNodeId: node_2_4
+    cost: 30
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_2_6
+    displayName: 
+    displayDescription: 
+    gridPositionX: 2
+    gridPositionY: 6
+    parentNodeId: node_2_5
+    cost: 33
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_3_5
+    displayName: 
+    displayDescription: 
+    gridPositionX: 3
+    gridPositionY: 5
+    parentNodeId: node_2_6
+    cost: 37
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_4_6
+    displayName: 
+    displayDescription: 
+    gridPositionX: 4
+    gridPositionY: 6
+    parentNodeId: node_3_5
+    cost: 41
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_4_7
+    displayName: 
+    displayDescription: 
+    gridPositionX: 4
+    gridPositionY: 7
+    parentNodeId: node_4_6
+    cost: 46
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_4_8
+    displayName: 
+    displayDescription: 
+    gridPositionX: 4
+    gridPositionY: 8
+    parentNodeId: node_4_7
+    cost: 51
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_4_9
+    displayName: 
+    displayDescription: 
+    gridPositionX: 4
+    gridPositionY: 9
+    parentNodeId: node_4_8
+    cost: 57
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_4_10
+    displayName: 
+    displayDescription: 
+    gridPositionX: 4
+    gridPositionY: 10
+    parentNodeId: node_4_9
+    cost: 63
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_4_11
+    displayName: 
+    displayDescription: 
+    gridPositionX: 4
+    gridPositionY: 11
+    parentNodeId: node_4_10
+    cost: 70
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_4_12
+    displayName: 
+    displayDescription: 
+    gridPositionX: 4
+    gridPositionY: 12
+    parentNodeId: node_4_11
+    cost: 77
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_5_11
+    displayName: 
+    displayDescription: 
+    gridPositionX: 5
+    gridPositionY: 11
+    parentNodeId: node_4_12
+    cost: 85
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_5_12
+    displayName: 
+    displayDescription: 
+    gridPositionX: 5
+    gridPositionY: 12
+    parentNodeId: node_5_11
+    cost: 94
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_5_10
+    displayName: 
+    displayDescription: 
+    gridPositionX: 5
+    gridPositionY: 10
+    parentNodeId: node_5_12
+    cost: 104
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_5_9
+    displayName: 
+    displayDescription: 
+    gridPositionX: 5
+    gridPositionY: 9
+    parentNodeId: node_5_10
+    cost: 115
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_5_8
+    displayName: 
+    displayDescription: 
+    gridPositionX: 5
+    gridPositionY: 8
+    parentNodeId: node_5_9
+    cost: 127
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_6_10
+    displayName: 
+    displayDescription: 
+    gridPositionX: 6
+    gridPositionY: 10
+    parentNodeId: node_5_8
+    cost: 140
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_6_11
+    displayName: 
+    displayDescription: 
+    gridPositionX: 6
+    gridPositionY: 11
+    parentNodeId: node_6_10
+    cost: 154
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_6_12
+    displayName: 
+    displayDescription: 
+    gridPositionX: 6
+    gridPositionY: 12
+    parentNodeId: node_6_11
+    cost: 170
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_7_12
+    displayName: 
+    displayDescription: 
+    gridPositionX: 7
+    gridPositionY: 12
+    parentNodeId: node_6_12
+    cost: 187
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_7_11
+    displayName: 
+    displayDescription: 
+    gridPositionX: 7
+    gridPositionY: 11
+    parentNodeId: node_7_12
+    cost: 206
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_7_10
+    displayName: 
+    displayDescription: 
+    gridPositionX: 7
+    gridPositionY: 10
+    parentNodeId: node_7_11
+    cost: 227
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_6_9
+    displayName: 
+    displayDescription: 
+    gridPositionX: 6
+    gridPositionY: 9
+    parentNodeId: node_7_10
+    cost: 250
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_7_8
+    displayName: 
+    displayDescription: 
+    gridPositionX: 7
+    gridPositionY: 8
+    parentNodeId: node_6_9
+    cost: 275
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_7_9
+    displayName: 
+    displayDescription: 
+    gridPositionX: 7
+    gridPositionY: 9
+    parentNodeId: node_7_8
+    cost: 303
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_5_6
+    displayName: 
+    displayDescription: 
+    gridPositionX: 5
+    gridPositionY: 6
+    parentNodeId: node_7_9
+    cost: 334
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_5_7
+    displayName: 
+    displayDescription: 
+    gridPositionX: 5
+    gridPositionY: 7
+    parentNodeId: node_5_6
+    cost: 368
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_6_7
+    displayName: 
+    displayDescription: 
+    gridPositionX: 6
+    gridPositionY: 7
+    parentNodeId: node_5_7
+    cost: 405
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_6_6
+    displayName: 
+    displayDescription: 
+    gridPositionX: 6
+    gridPositionY: 6
+    parentNodeId: node_6_7
+    cost: 446
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_7_6
+    displayName: 
+    displayDescription: 
+    gridPositionX: 7
+    gridPositionY: 6
+    parentNodeId: node_6_6
+    cost: 491
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_8_6
+    displayName: 
+    displayDescription: 
+    gridPositionX: 8
+    gridPositionY: 6
+    parentNodeId: node_7_6
+    cost: 541
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_8_7
+    displayName: 
+    displayDescription: 
+    gridPositionX: 8
+    gridPositionY: 7
+    parentNodeId: node_8_6
+    cost: 596
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_7_7
+    displayName: 
+    displayDescription: 
+    gridPositionX: 7
+    gridPositionY: 7
+    parentNodeId: node_8_7
+    cost: 656
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_9_6
+    displayName: 
+    displayDescription: 
+    gridPositionX: 9
+    gridPositionY: 6
+    parentNodeId: node_7_7
+    cost: 722
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_9_7
+    displayName: 
+    displayDescription: 
+    gridPositionX: 9
+    gridPositionY: 7
+    parentNodeId: node_9_6
+    cost: 795
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_10_6
+    displayName: 
+    displayDescription: 
+    gridPositionX: 10
+    gridPositionY: 6
+    parentNodeId: node_9_7
+    cost: 875
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_11_6
+    displayName: 
+    displayDescription: 
+    gridPositionX: 11
+    gridPositionY: 6
+    parentNodeId: node_10_6
+    cost: 963
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_11_7
+    displayName: 
+    displayDescription: 
+    gridPositionX: 11
+    gridPositionY: 7
+    parentNodeId: node_11_6
+    cost: 1060
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_10_7
+    displayName: 
+    displayDescription: 
+    gridPositionX: 10
+    gridPositionY: 7
+    parentNodeId: node_11_7
+    cost: 1166
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_10_8
+    displayName: 
+    displayDescription: 
+    gridPositionX: 10
+    gridPositionY: 8
+    parentNodeId: node_10_7
+    cost: 1283
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_9_8
+    displayName: 
+    displayDescription: 
+    gridPositionX: 9
+    gridPositionY: 8
+    parentNodeId: node_10_8
+    cost: 1412
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_8_8
+    displayName: 
+    displayDescription: 
+    gridPositionX: 8
+    gridPositionY: 8
+    parentNodeId: node_9_8
+    cost: 1554
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_9_9
+    displayName: 
+    displayDescription: 
+    gridPositionX: 9
+    gridPositionY: 9
+    parentNodeId: node_8_8
+    cost: 1710
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_8_9
+    displayName: 
+    displayDescription: 
+    gridPositionX: 8
+    gridPositionY: 9
+    parentNodeId: node_9_9
+    cost: 1881
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_8_10
+    displayName: 
+    displayDescription: 
+    gridPositionX: 8
+    gridPositionY: 10
+    parentNodeId: node_8_9
+    cost: 2070
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_10_9
+    displayName: 
+    displayDescription: 
+    gridPositionX: 10
+    gridPositionY: 9
+    parentNodeId: node_8_10
+    cost: 2277
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_11_9
+    displayName: 
+    displayDescription: 
+    gridPositionX: 11
+    gridPositionY: 9
+    parentNodeId: node_10_9
+    cost: 2505
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_9_10
+    displayName: 
+    displayDescription: 
+    gridPositionX: 9
+    gridPositionY: 10
+    parentNodeId: node_11_9
+    cost: 2756
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_11_10
+    displayName: 
+    displayDescription: 
+    gridPositionX: 11
+    gridPositionY: 10
+    parentNodeId: node_9_10
+    cost: 3032
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+  - nodeId: node_10_10
+    displayName: 
+    displayDescription: 
+    gridPositionX: 10
+    gridPositionY: 10
+    parentNodeId: node_11_10
+    cost: 3336
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0

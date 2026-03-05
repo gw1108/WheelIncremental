@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -16,11 +18,11 @@ public class SkillTreeEditorWindow : EditorWindow
     private const string ButtonsObjectPath = "Screens/ShopScreen/Bg/Buttons";
     private const string LevelUpButtonPrefabPath = "Assets/Prefabs/UI/LevelUpButton.prefab";
     private const string LineSuffix = "_Line";
-    private const string LinesContainerName = "Lines";
 
     // ── Serialized state ────────────────────────────────────────────────────
     private SkillTreeData skillTreeData;
-    private float cellSize = 150f;
+    private float cellWidth = 100f;
+    private float cellHeight = 100f;
     private float lineWidth = 4f;
     private Color lineColor = new Color(0.9f, 0.8f, 0.2f, 1f);
 
@@ -32,6 +34,7 @@ public class SkillTreeEditorWindow : EditorWindow
     private bool showSettings = true;
     private bool showNodeList = true;
     private bool showGridPreview = true;
+    private bool showCsv = true;
 
     // ── Node list editing ────────────────────────────────────────────────────
     private int selectedNodeIndex = -1;
@@ -63,6 +66,8 @@ public class SkillTreeEditorWindow : EditorWindow
         DrawNodeListSection();
         EditorGUILayout.Space(4);
         DrawGridPreviewSection();
+        EditorGUILayout.Space(4);
+        DrawCsvSection();
         EditorGUILayout.Space(8);
         DrawGenerateSection();
 
@@ -109,7 +114,8 @@ public class SkillTreeEditorWindow : EditorWindow
         if (showSettings)
         {
             EditorGUI.indentLevel++;
-            cellSize = EditorGUILayout.FloatField("Cell Size (px)", cellSize);
+            cellWidth = EditorGUILayout.FloatField("Cell Size (px)", cellWidth);
+            cellHeight = EditorGUILayout.FloatField("Cell Size (px)", cellHeight);
             lineWidth = EditorGUILayout.FloatField("Line Width (px)", lineWidth);
             lineColor = EditorGUILayout.ColorField("Line Color", lineColor);
             EditorGUI.indentLevel--;
@@ -164,7 +170,7 @@ public class SkillTreeEditorWindow : EditorWindow
         if (GUILayout.Button(isSelected ? "▼" : "▶", GUILayout.Width(22)))
             selectedNodeIndex = isSelected ? -1 : index;
 
-        EditorGUILayout.LabelField($"[{index}]  {node.nodeId}  ({node.gridPosition.x}, {node.gridPosition.y})",
+        EditorGUILayout.LabelField($"[{index}]  {node.nodeId}  ({node.gridPositionX}, {node.gridPositionY})",
             EditorStyles.boldLabel);
         EditorGUILayout.EndHorizontal();
 
@@ -174,7 +180,8 @@ public class SkillTreeEditorWindow : EditorWindow
 
             node.nodeId = EditorGUILayout.TextField("Node ID", node.nodeId);
             node.displayName = EditorGUILayout.TextField("Display Name", node.displayName);
-            node.gridPosition = EditorGUILayout.Vector2IntField("Grid Position (col, row)", node.gridPosition);
+            node.gridPositionX = EditorGUILayout.IntField("Grid Position X (col)", node.gridPositionX);
+            node.gridPositionY = EditorGUILayout.IntField("Grid Position Y (row)", node.gridPositionY);
 
             // Parent dropdown
             string[] parentOptions = BuildParentDropdownOptions(index);
@@ -218,7 +225,8 @@ public class SkillTreeEditorWindow : EditorWindow
         {
             nodeId = $"node_{skillTreeData.nodes.Count}",
             displayName = $"Skill {skillTreeData.nodes.Count}",
-            gridPosition = Vector2Int.zero,
+            gridPositionX = 0,
+            gridPositionY = 0,
             parentNodeId = string.Empty
         });
 
@@ -261,8 +269,8 @@ public class SkillTreeEditorWindow : EditorWindow
         int maxRow = 0;
         foreach (SkillTreeNodeEntry node in skillTreeData.nodes)
         {
-            maxCol = Mathf.Max(maxCol, node.gridPosition.x);
-            maxRow = Mathf.Max(maxRow, node.gridPosition.y);
+            maxCol = Mathf.Max(maxCol, node.gridPositionX);
+            maxRow = Mathf.Max(maxRow, node.gridPositionY);
         }
 
         float previewWidth = (maxCol + 1) * (NodePreviewSize + NodePreviewSpacing) + NodePreviewSpacing;
@@ -280,8 +288,8 @@ public class SkillTreeEditorWindow : EditorWindow
             SkillTreeNodeEntry parent = skillTreeData.nodes.FirstOrDefault(n => n.nodeId == node.parentNodeId);
             if (parent == null) continue;
 
-            Vector2 from = NodePreviewCenter(node.gridPosition, contentRect);
-            Vector2 to = NodePreviewCenter(parent.gridPosition, contentRect);
+            Vector2 from = NodePreviewCenter(node.gridPositionX, node.gridPositionY, contentRect);
+            Vector2 to = NodePreviewCenter(parent.gridPositionX, parent.gridPositionY, contentRect);
 
             Handles.color = lineColor;
             Handles.DrawLine(from, to, 2f);
@@ -290,7 +298,7 @@ public class SkillTreeEditorWindow : EditorWindow
         // Draw node circles
         foreach (SkillTreeNodeEntry node in skillTreeData.nodes)
         {
-            Vector2 center = NodePreviewCenter(node.gridPosition, contentRect);
+            Vector2 center = NodePreviewCenter(node.gridPositionX, node.gridPositionY, contentRect);
             Rect nodeRect = new Rect(center.x - NodePreviewSize * 0.5f,
                                      center.y - NodePreviewSize * 0.5f,
                                      NodePreviewSize, NodePreviewSize);
@@ -311,10 +319,10 @@ public class SkillTreeEditorWindow : EditorWindow
         EditorGUILayout.EndFoldoutHeaderGroup();
     }
 
-    private Vector2 NodePreviewCenter(Vector2Int gridPos, Rect container)
+    private Vector2 NodePreviewCenter(int col, int row, Rect container)
     {
-        float x = container.x + NodePreviewSpacing + gridPos.x * (NodePreviewSize + NodePreviewSpacing) + NodePreviewSize * 0.5f;
-        float y = container.y + NodePreviewSpacing + gridPos.y * (NodePreviewSize + NodePreviewSpacing) + NodePreviewSize * 0.5f;
+        float x = container.x + NodePreviewSpacing + col * (NodePreviewSize + NodePreviewSpacing) + NodePreviewSize * 0.5f;
+        float y = container.y + NodePreviewSpacing + row * (NodePreviewSize + NodePreviewSpacing) + NodePreviewSize * 0.5f;
         return new Vector2(x, y);
     }
 
@@ -365,11 +373,11 @@ public class SkillTreeEditorWindow : EditorWindow
         ClearGeneratedNodes(buttonsGO);
 
         // Ensure Lines container
-        GameObject linesContainer = new GameObject(LinesContainerName);
-        Undo.RegisterCreatedObjectUndo(linesContainer, "Create Lines Container");
-        linesContainer.transform.SetParent(buttonsGO.transform, false);
-        RectTransform linesRect = linesContainer.AddComponent<RectTransform>();
-        StretchToFill(linesRect);
+        //GameObject linesContainer = new GameObject(LinesContainerName);
+        //Undo.RegisterCreatedObjectUndo(linesContainer, "Create Lines Container");
+        //linesContainer.transform.SetParent(buttonsGO.transform, false);
+        //RectTransform linesRect = linesContainer.AddComponent<RectTransform>();
+        //StretchToFill(linesRect);
 
         // Instantiate buttons
         Dictionary<string, LevelUpButton> spawnedButtons = new Dictionary<string, LevelUpButton>();
@@ -381,10 +389,10 @@ public class SkillTreeEditorWindow : EditorWindow
             instance.name = $"LevelUpButton_{nodeEntry.nodeId}";
 
             RectTransform rt = instance.GetComponent<RectTransform>();
-            rt.anchoredPosition = GridToCanvasPosition(nodeEntry.gridPosition);
+            rt.anchoredPosition = GridToCanvasPosition(nodeEntry.gridPositionX, nodeEntry.gridPositionY);
 
             LevelUpButton levelUpButton = instance.GetComponent<LevelUpButton>();
-            levelUpButton.nodeId = nodeEntry.nodeId;
+            levelUpButton.node = nodeEntry;
 
             spawnedButtons[nodeEntry.nodeId] = levelUpButton;
         }
@@ -400,7 +408,7 @@ public class SkillTreeEditorWindow : EditorWindow
             childButton.parentButton = parentButton;
             EditorUtility.SetDirty(childButton);
 
-            CreateLine(linesContainer, childButton, parentButton, nodeEntry.nodeId);
+            CreateLine(childButton, parentButton, nodeEntry.nodeId);
         }
 
         EditorSceneManager.MarkSceneDirty(buttonsGO.scene);
@@ -420,7 +428,7 @@ public class SkillTreeEditorWindow : EditorWindow
         List<Transform> toDestroy = new List<Transform>();
         foreach (Transform child in buttonsGO.transform)
         {
-            if (child.name.StartsWith("LevelUpButton_") || child.name == LinesContainerName)
+            if (child.name.StartsWith("LevelUpButton_"))//|| child.name == LinesContainerName)
                 toDestroy.Add(child);
         }
 
@@ -428,11 +436,11 @@ public class SkillTreeEditorWindow : EditorWindow
             Undo.DestroyObjectImmediate(t.gameObject);
     }
 
-    private void CreateLine(GameObject container, LevelUpButton from, LevelUpButton to, string nodeId)
+    private void CreateLine(LevelUpButton from, LevelUpButton to, string nodeId)
     {
         GameObject lineGO = new GameObject($"{nodeId}{LineSuffix}");
         Undo.RegisterCreatedObjectUndo(lineGO, "Create UILine");
-        lineGO.transform.SetParent(container.transform, false);
+        lineGO.transform.SetParent(to.transform, false);
 
         RectTransform rt = lineGO.AddComponent<RectTransform>();
         StretchToFill(rt);
@@ -440,15 +448,15 @@ public class SkillTreeEditorWindow : EditorWindow
         UILine line = lineGO.AddComponent<UILine>();
         line.color = lineColor;
         line.lineWidth = lineWidth;
-        line.from = from.GetComponent<RectTransform>();
-        line.to = to.GetComponent<RectTransform>();
+        line.from = to.GetComponent<RectTransform>();
+        line.to = from.GetComponent<RectTransform>();
         line.raycastTarget = false;
     }
 
-    private Vector2 GridToCanvasPosition(Vector2Int gridPos)
+    private Vector2 GridToCanvasPosition(int col, int row)
     {
-        // Grid origin is at centre; columns go right, rows go down (negative Y in UI).
-        return new Vector2(gridPos.x * cellSize, -gridPos.y * cellSize);
+        // Grid origin is at centre; columns go right, rows go up.
+        return new Vector2(col * cellWidth, row * cellHeight);
     }
 
     private GameObject FindButtonsGameObject()
@@ -482,5 +490,251 @@ public class SkillTreeEditorWindow : EditorWindow
         rt.anchorMax = Vector2.one;
         rt.offsetMin = Vector2.zero;
         rt.offsetMax = Vector2.zero;
+    }
+
+    // ── CSV section ──────────────────────────────────────────────────────────
+
+    private void DrawCsvSection()
+    {
+        showCsv = EditorGUILayout.BeginFoldoutHeaderGroup(showCsv, "CSV Import / Export");
+        if (showCsv)
+        {
+            EditorGUI.indentLevel++;
+
+            EditorGUILayout.HelpBox(
+                "CSV columns (order matters):\n" +
+                "nodeId, displayName, displayDescription, gridPositionX, gridPositionY, parentNodeId, " +
+                "cost, increaseLevelOfAllWedges, increaseLevelOfAllRedWedges, increaseLevelOfAllBlackWedges, distanceFromOrigin",
+                MessageType.None);
+
+            EditorGUILayout.BeginHorizontal();
+
+            if (GUILayout.Button("Import from CSV", GUILayout.Height(28)))
+                ImportFromCsv();
+
+            if (GUILayout.Button("Export to CSV", GUILayout.Height(28)))
+                ExportToCsv();
+
+            EditorGUILayout.EndHorizontal();
+
+            EditorGUI.indentLevel--;
+        }
+        EditorGUILayout.EndFoldoutHeaderGroup();
+    }
+
+    private void ImportFromCsv()
+    {
+        string filePath = EditorUtility.OpenFilePanel("Import Skill Tree CSV", "", "csv");
+        if (string.IsNullOrEmpty(filePath)) return;
+
+        string[] lines;
+        try
+        {
+            lines = File.ReadAllLines(filePath, Encoding.UTF8);
+        }
+        catch (IOException ex)
+        {
+            EditorUtility.DisplayDialog("CSV Import Error", $"Could not read file:\n{ex.Message}", "OK");
+            return;
+        }
+
+        if (lines.Length < 2)
+        {
+            EditorUtility.DisplayDialog("CSV Import Error",
+                "The file must contain a header row and at least one data row.", "OK");
+            return;
+        }
+
+        // Validate header
+        string[] header = ParseCsvLine(lines[0]);
+        string[] expectedHeader = CsvHeader();
+        bool headerValid = header.Length == expectedHeader.Length &&
+                           !header.Where((col, i) => col.Trim() != expectedHeader[i]).Any();
+
+        if (!headerValid)
+        {
+            bool proceed = EditorUtility.DisplayDialog("CSV Import Warning",
+                $"Header does not match the expected format:\n{string.Join(", ", expectedHeader)}\n\nProceed anyway?",
+                "Proceed", "Cancel");
+            if (!proceed) return;
+        }
+
+        List<SkillTreeNodeEntry> imported = new List<SkillTreeNodeEntry>();
+        List<string> errors = new List<string>();
+
+        for (int i = 1; i < lines.Length; i++)
+        {
+            string line = lines[i].Trim();
+            if (string.IsNullOrEmpty(line)) continue;
+
+            string[] cols = ParseCsvLine(line);
+            if (cols.Length < 11)
+            {
+                errors.Add($"Line {i + 1}: expected 11 columns, got {cols.Length}. Skipped.");
+                continue;
+            }
+
+            if (!int.TryParse(cols[3].Trim(), out int gridX))
+            {
+                errors.Add($"Line {i + 1}: invalid gridPositionX '{cols[3]}'. Skipped.");
+                continue;
+            }
+
+            if (!int.TryParse(cols[4].Trim(), out int gridY))
+            {
+                errors.Add($"Line {i + 1}: invalid gridPositionY '{cols[4]}'. Skipped.");
+                continue;
+            }
+
+            float.TryParse(cols[6].Trim(), System.Globalization.NumberStyles.Float,
+                System.Globalization.CultureInfo.InvariantCulture, out float cost);
+            int.TryParse(cols[7].Trim(), out int increaseAll);
+            int.TryParse(cols[8].Trim(), out int increaseRed);
+            int.TryParse(cols[9].Trim(), out int increaseBlack);
+            int.TryParse(cols[10].Trim(), out int distanceFromOrigin);
+
+            imported.Add(new SkillTreeNodeEntry
+            {
+                nodeId = cols[0].Trim(),
+                displayName = cols[1].Trim(),
+                displayDescription = cols[2].Trim(),
+                gridPositionX = gridX,
+                gridPositionY = gridY,
+                parentNodeId = cols[5].Trim(),
+                cost = cost,
+                increaseLevelOfAllWedges = increaseAll,
+                increaseLevelOfAllRedWedges = increaseRed,
+                increaseLevelOfAllBlackWedges = increaseBlack,
+                distanceFromOrigin = distanceFromOrigin
+            });
+        }
+
+        if (errors.Count > 0)
+        {
+            bool proceed = EditorUtility.DisplayDialog("CSV Import — Parse Errors",
+                $"{errors.Count} row(s) had errors and were skipped:\n\n{string.Join("\n", errors)}\n\nImport the remaining {imported.Count} node(s)?",
+                "Import", "Cancel");
+            if (!proceed) return;
+        }
+
+        Undo.RecordObject(skillTreeData, "Import Skill Tree CSV");
+        skillTreeData.nodes = imported;
+        EditorUtility.SetDirty(skillTreeData);
+        AssetDatabase.SaveAssets();
+
+        Debug.Log($"[SkillTreeEditor] Imported {imported.Count} node(s) from '{Path.GetFileName(filePath)}'.");
+    }
+
+    private void ExportToCsv()
+    {
+        string defaultName = skillTreeData != null
+            ? Path.GetFileNameWithoutExtension(AssetDatabase.GetAssetPath(skillTreeData))
+            : "SkillTreeData";
+
+        string filePath = EditorUtility.SaveFilePanel("Export Skill Tree CSV", "", defaultName, "csv");
+        if (string.IsNullOrEmpty(filePath)) return;
+
+        StringBuilder sb = new StringBuilder();
+        sb.AppendLine(string.Join(",", CsvHeader()));
+
+        foreach (SkillTreeNodeEntry node in skillTreeData.nodes)
+        {
+            sb.AppendLine(string.Join(",", new[]
+            {
+                EscapeCsvField(node.nodeId),
+                EscapeCsvField(node.displayName),
+                EscapeCsvField(node.displayDescription),
+                node.gridPositionX.ToString(),
+                node.gridPositionY.ToString(),
+                EscapeCsvField(node.parentNodeId),
+                node.cost.ToString(System.Globalization.CultureInfo.InvariantCulture),
+                node.increaseLevelOfAllWedges.ToString(),
+                node.increaseLevelOfAllRedWedges.ToString(),
+                node.increaseLevelOfAllBlackWedges.ToString(),
+                node.distanceFromOrigin.ToString()
+            }));
+        }
+
+        try
+        {
+            File.WriteAllText(filePath, sb.ToString(), Encoding.UTF8);
+        }
+        catch (IOException ex)
+        {
+            EditorUtility.DisplayDialog("CSV Export Error", $"Could not write file:\n{ex.Message}", "OK");
+            return;
+        }
+
+        Debug.Log($"[SkillTreeEditor] Exported {skillTreeData.nodes.Count} node(s) to '{Path.GetFileName(filePath)}'.");
+    }
+
+    /// <summary>Returns the canonical CSV column headers in field order.</summary>
+    private static string[] CsvHeader() => new[]
+    {
+        "nodeId", "displayName", "displayDescription", "gridPositionX", "gridPositionY", "parentNodeId",
+        "cost", "increaseLevelOfAllWedges", "increaseLevelOfAllRedWedges", "increaseLevelOfAllBlackWedges",
+        "distanceFromOrigin"
+    };
+
+    /// <summary>Parses a single CSV line, respecting double-quoted fields that may contain commas.</summary>
+    private static string[] ParseCsvLine(string line)
+    {
+        List<string> fields = new List<string>();
+        StringBuilder current = new StringBuilder();
+        bool inQuotes = false;
+
+        for (int i = 0; i < line.Length; i++)
+        {
+            char c = line[i];
+
+            if (inQuotes)
+            {
+                if (c == '"')
+                {
+                    // Escaped quote: "" inside a quoted field
+                    if (i + 1 < line.Length && line[i + 1] == '"')
+                    {
+                        current.Append('"');
+                        i++;
+                    }
+                    else
+                    {
+                        inQuotes = false;
+                    }
+                }
+                else
+                {
+                    current.Append(c);
+                }
+            }
+            else
+            {
+                if (c == '"')
+                {
+                    inQuotes = true;
+                }
+                else if (c == ',')
+                {
+                    fields.Add(current.ToString());
+                    current.Clear();
+                }
+                else
+                {
+                    current.Append(c);
+                }
+            }
+        }
+
+        fields.Add(current.ToString());
+        return fields.ToArray();
+    }
+
+    /// <summary>Wraps a field in quotes and escapes any internal quotes if the field contains commas or quotes.</summary>
+    private static string EscapeCsvField(string field)
+    {
+        if (string.IsNullOrEmpty(field)) return string.Empty;
+        if (field.Contains(',') || field.Contains('"') || field.Contains('\n'))
+            return $"\"{field.Replace("\"", "\"\"")}\"";
+        return field;
     }
 }

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
@@ -8,10 +8,10 @@ using UnityEngine.UI;
 [RequireComponent(typeof(CanvasRenderer))]
 public class UILine : Graphic
 {
-    [Tooltip("Start point of the line (typically the child node button).")]
+    [Tooltip("Start point of the line (typically the parent node button).")]
     public RectTransform from;
 
-    [Tooltip("End point of the line (typically the parent node button).")]
+    [Tooltip("End point of the line (typically the child node button).")]
     public RectTransform to;
 
     [Tooltip("Thickness of the rendered line in pixels.")]
@@ -61,4 +61,17 @@ public class UILine : Graphic
         SetVerticesDirty();
     }
 #endif
+
+    private void OnDrawGizmos()
+    {
+        if (from == null || to == null)
+            return;
+
+        Vector3 fromWorld = from.position;//from.TransformPoint(from.localPosition);
+        Vector3 toWorld = to.position;//to.TransformPoint(to.localPosition);
+        Vector3 midpoint = (fromWorld + toWorld) * 0.5f;
+
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawCube(midpoint, Vector3.one * 10f);
+    }
 }

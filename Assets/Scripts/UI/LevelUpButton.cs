@@ -6,6 +6,5 @@ public class LevelUpButton : MonoBehaviour
              "Leave null for the root/origin node.")]
     public LevelUpButton parentButton;
 
-    [Tooltip("Unique identifier that matches the nodeId in SkillTreeData.")]
-    public string nodeId;
+    public SkillTreeNodeEntry node;
 }
