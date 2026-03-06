@@ -28,4 +28,9 @@ public class SkillTreeNodeEntry
     public int increaseLevelOfAllBlackWedges;
 
     public int distanceFromOrigin = 0;
+
+    public int GetDefaultCost(int distanceFromOrigin)
+    {
+        return Mathf.CeilToInt(Mathf.Pow(1.12f, (distanceFromOrigin - 1)) * 10f);
+    }
 }

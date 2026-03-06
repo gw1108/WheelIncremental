@@ -15,15 +15,11 @@ public class SkillTreeEditorWindow : EditorWindow
     // ── Layout settings ─────────────────────────────────────────────────────
     private const float NodePreviewSize = 40f;
     private const float NodePreviewSpacing = 80f;
-    private const string ButtonsObjectPath = "Screens/ShopScreen/Bg/Buttons";
-    private const string LevelUpButtonPrefabPath = "Assets/Prefabs/UI/LevelUpButton.prefab";
     private const string LineSuffix = "_Line";
 
     // ── Serialized state ────────────────────────────────────────────────────
     private SkillTreeData skillTreeData;
-    private float cellWidth = 100f;
-    private float cellHeight = 100f;
-    private float lineWidth = 4f;
+    private bool shouldGenerateDefaultCosts;
     private Color lineColor = new Color(0.9f, 0.8f, 0.2f, 1f);
 
     // ── UI scroll positions ──────────────────────────────────────────────────
@@ -64,8 +60,8 @@ public class SkillTreeEditorWindow : EditorWindow
         DrawSettingsSection();
         EditorGUILayout.Space(4);
         DrawNodeListSection();
-        EditorGUILayout.Space(4);
-        DrawGridPreviewSection();
+        //EditorGUILayout.Space(4);
+        //DrawGridPreviewSection();
         EditorGUILayout.Space(4);
         DrawCsvSection();
         EditorGUILayout.Space(8);
@@ -83,6 +79,8 @@ public class SkillTreeEditorWindow : EditorWindow
 
         skillTreeData = (SkillTreeData)EditorGUILayout.ObjectField(
             "Skill Tree Data", skillTreeData, typeof(SkillTreeData), false);
+
+        shouldGenerateDefaultCosts = EditorGUILayout.Toggle("Fill With Default Costs", shouldGenerateDefaultCosts);
 
         if (GUILayout.Button("New", GUILayout.Width(50)))
             CreateNewSkillTreeData();
@@ -114,9 +112,6 @@ public class SkillTreeEditorWindow : EditorWindow
         if (showSettings)
         {
             EditorGUI.indentLevel++;
-            cellWidth = EditorGUILayout.FloatField("Cell Size (px)", cellWidth);
-            cellHeight = EditorGUILayout.FloatField("Cell Size (px)", cellHeight);
-            lineWidth = EditorGUILayout.FloatField("Line Width (px)", lineWidth);
             lineColor = EditorGUILayout.ColorField("Line Color", lineColor);
             EditorGUI.indentLevel--;
         }
@@ -340,8 +335,12 @@ public class SkillTreeEditorWindow : EditorWindow
 
         EditorGUILayout.EndHorizontal();
 
+        if (GUILayout.Button("Import from Scene", GUILayout.Height(32)))
+            ImportFromScene();
+
         EditorGUILayout.HelpBox(
-            "\"Generate in Scene\" clears previously generated nodes first, then instantiates fresh ones.",
+            "\"Generate in Scene\" clears previously generated nodes first, then instantiates fresh ones.\n" +
+            "\"Import from Scene\" reads all LevelUpButton GameObjects currently in the scene and overwrites the SkillTreeData nodes.",
             MessageType.None);
     }
 
@@ -359,12 +358,11 @@ public class SkillTreeEditorWindow : EditorWindow
 
         GameObject buttonsGO = FindButtonsGameObject();
         if (buttonsGO == null) return;
-
-        GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>(LevelUpButtonPrefabPath);
-        if (prefab == null)
+        GameObject levelUpButtonPrefab = GetLevelUpButtonPrefab();
+        if (levelUpButtonPrefab == null)
         {
             EditorUtility.DisplayDialog("Skill Tree Editor",
-                $"LevelUpButton prefab not found at:\n{LevelUpButtonPrefabPath}", "OK");
+                $"LevelUpButton prefab not found at:\n{LevelUpButton.LevelUpButtonPrefabPath}", "OK");
             return;
         }
 
@@ -376,51 +374,89 @@ public class SkillTreeEditorWindow : EditorWindow
         Dictionary<string, LevelUpButton> spawnedButtons = new Dictionary<string, LevelUpButton>();
         foreach (SkillTreeNodeEntry nodeEntry in skillTreeData.nodes)
         {
-            GameObject instance = (GameObject)PrefabUtility.InstantiatePrefab(prefab, buttonsGO.transform);
-            Undo.RegisterCreatedObjectUndo(instance, "Instantiate LevelUpButton");
-            instance.name = $"LevelUpButton_{nodeEntry.nodeId}";
-
-            RectTransform rt = instance.GetComponent<RectTransform>();
-            rt.anchoredPosition = GridToCanvasPosition(nodeEntry.gridPositionX, nodeEntry.gridPositionY);
-
-            LevelUpButton levelUpButton = instance.GetComponent<LevelUpButton>();
-            levelUpButton.node = nodeEntry;
-
-            spawnedButtons[nodeEntry.nodeId] = levelUpButton;
+            // Reset distance from origin for later.
+            nodeEntry.distanceFromOrigin = -1;
+            CreateLevelUpButton(buttonsGO, levelUpButtonPrefab, nodeEntry, spawnedButtons);
         }
 
         foreach (SkillTreeNodeEntry nodeEntry in skillTreeData.nodes)
         {
-            if (string.IsNullOrEmpty(nodeEntry.parentNodeId))
-            {
-                Debug.Log(nodeEntry.nodeId + "," + nodeEntry.displayName + ": has no parentId: " + nodeEntry.parentNodeId);
-                continue;
-            }
-
-            if (!spawnedButtons.TryGetValue(nodeEntry.nodeId, out LevelUpButton childButton)) continue;
-            if (!spawnedButtons.TryGetValue(nodeEntry.parentNodeId, out LevelUpButton parentButton)) continue;
-
-            childButton.parentButton = parentButton;
-            EditorUtility.SetDirty(childButton);
-
-            CreateLine(childButton, parentButton, nodeEntry.nodeId);
+            CreateLevelUpButtonLine(spawnedButtons, nodeEntry, this.lineColor);
         }
 
-        // set us up the distance from origin.
         foreach (SkillTreeNodeEntry nodeEntry in skillTreeData.nodes)
         {
-            if (string.IsNullOrEmpty(nodeEntry.parentNodeId))
+            // set us up the distance from origin.
+            GetOrCalculateDistanceFromOrigin(spawnedButtons, nodeEntry);
+            if (shouldGenerateDefaultCosts)
             {
-                nodeEntry.distanceFromOrigin = 0;
-            }
-            else
-            {
-                nodeEntry.distanceFromOrigin = 1 + spawnedButtons[nodeEntry.nodeId].node.distanceFromOrigin;
+                nodeEntry.cost = nodeEntry.GetDefaultCost(nodeEntry.distanceFromOrigin);
             }
         }
 
         EditorSceneManager.MarkSceneDirty(buttonsGO.scene);
         Debug.Log($"[SkillTreeEditor] Generated {skillTreeData.nodes.Count} node(s) under '{buttonsGO.name}'.");
+    }
+
+    public static int GetOrCalculateDistanceFromOrigin(Dictionary<string, LevelUpButton> spawnedButtons, SkillTreeNodeEntry nodeEntry)
+    {
+        if (string.IsNullOrEmpty(nodeEntry.parentNodeId))
+        {
+            nodeEntry.distanceFromOrigin = 0;
+            return 0;
+        }
+        else if (spawnedButtons[nodeEntry.parentNodeId].node.distanceFromOrigin >= 0)
+        {
+            nodeEntry.distanceFromOrigin = 1 + spawnedButtons[nodeEntry.parentNodeId].node.distanceFromOrigin;
+            return nodeEntry.distanceFromOrigin;
+        }
+        else
+        {
+            int parentDistanceFromOrigin = GetOrCalculateDistanceFromOrigin(spawnedButtons, spawnedButtons[nodeEntry.parentNodeId].node);
+            nodeEntry.distanceFromOrigin = 1 + parentDistanceFromOrigin;
+            return nodeEntry.distanceFromOrigin;
+        }
+    }
+
+    public static bool CreateLevelUpButtonLine(Dictionary<string, LevelUpButton> spawnedButtons, SkillTreeNodeEntry nodeEntry, Color lineColor)
+    {
+        if (string.IsNullOrEmpty(nodeEntry.parentNodeId))
+        {
+            Debug.Log(nodeEntry.nodeId + "," + nodeEntry.displayName + ": has no parentId: " + nodeEntry.parentNodeId);
+            return false;
+        }
+
+        if (!spawnedButtons.TryGetValue(nodeEntry.nodeId, out LevelUpButton childButton)) return false;
+        if (!spawnedButtons.TryGetValue(nodeEntry.parentNodeId, out LevelUpButton parentButton)) return false;
+
+        childButton.parentButton = parentButton;
+        EditorUtility.SetDirty(childButton);
+
+        CreateLine(childButton, parentButton, lineColor);
+        return true;
+    }
+
+    public static GameObject GetLevelUpButtonPrefab()
+    {
+        return AssetDatabase.LoadAssetAtPath<GameObject>(LevelUpButton.LevelUpButtonPrefabPath);
+    }
+
+    public static void CreateLevelUpButton(GameObject buttonsGO, GameObject prefab, SkillTreeNodeEntry nodeEntry, Dictionary<string, LevelUpButton> spawnedButtons)
+    {
+        GameObject instance = (GameObject)PrefabUtility.InstantiatePrefab(prefab, buttonsGO.transform);
+        Undo.RegisterCreatedObjectUndo(instance, "Instantiate LevelUpButton");
+        instance.name = $"LevelUpButton_{nodeEntry.nodeId}";
+
+        RectTransform rt = instance.GetComponent<RectTransform>();
+        rt.anchoredPosition = new Vector2(nodeEntry.gridPositionX * LevelUpButton.CellWidth, nodeEntry.gridPositionY * LevelUpButton.CellHeight);
+
+        LevelUpButton levelUpButton = instance.GetComponent<LevelUpButton>();
+        levelUpButton.node = nodeEntry;
+
+        if (spawnedButtons != null)
+        {
+            spawnedButtons[nodeEntry.nodeId] = levelUpButton;
+        }
     }
 
     private void ClearGeneratedNodes()
@@ -444,9 +480,104 @@ public class SkillTreeEditorWindow : EditorWindow
             Undo.DestroyObjectImmediate(t.gameObject);
     }
 
-    private void CreateLine(LevelUpButton from, LevelUpButton to, string nodeId)
+    /// <summary>
+    /// Reads all LevelUpButton components under the Buttons container in the active scene
+    /// and overwrites the SkillTreeData nodes list with the data found on them.
+    /// </summary>
+    private void ImportFromScene()
     {
-        GameObject lineGO = new GameObject($"{nodeId}{LineSuffix}");
+        GameObject buttonsGO = FindButtonsGameObject();
+        if (buttonsGO == null) return;
+
+        LevelUpButton[] sceneButtons = buttonsGO.GetComponentsInChildren<LevelUpButton>(includeInactive: true);
+
+        if (sceneButtons.Length == 0)
+        {
+            EditorUtility.DisplayDialog("Import from Scene",
+                $"No LevelUpButton components found under '{LevelUpButton.ButtonsObjectPath}'.", "OK");
+            return;
+        }
+
+        // Build a lookup from LevelUpButton instance to nodeId so we can resolve parentNodeId.
+        Dictionary<LevelUpButton, string> buttonToNodeId = new Dictionary<LevelUpButton, string>(sceneButtons.Length);
+        List<SkillTreeNodeEntry> importedNodes = new List<SkillTreeNodeEntry>();
+
+        // First pass: collect node entries, deriving nodeId from the node data or the GO name.
+        foreach (LevelUpButton button in sceneButtons)
+        {
+            SkillTreeNodeEntry sourceNode = button.node;
+
+            string nodeId = sourceNode != null && !string.IsNullOrEmpty(sourceNode.nodeId)
+                ? sourceNode.nodeId
+                : button.gameObject.name.Replace("LevelUpButton_", string.Empty);
+
+            buttonToNodeId[button] = nodeId;
+        }
+
+        // Second pass: build entries with resolved parentNodeId.
+        foreach (LevelUpButton button in sceneButtons)
+        {
+            SkillTreeNodeEntry sourceNode = button.node;
+            string nodeId = buttonToNodeId[button];
+
+            string parentNodeId = string.Empty;
+            if (!string.IsNullOrEmpty(sourceNode.parentNodeId))
+            {
+                parentNodeId = sourceNode.parentNodeId;
+            }
+            else if (button.parentButton != null && buttonToNodeId.TryGetValue(button.parentButton, out string parentId))
+            {
+                parentNodeId = parentId;
+            }
+
+            RectTransform rt = button.GetComponent<RectTransform>();
+            int gridX = sourceNode?.gridPositionX ?? 0;
+            int gridY = sourceNode?.gridPositionY ?? 0;
+
+            // If the node has no explicit grid position, derive it from the anchored position and cell size.
+            if (sourceNode == null || (sourceNode.gridPositionX == 0 && sourceNode.gridPositionY == 0))
+            {
+                if (rt != null && (LevelUpButton.CellWidth > 0f && LevelUpButton.CellHeight > 0f))
+                {
+                    gridX = Mathf.RoundToInt(rt.anchoredPosition.x / LevelUpButton.CellWidth);
+                    gridY = Mathf.RoundToInt(rt.anchoredPosition.y / LevelUpButton.CellHeight);
+                }
+            }
+
+            importedNodes.Add(new SkillTreeNodeEntry
+            {
+                nodeId = nodeId,
+                displayName = sourceNode?.displayName ?? nodeId,
+                displayDescription = sourceNode?.displayDescription ?? string.Empty,
+                gridPositionX = gridX,
+                gridPositionY = gridY,
+                parentNodeId = parentNodeId,
+                cost = shouldGenerateDefaultCosts ? sourceNode.GetDefaultCost(sourceNode?.distanceFromOrigin ?? 0) : sourceNode?.cost ?? 0f,
+                increaseLevelOfAllWedges = sourceNode?.increaseLevelOfAllWedges ?? 0,
+                increaseLevelOfAllRedWedges = sourceNode?.increaseLevelOfAllRedWedges ?? 0,
+                increaseLevelOfAllBlackWedges = sourceNode?.increaseLevelOfAllBlackWedges ?? 0,
+                distanceFromOrigin = sourceNode?.distanceFromOrigin ?? 0
+            });
+        }
+
+        bool confirmed = EditorUtility.DisplayDialog("Import from Scene",
+            $"This will overwrite all {skillTreeData.nodes.Count} existing node(s) in '{skillTreeData.name}' " +
+            $"with {importedNodes.Count} node(s) read from the scene.\n\nProceed?",
+            "Import", "Cancel");
+
+        if (!confirmed) return;
+
+        Undo.RecordObject(skillTreeData, "Import Skill Tree from Scene");
+        skillTreeData.nodes = importedNodes;
+        EditorUtility.SetDirty(skillTreeData);
+        AssetDatabase.SaveAssets();
+
+        Debug.Log($"[SkillTreeEditor] Imported {importedNodes.Count} node(s) from scene into '{skillTreeData.name}'.");
+    }
+
+    public static void CreateLine(LevelUpButton from, LevelUpButton to, Color lineColor)
+    {
+        GameObject lineGO = new GameObject($"{from.node.nodeId}{LineSuffix}");
         Undo.RegisterCreatedObjectUndo(lineGO, "Create UILine");
         lineGO.transform.SetParent(from.transform, false);
 
@@ -455,29 +586,23 @@ public class SkillTreeEditorWindow : EditorWindow
 
         UILine line = lineGO.AddComponent<UILine>();
         line.color = lineColor;
-        line.lineWidth = lineWidth;
+        line.lineWidth = LevelUpButton.LineWidth;
         line.from = from.GetComponent<RectTransform>();
         line.to = to.GetComponent<RectTransform>();
         line.raycastTarget = false;
     }
 
-    private Vector2 GridToCanvasPosition(int col, int row)
-    {
-        // Grid origin is at centre; columns go right, rows go up.
-        return new Vector2(col * cellWidth, row * cellHeight);
-    }
-
-    private GameObject FindButtonsGameObject()
+    public static GameObject FindButtonsGameObject()
     {
         GameObject[] roots = UnityEngine.SceneManagement.SceneManager.GetActiveScene().GetRootGameObjects();
         foreach (GameObject root in roots)
         {
-            Transform found = root.transform.Find(ButtonsObjectPath);
+            Transform found = root.transform.Find(LevelUpButton.ButtonsObjectPath);
             if (found != null) return found.gameObject;
         }
 
         EditorUtility.DisplayDialog("Skill Tree Editor",
-            $"Could not find the 'Buttons' GameObject at path:\n{ButtonsObjectPath}\n\nMake sure the Game scene is loaded.",
+            $"Could not find the 'Buttons' GameObject at path:\n{LevelUpButton.ButtonsObjectPath}\n\nMake sure the Game scene is loaded.",
             "OK");
         return null;
     }
