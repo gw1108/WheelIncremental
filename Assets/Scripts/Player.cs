@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Wheels;
@@ -6,6 +7,9 @@ using Wheels;
 public class Player : SingletonMonoBehaviour<Player>
 {
     public Wheel ActiveWheel;
+    public int WheelSize = 6;
+    public int GlobalWheelLevel = 0;
+    public List<int> DefaultWheelValues;
 
     private const string HUD_MoneyLabelStringFormat = "Current: ${0}";
     private const string HUD_SpinsLeftStringFormat = "Spins Left: {0}";
@@ -79,6 +83,34 @@ public class Player : SingletonMonoBehaviour<Player>
         {
             GameOver();
         }
+    }
+
+    /// <summary>
+    /// Get the wheel segments based off the player's wheel level.
+    /// </summary>
+    /// <returns></returns>
+    public List<WheelSegmentData> GetWheelSegmentData()
+    {
+        List<WheelSegmentData> wheel = new List<WheelSegmentData>();
+        //foreach(int defaultWheelValue in DefaultWheelValues)
+        for (int i = 0; i < DefaultWheelValues.Count; i++)
+        {
+            wheel.Add(new WheelSegmentData());
+            wheel[i].cashPrize = DefaultWheelValues[i];
+            wheel[i].prizeName = wheel[i].cashPrize.ToString();
+            // is not accumulator slice.
+            Color segmentColor;
+            if (i % 2 == 0)
+            {
+                segmentColor = Color.red;
+            }
+            else
+            {
+                segmentColor = Color.black;
+            }
+            wheel[i].segmentColor = segmentColor;
+        }
+        return wheel;
     }
 
     private void GameOver()

@@ -34,12 +34,17 @@ public class BaseScreen : MonoBehaviour
 
     public void Show()
     {
-        Container.SetActive(true);
+        ShowContainer(true);
         MainContentRoot.transform.localScale = Vector3.one * 0.5f;
         MainContentRoot.transform.DOScale(Vector3.one, 0.55f);
         CanvasGroup.DOFade(1, 0.55f).From(0f);
 
         OnShow();
+    }
+
+    public void ShowContainer(bool active)
+    {
+        Container.SetActive(active);
     }
 
     protected virtual void OnShow()

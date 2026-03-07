@@ -1,4 +1,5 @@
-﻿using System;
+using Sirenix.OdinInspector;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -41,6 +42,74 @@ public class OverlayScreenManager : SingletonMonoBehaviour<OverlayScreenManager>
         if (Keyboard.current[Key.Escape].wasPressedThisFrame && ScreenStack.Count >= 1)
         {
             ScreenStack.Peek().EscapeOut();
+        }
+    }
+
+    private void ExpandSpecificScreen(BaseScreen screen, bool expand, bool setContentActive)
+    {
+        SceneHierarchyUtility.SetExpanded(screen.gameObject, true);
+        screen.ShowContainer(setContentActive);
+    }
+
+    private void CollapseSpecificScreen(BaseScreen screen, bool expand)
+    {
+        SceneHierarchyUtility.SetExpanded(screen.gameObject, false);
+        screen.ShowContainer(false);
+    }
+
+    [HorizontalGroup("ExpandShop", 0.33f)]
+    [Button(ButtonSizes.Small)]
+    private void ExpandShop()
+    {
+        if (Screens.TryGetValue(ScreenType.Shop, out var screen))
+        {
+            ExpandSpecificScreen(screen, true, true);
+        }
+    }
+
+    [HorizontalGroup("ExpandShop", 0.33f)]
+    [Button(ButtonSizes.Small)]
+    private void CollapseShop()
+    {
+        if (Screens.TryGetValue(ScreenType.Shop, out var screen))
+        {
+            CollapseSpecificScreen(screen, true);
+        }
+    }
+
+    [HorizontalGroup("ExpandAll", 0.33f)]
+    [Button(ButtonSizes.Medium)]
+    private void ExpandAllScreens()
+    {
+        foreach (BaseScreen screen in Screens.Values)
+        {
+            if (screen == null) continue;
+
+            SceneHierarchyUtility.SetExpanded(screen.gameObject, true);
+        }
+    }
+
+    [HorizontalGroup("ExpandAll", 0.33f)]
+    [Button(ButtonSizes.Medium)]
+    private void ExpandAllScreensRecursive()
+    {
+        foreach (BaseScreen screen in Screens.Values)
+        {
+            if (screen == null) continue;
+
+            SceneHierarchyUtility.SetExpandedRecursive(screen.gameObject, true);
+        }
+    }
+
+    [HorizontalGroup("ExpandAll", 0.33f)]
+    [Button(ButtonSizes.Medium)]
+    private void CollapseAllScreens()
+    {
+        foreach (BaseScreen screen in Screens.Values)
+        {
+            if (screen == null) continue;
+
+            SceneHierarchyUtility.SetExpanded(screen.gameObject, false);
         }
     }
 

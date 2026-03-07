@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using System;
 using System.Collections.Generic;
 using TMPro;
@@ -14,7 +15,9 @@ namespace Wheels
 
         [Header("Segments")]
         [Tooltip("Fill this in with the initial segments this wheel will have on Start.")]
-        [SerializeField] private List<WheelSegmentData> initialSegments = new List<WheelSegmentData>();
+        [SerializeField]
+        [TableList]
+        private List<WheelSegmentData> initialSegments = new List<WheelSegmentData>();
 
         public Action<Wheel, WheelSegmentData> OnWheelSpinCompleted;
 
@@ -27,7 +30,7 @@ namespace Wheels
 
         private void Start()
         {
-            _segments.AddRange(initialSegments);
+            _segments.AddRange(Player.Instance.GetWheelSegmentData());
             RebuildWheel();
         }
 
