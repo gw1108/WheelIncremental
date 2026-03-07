@@ -37,6 +37,14 @@ public class OverlayScreenManager : SingletonMonoBehaviour<OverlayScreenManager>
         ServiceLocator.Instance.Register(this);
     }
 
+    private void Start()
+    {
+        foreach (var screen in Screens.Values)
+        {
+            screen.QuickHide();
+        }
+    }
+
     private void Update()
     {
         if (Keyboard.current[Key.Escape].wasPressedThisFrame && ScreenStack.Count >= 1)

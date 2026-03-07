@@ -57,12 +57,20 @@ public class BaseScreen : MonoBehaviour
         OnHide();
     }
 
+    /// <summary>
+    /// Quickly hides without calling OnHide.
+    /// </summary>
+    public void QuickHide()
+    {
+        Container.SetActive(false);
+    }
+
     private IEnumerator HideHelper()
     {
         OverlayScreenManager.Instance.inputBlocker.SetActive(true);
         yield return CanvasGroup.DOFade(0.0f, 0.25f).From(1.0f);
         OverlayScreenManager.Instance.inputBlocker.SetActive(false);
-        Container.SetActive(false);
+        QuickHide();
     }
 
     protected virtual void OnHide()

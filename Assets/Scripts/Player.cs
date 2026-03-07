@@ -22,7 +22,6 @@ public class Player : SingletonMonoBehaviour<Player>
         set
         {
             m_money = value;
-            HUD_MoneyLabel.SetText(string.Format(HUD_MoneyLabelStringFormat, m_money));
         }
     }
     public int CurrentSpinsLeft
@@ -37,10 +36,24 @@ public class Player : SingletonMonoBehaviour<Player>
             HUD_SpinsLeftLabel.SetText(string.Format(HUD_SpinsLeftStringFormat, CurrentSpinsLeft));
         }
     }
+    public int CurrentRoundMoney
+    {
+        get
+        {
+            return m_currentRoundMoney;
+        }
+        set
+        {
+            m_currentRoundMoney = value;
+            HUD_MoneyLabel.SetText(string.Format(HUD_MoneyLabelStringFormat, m_currentRoundMoney));
+        }
+    }
+
     public TextMeshProUGUI HUD_MoneyLabel;
     public TextMeshProUGUI HUD_SpinsLeftLabel;
     public int SpinsOnNewGame = 1;
 
+    private int m_currentRoundMoney = 0;
     private int m_currentSpinsLeft = 1;
     private int m_money;
 
@@ -68,6 +81,7 @@ public class Player : SingletonMonoBehaviour<Player>
         // reset running multiplier to base.
         // reset current multiplier to base.
         CurrentSpinsLeft = SpinsOnNewGame;
+        CurrentRoundMoney = 0;
     }
 
 
@@ -77,7 +91,7 @@ public class Player : SingletonMonoBehaviour<Player>
         int moneyGained = wheelSegmentData.cashPrize;
         // multiply by current multiplier
         // multiply by running multiplier
-        Money += moneyGained;
+        CurrentRoundMoney += moneyGained;
 
         if (CurrentSpinsLeft <= 0)
         {

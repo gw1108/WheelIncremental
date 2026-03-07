@@ -14282,7 +14282,7 @@ MonoBehaviour:
     keyData: 0000000004000000
     valueData:
     - {fileID: 1001059238}
-    - {fileID: 1632618594}
+    - {fileID: 1632618596}
   inputBlocker: {fileID: 95512743}
 --- !u!1001 &821822992
 PrefabInstance:
@@ -18101,6 +18101,7 @@ MonoBehaviour:
   MainContentRoot: {fileID: 136595144}
   CloseButton: {fileID: 1056116155}
   EscapeButton: {fileID: 0}
+  CurrentMoneyLabel: {fileID: 850557552}
 --- !u!1 &1011498575
 GameObject:
   m_ObjectHideFlags: 0
@@ -28527,8 +28528,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1632618593}
-  - component: {fileID: 1632618594}
   - component: {fileID: 1632618595}
+  - component: {fileID: 1632618596}
   m_Layer: 5
   m_Name: GameOverScreen
   m_TagString: Untagged
@@ -28556,22 +28557,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1632618594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632618592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d62d901129e1b834796edc2ed6b3eb33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BaseScreen
-  Container: {fileID: 1623807320}
-  MainContentRoot: {fileID: 1593170661}
-  CloseButton: {fileID: 0}
-  EscapeButton: {fileID: 0}
 --- !u!225 &1632618595
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -28584,6 +28569,23 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1632618596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632618592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 451f4a81c9081c34fba7d4887945d9db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameOverScreen
+  Container: {fileID: 1623807320}
+  MainContentRoot: {fileID: 1593170661}
+  CloseButton: {fileID: 0}
+  EscapeButton: {fileID: 0}
+  MainLabel: {fileID: 975051380}
 --- !u!1001 &1636357321
 PrefabInstance:
   m_ObjectHideFlags: 0
