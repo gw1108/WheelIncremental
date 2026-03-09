@@ -9,7 +9,7 @@ namespace Wheels
     public class Wheel : MonoBehaviour
     {
         [Header("Wheel Settings")]
-        [SerializeField] private float wheelRadius = 2.5f;
+        [SerializeField] private float wheelRadius = 4f;
         [SerializeField] private Material segmentMaterial;
         [SerializeField] private TMP_FontAsset font;
 
