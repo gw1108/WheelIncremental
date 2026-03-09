@@ -11,6 +11,12 @@ public class Player : SingletonMonoBehaviour<Player>
     public int GlobalWheelLevel = 0;
     public List<int> DefaultWheelValues;
 
+    #region levelUpStuff
+    public int levelOfAllWedges = 0;
+    public int levelOfAllRedWedges = 0;
+    public int levelOfAllBlackWedges = 0;
+    #endregion
+
     private const string HUD_MoneyLabelStringFormat = "Current: ${0}";
     private const string HUD_SpinsLeftStringFormat = "Spins Left: {0}";
     public int Money
@@ -56,6 +62,7 @@ public class Player : SingletonMonoBehaviour<Player>
     private int m_currentRoundMoney = 0;
     private int m_currentSpinsLeft = 1;
     private int m_money;
+    private List<string> purchasedUpgrades = new List<string>();
 
     private void Start()
     {
@@ -82,8 +89,8 @@ public class Player : SingletonMonoBehaviour<Player>
         // reset current multiplier to base.
         CurrentSpinsLeft = SpinsOnNewGame;
         CurrentRoundMoney = 0;
+        ActiveWheel.FullRebuildWheel();
     }
-
 
     public void OnWheelSpinComplete(WheelSegmentData wheelSegmentData)
     {
@@ -105,13 +112,12 @@ public class Player : SingletonMonoBehaviour<Player>
     /// <returns></returns>
     public List<WheelSegmentData> GetWheelSegmentData()
     {
+        int indexOfLargestRedWedges, indexOfLargestBlackWedges, largestRedWedge = 0, largestBlackWedge = 0;
         List<WheelSegmentData> wheel = new List<WheelSegmentData>();
-        //foreach(int defaultWheelValue in DefaultWheelValues)
         for (int i = 0; i < DefaultWheelValues.Count; i++)
         {
             wheel.Add(new WheelSegmentData());
             wheel[i].cashPrize = DefaultWheelValues[i];
-            wheel[i].prizeName = wheel[i].cashPrize.ToString();
             // is not accumulator slice.
             Color segmentColor;
             if (i % 2 == 0)
@@ -123,8 +129,41 @@ public class Player : SingletonMonoBehaviour<Player>
                 segmentColor = Color.black;
             }
             wheel[i].segmentColor = segmentColor;
+            if (wheel[i].segmentColor == Color.black && wheel[i].cashPrize >= largestBlackWedge)
+            {
+                largestBlackWedge = wheel[i].cashPrize;
+                indexOfLargestBlackWedges = i;
+            }
+            else if (wheel[i].segmentColor == Color.red && wheel[i].cashPrize >= largestRedWedge)
+            {
+                largestRedWedge = wheel[i].cashPrize;
+                indexOfLargestRedWedges = i;
+            }
+        }
+
+        // Level up stuff.
+        for (int i = 0; i < DefaultWheelValues.Count; i++)
+        {
+            wheel[i].cashPrize += levelOfAllWedges;
+            if (wheel[i].segmentColor == Color.red)
+            {
+                wheel[i].cashPrize += levelOfAllRedWedges;
+            }
+            else if (wheel[i].segmentColor == Color.black)
+            {
+                wheel[i].cashPrize += levelOfAllBlackWedges;
+            }
+            wheel[i].prizeName = wheel[i].cashPrize.ToString();
         }
         return wheel;
+    }
+
+    public void BuyShopNodeUpgrade(SkillTreeNodeEntry node)
+    {
+        purchasedUpgrades.Add(node.nodeId);
+        levelOfAllWedges += node.increaseLevelOfAllWedges;
+        levelOfAllBlackWedges += node.increaseLevelOfAllBlackWedges;
+        levelOfAllRedWedges += node.increaseLevelOfAllRedWedges;
     }
 
     private void GameOver()

@@ -30,6 +30,12 @@ namespace Wheels
 
         private void Start()
         {
+            FullRebuildWheel();
+        }
+
+        public void FullRebuildWheel()
+        {
+            _segments.Clear();
             _segments.AddRange(Player.Instance.GetWheelSegmentData());
             RebuildWheel();
         }

@@ -2520,6 +2520,9 @@ MonoBehaviour:
   WheelSize: 8
   GlobalWheelLevel: 0
   DefaultWheelValues: 0100000006000000030000000100000002000000010000000600000003000000
+  levelOfAllWedges: 0
+  levelOfAllRedWedges: 0
+  levelOfAllBlackWedges: 0
   HUD_MoneyLabel: {fileID: 254384693}
   HUD_SpinsLeftLabel: {fileID: 1610337640}
   SpinsOnNewGame: 1
@@ -2541,7 +2544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &136595145
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5799,7 +5802,7 @@ PrefabInstance:
       objectReference: {fileID: 1498980399}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayName
-      value: Node 6
+      value: All Black Wedges +3
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.parentNodeId
@@ -5815,11 +5818,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayDescription
-      value: Node 6... the description!
+      value: All black wedges grant +3.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.distanceFromOrigin
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: node.increaseLevelOfAllBlackWedges
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7292,7 +7299,7 @@ PrefabInstance:
       objectReference: {fileID: 1593297839}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayName
-      value: Node 7
+      value: All Red Wedges +3
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.parentNodeId
@@ -7308,7 +7315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayDescription
-      value: Node 7... the description!
+      value: All red wedges grant +3.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.distanceFromOrigin
@@ -12034,11 +12041,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipHeader
-      value: Node 2
+      value: All Wedges +1
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipMessage
-      value: Node 2... the description!
+      value: All wedges grant +1.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -12054,7 +12061,7 @@ PrefabInstance:
       objectReference: {fileID: 1801162697}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayName
-      value: Node 2
+      value: All Wedges +1
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.parentNodeId
@@ -12070,11 +12077,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayDescription
-      value: Node 2... the description!
+      value: All wedges grant +1.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.distanceFromOrigin
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: node.increaseLevelOfAllWedges
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14653,11 +14664,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipHeader
-      value: Node 5
+      value: All Red Wedges +3
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipMessage
-      value: Node 5... the description!
+      value: All red wedges grant +3.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -14673,7 +14684,7 @@ PrefabInstance:
       objectReference: {fileID: 1197921987}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayName
-      value: Node 5
+      value: All Red Wedges +3
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.parentNodeId
@@ -14689,11 +14700,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayDescription
-      value: Node 5... the description!
+      value: All red wedges grant +3.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.distanceFromOrigin
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: node.increaseLevelOfAllRedWedges
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22187,11 +22202,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipHeader
-      value: Node 4
+      value: All Red Wedges +3
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipMessage
-      value: Node 4... the description!
+      value: All red wedges grant +3.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -22207,7 +22222,7 @@ PrefabInstance:
       objectReference: {fileID: 1488773245}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayName
-      value: Node 4
+      value: All Red Wedges +3
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.parentNodeId
@@ -22223,11 +22238,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayDescription
-      value: Node 4... the description!
+      value: All red wedges grant +3.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.distanceFromOrigin
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: node.increaseLevelOfAllRedWedges
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25902,11 +25921,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipHeader
-      value: Node 3
+      value: All Wedges +2
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipMessage
-      value: Node 3... the description!
+      value: All wedges grant +2.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -25922,7 +25941,7 @@ PrefabInstance:
       objectReference: {fileID: 696027575}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayName
-      value: Node 3
+      value: All Wedges +2
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.parentNodeId
@@ -25938,11 +25957,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayDescription
-      value: Node 3... the description!
+      value: All wedges grant +2.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.distanceFromOrigin
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: node.increaseLevelOfAllWedges
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26275,11 +26298,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipHeader
-      value: Node 5
+      value: All Black Wedges +3
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipMessage
-      value: Node 5... the description!
+      value: All black wedges grant +3.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -26295,7 +26318,7 @@ PrefabInstance:
       objectReference: {fileID: 1850365921}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayName
-      value: Node 5
+      value: All Black Wedges +3
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.parentNodeId
@@ -26311,11 +26334,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayDescription
-      value: Node 5... the description!
+      value: All black wedges grant +3.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.distanceFromOrigin
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: node.increaseLevelOfAllBlackWedges
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27807,7 +27834,7 @@ PrefabInstance:
       objectReference: {fileID: 840220737}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayName
-      value: Node 6
+      value: All Red Wedges +3
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.parentNodeId
@@ -27823,11 +27850,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayDescription
-      value: Node 6... the description!
+      value: All red wedges grant +3.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.distanceFromOrigin
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: node.increaseLevelOfAllRedWedges
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32803,11 +32834,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipHeader
-      value: Node 1
+      value: All Wedges +1
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipMessage
-      value: Node 1... the description!
+      value: All wedges grant +1.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -32823,7 +32854,7 @@ PrefabInstance:
       objectReference: {fileID: 208098536}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayName
-      value: Node 1
+      value: All Wedges +1
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.parentNodeId
@@ -32835,10 +32866,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayDescription
-      value: Node 1... the description!
+      value: All wedges grant +1.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.distanceFromOrigin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: node.increaseLevelOfAllWedges
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -33765,11 +33800,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipHeader
-      value: Node 4
+      value: All Black Wedges +2
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipMessage
-      value: Node 4... the description!
+      value: All black wedges grant +2.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -33785,7 +33820,7 @@ PrefabInstance:
       objectReference: {fileID: 1488773245}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayName
-      value: Node 4
+      value: All Black Wedges +2
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.parentNodeId
@@ -33801,11 +33836,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.displayDescription
-      value: Node 4... the description!
+      value: All black wedges grant +2.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.distanceFromOrigin
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: node.increaseLevelOfAllBlackWedges
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

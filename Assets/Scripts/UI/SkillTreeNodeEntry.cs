@@ -22,12 +22,12 @@ public class SkillTreeNodeEntry
     [Tooltip("Cost to purchase this upgrade")]
     public float cost;
 
+    public int distanceFromOrigin = 0;
+
     // Level up effects
     public int increaseLevelOfAllWedges;
     public int increaseLevelOfAllRedWedges;
     public int increaseLevelOfAllBlackWedges;
-
-    public int distanceFromOrigin = 0;
 
     public int GetDefaultCost(int distanceFromOrigin)
     {

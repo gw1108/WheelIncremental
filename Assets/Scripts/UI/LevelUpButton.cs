@@ -2,6 +2,7 @@ using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelUpButton : MonoBehaviour
 {
@@ -15,7 +16,23 @@ public class LevelUpButton : MonoBehaviour
     public const float CellHeight = 100f;
     public const string ButtonsObjectPath = "Screens/ShopScreen/Bg/Buttons";
     public const string LevelUpButtonPrefabPath = "Assets/Prefabs/UI/LevelUpButton.prefab";
+    public const string ButtonNameFormat = "LevelUpButton_node_{0}_{1}";
     public const float LineWidth = 4f;
+    private Button button;
+
+    private void Start()
+    {
+        button = GetComponent<Button>();
+        button.onClick.AddListener(ClickedLevelUpButton);
+    }
+
+    private void ClickedLevelUpButton()
+    {
+        Debug.Log("Clicked level up button!");
+        // set this node as purchased on the player.
+        button.interactable = false;
+        Player.Instance.BuyShopNodeUpgrade(node);
+    }
 
     [HorizontalGroup("Split1", 0.33f)]
     [Button(ButtonSizes.Large)]
@@ -102,6 +119,94 @@ public class LevelUpButton : MonoBehaviour
         if (createdButton != null)
         {
             Selection.activeGameObject = createdButton.gameObject;
+        }
+    }
+
+    [HorizontalGroup("Split4", 0.33f)]
+    [Button(ButtonSizes.Large)]
+    private void UpLeft_Select()
+    {
+        GameObject existingButton = FindButtonsGameObject(node.gridPositionX - 1, node.gridPositionY + 1);
+        if (existingButton != null)
+        {
+            Selection.activeGameObject = existingButton;
+        }
+    }
+
+    [HorizontalGroup("Split4", 0.33f)]
+    [Button(ButtonSizes.Large)]
+    private void Up_Select()
+    {
+        GameObject existingButton = FindButtonsGameObject(node.gridPositionX, node.gridPositionY + 1);
+        if (existingButton != null)
+        {
+            Selection.activeGameObject = existingButton;
+        }
+    }
+
+    [HorizontalGroup("Split4", 0.33f)]
+    [Button(ButtonSizes.Large)]
+    private void UpRight_Select()
+    {
+        GameObject existingButton = FindButtonsGameObject(node.gridPositionX + 1, node.gridPositionY + 1);
+        if (existingButton != null)
+        {
+            Selection.activeGameObject = existingButton;
+        }
+    }
+
+    [HorizontalGroup("Split5", 0.5f)]
+    [Button(ButtonSizes.Large)]
+    private void Left_Select()
+    {
+        GameObject existingButton = FindButtonsGameObject(node.gridPositionX - 1, node.gridPositionY);
+        if (existingButton != null)
+        {
+            Selection.activeGameObject = existingButton;
+        }
+    }
+
+    [HorizontalGroup("Split5", 0.5f)]
+    [Button(ButtonSizes.Large)]
+    private void Right_Select()
+    {
+        GameObject existingButton = FindButtonsGameObject(node.gridPositionX + 1, node.gridPositionY);
+        if (existingButton != null)
+        {
+            Selection.activeGameObject = existingButton;
+        }
+    }
+
+    [HorizontalGroup("Split6", 0.33f)]
+    [Button(ButtonSizes.Large)]
+    private void DownLeft_Select()
+    {
+        GameObject existingButton = FindButtonsGameObject(node.gridPositionX - 1, node.gridPositionY - 1);
+        if (existingButton != null)
+        {
+            Selection.activeGameObject = existingButton;
+        }
+    }
+
+    [HorizontalGroup("Split6", 0.33f)]
+    [Button(ButtonSizes.Large)]
+    private void Down_Select()
+    {
+        GameObject existingButton = FindButtonsGameObject(node.gridPositionX, node.gridPositionY - 1);
+        if (existingButton != null)
+        {
+            Selection.activeGameObject = existingButton;
+        }
+    }
+
+    [HorizontalGroup("Split6", 0.33f)]
+    [Button(ButtonSizes.Large)]
+    private void DownRight_Select()
+    {
+        GameObject existingButton = FindButtonsGameObject(node.gridPositionX + 1, node.gridPositionY - 1);
+        if (existingButton != null)
+        {
+            Selection.activeGameObject = existingButton;
         }
     }
 
@@ -198,6 +303,19 @@ public class LevelUpButton : MonoBehaviour
         foreach (GameObject root in roots)
         {
             Transform found = root.transform.Find(ButtonsObjectPath);
+            if (found != null) return found.gameObject;
+        }
+
+        Debug.LogWarning($"Could not find the 'Buttons' GameObject at path:\n{ButtonsObjectPath}\n\nMake sure the Game scene is loaded.");
+        return null;
+    }
+
+    public static GameObject FindButtonsGameObject(int xCoord, int yCoord)
+    {
+        GameObject[] roots = UnityEngine.SceneManagement.SceneManager.GetActiveScene().GetRootGameObjects();
+        foreach (GameObject root in roots)
+        {
+            Transform found = root.transform.Find(ButtonsObjectPath + "/" + string.Format(ButtonNameFormat, xCoord, yCoord));
             if (found != null) return found.gameObject;
         }
 
