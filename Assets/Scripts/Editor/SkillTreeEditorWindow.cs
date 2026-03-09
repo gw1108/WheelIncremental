@@ -339,10 +339,62 @@ public class SkillTreeEditorWindow : EditorWindow
         if (GUILayout.Button("Import from Scene", GUILayout.Height(32)))
             ImportFromScene();
 
+        if (GUILayout.Button("Sync Tooltips from Data", GUILayout.Height(32)))
+            SyncTooltipsFromData();
+
         EditorGUILayout.HelpBox(
             "\"Generate in Scene\" clears previously generated nodes first, then instantiates fresh ones.\n" +
-            "\"Import from Scene\" reads all LevelUpButton GameObjects currently in the scene and overwrites the SkillTreeData nodes.",
+            "\"Import from Scene\" reads all LevelUpButton GameObjects currently in the scene and overwrites the SkillTreeData nodes.\n" +
+            "\"Sync Tooltips from Data\" updates the Tooltip on every scene LevelUpButton to match the SkillTreeData display name and description.",
             MessageType.None);
+    }
+
+    /// <summary>
+    /// Finds every LevelUpButton under the Buttons container in the active scene
+    /// and sets its Tooltip header/message to match the node's display name and description.
+    /// </summary>
+    private void SyncTooltipsFromData()
+    {
+        GameObject buttonsGO = LevelUpButton.FindButtonsGameObject();
+        if (buttonsGO == null)
+        {
+            return;
+        }
+
+        LevelUpButton[] sceneButtons = buttonsGO.GetComponentsInChildren<LevelUpButton>(includeInactive: true);
+
+        if (sceneButtons.Length == 0)
+        {
+            EditorUtility.DisplayDialog("Sync Tooltips",
+                $"No LevelUpButton components found under '{LevelUpButton.ButtonsObjectPath}'.", "OK");
+            return;
+        }
+
+        int syncedCount = 0;
+        int missingTooltipCount = 0;
+
+        foreach (LevelUpButton levelUpButton in sceneButtons)
+        {
+            Tooltip tooltip = levelUpButton.GetComponent<Tooltip>();
+            if (tooltip == null)
+            {
+                missingTooltipCount++;
+                continue;
+            }
+
+            Undo.RecordObject(tooltip, "Sync Tooltip from SkillTreeData");
+            tooltip.tooltipHeader = levelUpButton.node.displayName;
+            tooltip.tooltipMessage = levelUpButton.node.displayDescription;
+            EditorUtility.SetDirty(tooltip);
+            syncedCount++;
+        }
+
+        EditorSceneManager.MarkSceneDirty(buttonsGO.scene);
+
+        if (missingTooltipCount > 0)
+            Debug.LogWarning($"[SkillTreeEditor] {missingTooltipCount} LevelUpButton(s) had no Tooltip component and were skipped.");
+
+        Debug.Log($"[SkillTreeEditor] Synced tooltips on {syncedCount} LevelUpButton(s) under '{LevelUpButton.ButtonsObjectPath}'.");
     }
 
     // ── Generation logic ─────────────────────────────────────────────────────

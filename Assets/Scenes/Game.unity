@@ -2544,7 +2544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &136595145
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5782,11 +5782,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipHeader
-      value: Node 6
+      value: All Black Wedges +3
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipMessage
-      value: Node 6... the description!
+      value: All black wedges grant +3.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -7279,11 +7279,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipHeader
-      value: Node 7
+      value: All Red Wedges +3
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipMessage
-      value: Node 7... the description!
+      value: All red wedges grant +3.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -27814,11 +27814,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipHeader
-      value: Node 6
+      value: All Red Wedges +3
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipMessage
-      value: Node 6... the description!
+      value: All red wedges grant +3.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost

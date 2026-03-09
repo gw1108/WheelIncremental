@@ -20,10 +20,10 @@ MonoBehaviour:
     gridPositionY: 0
     parentNodeId: 
     cost: 9
+    distanceFromOrigin: 0
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 0
   - nodeId: node_0_1
     displayName: Node 1
     displayDescription: Node 1... the description!
@@ -31,10 +31,10 @@ MonoBehaviour:
     gridPositionY: 1
     parentNodeId: node_0_0
     cost: 10
+    distanceFromOrigin: 1
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 1
   - nodeId: node_1_2
     displayName: Node 2
     displayDescription: Node 2... the description!
@@ -42,10 +42,10 @@ MonoBehaviour:
     gridPositionY: 2
     parentNodeId: node_0_1
     cost: 12
+    distanceFromOrigin: 2
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 2
   - nodeId: node_1_3
     displayName: Node 3
     displayDescription: Node 3... the description!
@@ -53,10 +53,10 @@ MonoBehaviour:
     gridPositionY: 3
     parentNodeId: node_1_2
     cost: 13
+    distanceFromOrigin: 3
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 3
   - nodeId: node_1_4
     displayName: Node 4
     displayDescription: Node 4... the description!
@@ -64,10 +64,10 @@ MonoBehaviour:
     gridPositionY: 4
     parentNodeId: node_1_3
     cost: 15
+    distanceFromOrigin: 4
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 4
   - nodeId: node_0_4
     displayName: Node 5
     displayDescription: Node 5... the description!
@@ -75,10 +75,10 @@ MonoBehaviour:
     gridPositionY: 4
     parentNodeId: node_1_4
     cost: 16
+    distanceFromOrigin: 5
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 5
   - nodeId: node_1_5
     displayName: Node 5
     displayDescription: Node 5... the description!
@@ -86,10 +86,10 @@ MonoBehaviour:
     gridPositionY: 5
     parentNodeId: node_1_4
     cost: 16
+    distanceFromOrigin: 5
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 5
   - nodeId: node_2_2
     displayName: Node 3
     displayDescription: Node 3... the description!
@@ -97,10 +97,10 @@ MonoBehaviour:
     gridPositionY: 2
     parentNodeId: node_1_2
     cost: 13
+    distanceFromOrigin: 3
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 3
   - nodeId: node_2_3
     displayName: Node 4
     displayDescription: Node 4... the description!
@@ -108,10 +108,10 @@ MonoBehaviour:
     gridPositionY: 3
     parentNodeId: node_2_2
     cost: 15
+    distanceFromOrigin: 4
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 4
   - nodeId: node_2_4
     displayName: Node 5
     displayDescription: Node 5... the description!
@@ -119,10 +119,10 @@ MonoBehaviour:
     gridPositionY: 4
     parentNodeId: node_2_3
     cost: 16
+    distanceFromOrigin: 5
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 5
   - nodeId: node_2_5
     displayName: Node 6
     displayDescription: Node 6... the description!
@@ -130,10 +130,10 @@ MonoBehaviour:
     gridPositionY: 5
     parentNodeId: node_2_4
     cost: 18
+    distanceFromOrigin: 6
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 6
   - nodeId: node_2_6
     displayName: Node 7
     displayDescription: Node 7... the description!
@@ -141,10 +141,10 @@ MonoBehaviour:
     gridPositionY: 6
     parentNodeId: node_2_5
     cost: 20
+    distanceFromOrigin: 7
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 7
   - nodeId: node_3_5
     displayName: Node 6
     displayDescription: Node 6... the description!
@@ -152,10 +152,10 @@ MonoBehaviour:
     gridPositionY: 5
     parentNodeId: node_2_4
     cost: 18
+    distanceFromOrigin: 6
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 6
   - nodeId: node_4_6
     displayName: Node 7
     displayDescription: Node 7... the description!
@@ -163,10 +163,10 @@ MonoBehaviour:
     gridPositionY: 6
     parentNodeId: node_3_5
     cost: 20
+    distanceFromOrigin: 7
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 7
   - nodeId: node_4_7
     displayName: Node 8
     displayDescription: Node 8... the description!
@@ -174,10 +174,10 @@ MonoBehaviour:
     gridPositionY: 7
     parentNodeId: node_4_6
     cost: 23
+    distanceFromOrigin: 8
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 8
   - nodeId: node_4_8
     displayName: Node 9
     displayDescription: Node 9... the description!
@@ -185,10 +185,10 @@ MonoBehaviour:
     gridPositionY: 8
     parentNodeId: node_4_7
     cost: 25
+    distanceFromOrigin: 9
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 9
   - nodeId: node_4_9
     displayName: Node 10
     displayDescription: Node 10... the description!
@@ -196,10 +196,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_4_8
     cost: 28
+    distanceFromOrigin: 10
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 10
   - nodeId: node_4_10
     displayName: Node 11
     displayDescription: Node 11... the description!
@@ -207,10 +207,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_4_9
     cost: 32
+    distanceFromOrigin: 11
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 11
   - nodeId: node_4_11
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -218,10 +218,10 @@ MonoBehaviour:
     gridPositionY: 11
     parentNodeId: node_4_10
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_4_12
     displayName: Node 13
     displayDescription: Node 13... the description!
@@ -229,10 +229,10 @@ MonoBehaviour:
     gridPositionY: 12
     parentNodeId: node_4_11
     cost: 39
+    distanceFromOrigin: 13
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 13
   - nodeId: node_5_11
     displayName: Node 13
     displayDescription: Node 13... the description!
@@ -240,10 +240,10 @@ MonoBehaviour:
     gridPositionY: 11
     parentNodeId: node_4_11
     cost: 39
+    distanceFromOrigin: 13
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 13
   - nodeId: node_5_12
     displayName: Node 13
     displayDescription: Node 13... the description!
@@ -251,10 +251,10 @@ MonoBehaviour:
     gridPositionY: 12
     parentNodeId: node_4_11
     cost: 39
+    distanceFromOrigin: 13
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 13
   - nodeId: node_5_10
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -262,10 +262,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_4_10
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_5_9
     displayName: Node 13
     displayDescription: Node 13... the description!
@@ -273,10 +273,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_5_10
     cost: 39
+    distanceFromOrigin: 13
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 13
   - nodeId: node_5_8
     displayName: Node 14
     displayDescription: Node 14... the description!
@@ -284,10 +284,10 @@ MonoBehaviour:
     gridPositionY: 8
     parentNodeId: node_5_9
     cost: 44
+    distanceFromOrigin: 14
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 14
   - nodeId: node_6_10
     displayName: Node 13
     displayDescription: Node 13... the description!
@@ -295,10 +295,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_5_10
     cost: 39
+    distanceFromOrigin: 13
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 13
   - nodeId: node_6_11
     displayName: Node 14
     displayDescription: Node 14... the description!
@@ -306,10 +306,10 @@ MonoBehaviour:
     gridPositionY: 11
     parentNodeId: node_6_10
     cost: 44
+    distanceFromOrigin: 14
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 14
   - nodeId: node_6_12
     displayName: Node 15
     displayDescription: Node 15... the description!
@@ -317,10 +317,10 @@ MonoBehaviour:
     gridPositionY: 12
     parentNodeId: node_6_11
     cost: 49
+    distanceFromOrigin: 15
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 15
   - nodeId: node_7_12
     displayName: Node 15
     displayDescription: Node 15... the description!
@@ -328,10 +328,10 @@ MonoBehaviour:
     gridPositionY: 12
     parentNodeId: node_6_11
     cost: 49
+    distanceFromOrigin: 15
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 15
   - nodeId: node_7_11
     displayName: Node 15
     displayDescription: Node 15... the description!
@@ -339,10 +339,10 @@ MonoBehaviour:
     gridPositionY: 11
     parentNodeId: node_6_11
     cost: 49
+    distanceFromOrigin: 15
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 15
   - nodeId: node_7_10
     displayName: Node 14
     displayDescription: Node 14... the description!
@@ -350,10 +350,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_6_10
     cost: 44
+    distanceFromOrigin: 14
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 14
   - nodeId: node_6_9
     displayName: Node 14
     displayDescription: Node 14... the description!
@@ -361,10 +361,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_6_10
     cost: 44
+    distanceFromOrigin: 14
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 14
   - nodeId: node_7_8
     displayName: Node 15
     displayDescription: Node 15... the description!
@@ -372,10 +372,10 @@ MonoBehaviour:
     gridPositionY: 8
     parentNodeId: node_6_9
     cost: 49
+    distanceFromOrigin: 15
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 15
   - nodeId: node_7_9
     displayName: Node 15
     displayDescription: Node 15... the description!
@@ -383,10 +383,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_6_9
     cost: 49
+    distanceFromOrigin: 15
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 15
   - nodeId: node_5_6
     displayName: Node 8
     displayDescription: Node 8... the description!
@@ -394,10 +394,10 @@ MonoBehaviour:
     gridPositionY: 6
     parentNodeId: node_4_6
     cost: 23
+    distanceFromOrigin: 8
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 8
   - nodeId: node_5_7
     displayName: Node 9
     displayDescription: Node 9... the description!
@@ -405,10 +405,10 @@ MonoBehaviour:
     gridPositionY: 7
     parentNodeId: node_5_6
     cost: 25
+    distanceFromOrigin: 9
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 9
   - nodeId: node_6_7
     displayName: Node 10
     displayDescription: Node 10... the description!
@@ -416,10 +416,10 @@ MonoBehaviour:
     gridPositionY: 7
     parentNodeId: node_5_7
     cost: 28
+    distanceFromOrigin: 10
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 10
   - nodeId: node_6_6
     displayName: Node 9
     displayDescription: Node 9... the description!
@@ -427,10 +427,10 @@ MonoBehaviour:
     gridPositionY: 6
     parentNodeId: node_5_6
     cost: 25
+    distanceFromOrigin: 9
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 9
   - nodeId: node_7_6
     displayName: Node 10
     displayDescription: Node 10... the description!
@@ -438,10 +438,10 @@ MonoBehaviour:
     gridPositionY: 6
     parentNodeId: node_6_6
     cost: 28
+    distanceFromOrigin: 10
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 10
   - nodeId: node_8_6
     displayName: Node 11
     displayDescription: Node 11... the description!
@@ -449,10 +449,10 @@ MonoBehaviour:
     gridPositionY: 6
     parentNodeId: node_7_6
     cost: 32
+    distanceFromOrigin: 11
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 11
   - nodeId: node_8_7
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -460,10 +460,10 @@ MonoBehaviour:
     gridPositionY: 7
     parentNodeId: node_8_6
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_7_7
     displayName: Node 13
     displayDescription: Node 13... the description!
@@ -471,10 +471,10 @@ MonoBehaviour:
     gridPositionY: 7
     parentNodeId: node_8_7
     cost: 39
+    distanceFromOrigin: 13
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 13
   - nodeId: node_9_6
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -482,10 +482,10 @@ MonoBehaviour:
     gridPositionY: 6
     parentNodeId: node_8_6
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_9_7
     displayName: Node 13
     displayDescription: Node 13... the description!
@@ -493,10 +493,10 @@ MonoBehaviour:
     gridPositionY: 7
     parentNodeId: node_9_6
     cost: 39
+    distanceFromOrigin: 13
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 13
   - nodeId: node_10_6
     displayName: Node 13
     displayDescription: Node 13... the description!
@@ -504,10 +504,10 @@ MonoBehaviour:
     gridPositionY: 6
     parentNodeId: node_9_6
     cost: 39
+    distanceFromOrigin: 13
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 13
   - nodeId: node_11_6
     displayName: Node 14
     displayDescription: Node 14... the description!
@@ -515,10 +515,10 @@ MonoBehaviour:
     gridPositionY: 6
     parentNodeId: node_10_6
     cost: 44
+    distanceFromOrigin: 14
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 14
   - nodeId: node_11_7
     displayName: Node 15
     displayDescription: Node 15... the description!
@@ -526,10 +526,10 @@ MonoBehaviour:
     gridPositionY: 7
     parentNodeId: node_11_6
     cost: 49
+    distanceFromOrigin: 15
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 15
   - nodeId: node_10_7
     displayName: Node 14
     displayDescription: Node 14... the description!
@@ -537,10 +537,10 @@ MonoBehaviour:
     gridPositionY: 7
     parentNodeId: node_10_6
     cost: 44
+    distanceFromOrigin: 14
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 14
   - nodeId: node_10_8
     displayName: Node 15
     displayDescription: Node 15... the description!
@@ -548,10 +548,10 @@ MonoBehaviour:
     gridPositionY: 8
     parentNodeId: node_10_7
     cost: 49
+    distanceFromOrigin: 15
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 15
   - nodeId: node_9_8
     displayName: Node 16
     displayDescription: Node 16... the description!
@@ -559,10 +559,10 @@ MonoBehaviour:
     gridPositionY: 8
     parentNodeId: node_10_8
     cost: 55
+    distanceFromOrigin: 16
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 16
   - nodeId: node_8_8
     displayName: Node 17
     displayDescription: Node 17... the description!
@@ -570,10 +570,10 @@ MonoBehaviour:
     gridPositionY: 8
     parentNodeId: node_9_8
     cost: 62
+    distanceFromOrigin: 17
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 17
   - nodeId: node_9_9
     displayName: Node 17
     displayDescription: Node 17... the description!
@@ -581,10 +581,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_9_8
     cost: 62
+    distanceFromOrigin: 17
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 17
   - nodeId: node_8_9
     displayName: Node 18
     displayDescription: Node 18... the description!
@@ -592,10 +592,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_9_9
     cost: 69
+    distanceFromOrigin: 18
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 18
   - nodeId: node_8_10
     displayName: Node 18
     displayDescription: Node 18... the description!
@@ -603,10 +603,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_9_9
     cost: 69
+    distanceFromOrigin: 18
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 18
   - nodeId: node_10_9
     displayName: Node 16
     displayDescription: Node 16... the description!
@@ -614,10 +614,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_10_8
     cost: 55
+    distanceFromOrigin: 16
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 16
   - nodeId: node_11_9
     displayName: Node 17
     displayDescription: Node 17... the description!
@@ -625,10 +625,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_10_9
     cost: 62
+    distanceFromOrigin: 17
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 17
   - nodeId: node_9_10
     displayName: Node 17
     displayDescription: Node 17... the description!
@@ -636,10 +636,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_10_9
     cost: 62
+    distanceFromOrigin: 17
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 17
   - nodeId: node_11_10
     displayName: Node 17
     displayDescription: Node 17... the description!
@@ -647,10 +647,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_10_9
     cost: 62
+    distanceFromOrigin: 17
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 17
   - nodeId: node_10_10
     displayName: Node 17
     displayDescription: Node 17... the description!
@@ -658,10 +658,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_10_9
     cost: 62
+    distanceFromOrigin: 17
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 17
   - nodeId: node_-1_2
     displayName: Node 2
     displayDescription: Node 2... the description!
@@ -669,10 +669,10 @@ MonoBehaviour:
     gridPositionY: 2
     parentNodeId: node_0_1
     cost: 12
+    distanceFromOrigin: 2
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 2
   - nodeId: node_-2_3
     displayName: Node 3
     displayDescription: Node 3... the description!
@@ -680,10 +680,10 @@ MonoBehaviour:
     gridPositionY: 3
     parentNodeId: node_-1_2
     cost: 13
+    distanceFromOrigin: 3
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 3
   - nodeId: node_-3_3
     displayName: Node 4
     displayDescription: Node 4... the description!
@@ -691,10 +691,10 @@ MonoBehaviour:
     gridPositionY: 3
     parentNodeId: node_-2_3
     cost: 15
+    distanceFromOrigin: 4
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 4
   - nodeId: node_-4_3
     displayName: Node 5
     displayDescription: Node 5... the description!
@@ -702,10 +702,10 @@ MonoBehaviour:
     gridPositionY: 3
     parentNodeId: node_-3_3
     cost: 16
+    distanceFromOrigin: 5
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 5
   - nodeId: node_-5_3
     displayName: Node 6
     displayDescription: Node 6... the description!
@@ -713,10 +713,10 @@ MonoBehaviour:
     gridPositionY: 3
     parentNodeId: node_-4_3
     cost: 18
+    distanceFromOrigin: 6
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 6
   - nodeId: node_-6_3
     displayName: Node 7
     displayDescription: Node 7... the description!
@@ -724,10 +724,10 @@ MonoBehaviour:
     gridPositionY: 3
     parentNodeId: node_-5_3
     cost: 20
+    distanceFromOrigin: 7
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 7
   - nodeId: node_-7_3
     displayName: Node 8
     displayDescription: Node 8... the description!
@@ -735,10 +735,10 @@ MonoBehaviour:
     gridPositionY: 3
     parentNodeId: node_-6_3
     cost: 23
+    distanceFromOrigin: 8
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 8
   - nodeId: node_-8_3
     displayName: Node 9
     displayDescription: Node 9... the description!
@@ -746,10 +746,10 @@ MonoBehaviour:
     gridPositionY: 3
     parentNodeId: node_-7_3
     cost: 25
+    distanceFromOrigin: 9
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 9
   - nodeId: node_-9_3
     displayName: Node 10
     displayDescription: Node 10... the description!
@@ -757,10 +757,10 @@ MonoBehaviour:
     gridPositionY: 3
     parentNodeId: node_-8_3
     cost: 28
+    distanceFromOrigin: 10
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 10
   - nodeId: node_-4_4
     displayName: Node 5
     displayDescription: Node 5... the description!
@@ -768,10 +768,10 @@ MonoBehaviour:
     gridPositionY: 4
     parentNodeId: node_-3_3
     cost: 16
+    distanceFromOrigin: 5
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 5
   - nodeId: node_-5_4
     displayName: Node 6
     displayDescription: Node 6... the description!
@@ -779,10 +779,10 @@ MonoBehaviour:
     gridPositionY: 4
     parentNodeId: node_-4_4
     cost: 18
+    distanceFromOrigin: 6
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 6
   - nodeId: node_-6_4
     displayName: Node 7
     displayDescription: Node 7... the description!
@@ -790,10 +790,10 @@ MonoBehaviour:
     gridPositionY: 4
     parentNodeId: node_-5_4
     cost: 20
+    distanceFromOrigin: 7
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 7
   - nodeId: node_-7_4
     displayName: Node 8
     displayDescription: Node 8... the description!
@@ -801,10 +801,10 @@ MonoBehaviour:
     gridPositionY: 4
     parentNodeId: node_-6_4
     cost: 23
+    distanceFromOrigin: 8
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 8
   - nodeId: node_-8_5
     displayName: Node 9
     displayDescription: Node 9... the description!
@@ -812,10 +812,10 @@ MonoBehaviour:
     gridPositionY: 5
     parentNodeId: node_-7_4
     cost: 25
+    distanceFromOrigin: 9
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 9
   - nodeId: node_-9_6
     displayName: Node 10
     displayDescription: Node 10... the description!
@@ -823,10 +823,10 @@ MonoBehaviour:
     gridPositionY: 6
     parentNodeId: node_-8_5
     cost: 28
+    distanceFromOrigin: 10
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 10
   - nodeId: node_-10_6
     displayName: Node 11
     displayDescription: Node 11... the description!
@@ -834,10 +834,10 @@ MonoBehaviour:
     gridPositionY: 6
     parentNodeId: node_-9_6
     cost: 32
+    distanceFromOrigin: 11
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 11
   - nodeId: node_-11_7
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -845,10 +845,10 @@ MonoBehaviour:
     gridPositionY: 7
     parentNodeId: node_-10_6
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_-11_6
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -856,10 +856,10 @@ MonoBehaviour:
     gridPositionY: 6
     parentNodeId: node_-10_6
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_-6_5
     displayName: Node 8
     displayDescription: Node 8... the description!
@@ -867,10 +867,10 @@ MonoBehaviour:
     gridPositionY: 5
     parentNodeId: node_-6_4
     cost: 23
+    distanceFromOrigin: 8
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 8
   - nodeId: node_-7_6
     displayName: Node 9
     displayDescription: Node 9... the description!
@@ -878,10 +878,10 @@ MonoBehaviour:
     gridPositionY: 6
     parentNodeId: node_-6_5
     cost: 25
+    distanceFromOrigin: 9
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 9
   - nodeId: node_-8_7
     displayName: Node 10
     displayDescription: Node 10... the description!
@@ -889,10 +889,10 @@ MonoBehaviour:
     gridPositionY: 7
     parentNodeId: node_-7_6
     cost: 28
+    distanceFromOrigin: 10
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 10
   - nodeId: node_-2_4
     displayName: Node 4
     displayDescription: Node 4... the description!
@@ -900,10 +900,10 @@ MonoBehaviour:
     gridPositionY: 4
     parentNodeId: node_-2_3
     cost: 15
+    distanceFromOrigin: 4
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 4
   - nodeId: node_-3_5
     displayName: Node 5
     displayDescription: Node 5... the description!
@@ -911,10 +911,10 @@ MonoBehaviour:
     gridPositionY: 5
     parentNodeId: node_-2_4
     cost: 16
+    distanceFromOrigin: 5
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 5
   - nodeId: node_-2_5
     displayName: Node 5
     displayDescription: Node 5... the description!
@@ -922,10 +922,10 @@ MonoBehaviour:
     gridPositionY: 5
     parentNodeId: node_-2_4
     cost: 16
+    distanceFromOrigin: 5
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 5
   - nodeId: node_-4_5
     displayName: Node 6
     displayDescription: Node 6... the description!
@@ -933,10 +933,10 @@ MonoBehaviour:
     gridPositionY: 5
     parentNodeId: node_-3_5
     cost: 18
+    distanceFromOrigin: 6
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 6
   - nodeId: node_-5_5
     displayName: Node 7
     displayDescription: Node 7... the description!
@@ -944,10 +944,10 @@ MonoBehaviour:
     gridPositionY: 5
     parentNodeId: node_-4_5
     cost: 20
+    distanceFromOrigin: 7
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 7
   - nodeId: node_-5_6
     displayName: Node 8
     displayDescription: Node 8... the description!
@@ -955,10 +955,10 @@ MonoBehaviour:
     gridPositionY: 6
     parentNodeId: node_-5_5
     cost: 23
+    distanceFromOrigin: 8
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 8
   - nodeId: node_-5_7
     displayName: Node 9
     displayDescription: Node 9... the description!
@@ -966,10 +966,10 @@ MonoBehaviour:
     gridPositionY: 7
     parentNodeId: node_-5_6
     cost: 25
+    distanceFromOrigin: 9
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 9
   - nodeId: node_-6_7
     displayName: Node 10
     displayDescription: Node 10... the description!
@@ -977,10 +977,10 @@ MonoBehaviour:
     gridPositionY: 7
     parentNodeId: node_-5_7
     cost: 28
+    distanceFromOrigin: 10
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 10
   - nodeId: node_-7_7
     displayName: Node 11
     displayDescription: Node 11... the description!
@@ -988,10 +988,10 @@ MonoBehaviour:
     gridPositionY: 7
     parentNodeId: node_-6_7
     cost: 32
+    distanceFromOrigin: 11
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 11
   - nodeId: node_-8_8
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -999,10 +999,10 @@ MonoBehaviour:
     gridPositionY: 8
     parentNodeId: node_-7_7
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_-9_9
     displayName: Node 13
     displayDescription: Node 13... the description!
@@ -1010,10 +1010,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_-8_8
     cost: 39
+    distanceFromOrigin: 13
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 13
   - nodeId: node_-9_10
     displayName: Node 14
     displayDescription: Node 14... the description!
@@ -1021,10 +1021,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_-9_9
     cost: 44
+    distanceFromOrigin: 14
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 14
   - nodeId: node_-8_9
     displayName: Node 13
     displayDescription: Node 13... the description!
@@ -1032,10 +1032,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_-8_8
     cost: 39
+    distanceFromOrigin: 13
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 13
   - nodeId: node_-8_10
     displayName: Node 14
     displayDescription: Node 14... the description!
@@ -1043,10 +1043,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_-8_9
     cost: 44
+    distanceFromOrigin: 14
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 14
   - nodeId: node_-8_11
     displayName: Node 15
     displayDescription: Node 15... the description!
@@ -1054,10 +1054,10 @@ MonoBehaviour:
     gridPositionY: 11
     parentNodeId: node_-8_10
     cost: 49
+    distanceFromOrigin: 15
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 15
   - nodeId: node_-8_12
     displayName: Node 16
     displayDescription: Node 16... the description!
@@ -1065,10 +1065,10 @@ MonoBehaviour:
     gridPositionY: 12
     parentNodeId: node_-8_11
     cost: 55
+    distanceFromOrigin: 16
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 16
   - nodeId: node_-8_13
     displayName: Node 17
     displayDescription: Node 17... the description!
@@ -1076,10 +1076,10 @@ MonoBehaviour:
     gridPositionY: 13
     parentNodeId: node_-8_12
     cost: 62
+    distanceFromOrigin: 17
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 17
   - nodeId: node_-7_8
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -1087,10 +1087,10 @@ MonoBehaviour:
     gridPositionY: 8
     parentNodeId: node_-7_7
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_-7_9
     displayName: Node 13
     displayDescription: Node 13... the description!
@@ -1098,10 +1098,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_-7_8
     cost: 39
+    distanceFromOrigin: 13
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 13
   - nodeId: node_-7_10
     displayName: Node 14
     displayDescription: Node 14... the description!
@@ -1109,10 +1109,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_-7_9
     cost: 44
+    distanceFromOrigin: 14
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 14
   - nodeId: node_-7_11
     displayName: Node 15
     displayDescription: Node 15... the description!
@@ -1120,10 +1120,10 @@ MonoBehaviour:
     gridPositionY: 11
     parentNodeId: node_-7_10
     cost: 49
+    distanceFromOrigin: 15
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 15
   - nodeId: node_-7_12
     displayName: Node 16
     displayDescription: Node 16... the description!
@@ -1131,10 +1131,10 @@ MonoBehaviour:
     gridPositionY: 12
     parentNodeId: node_-7_11
     cost: 55
+    distanceFromOrigin: 16
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 16
   - nodeId: node_-7_13
     displayName: Node 17
     displayDescription: Node 17... the description!
@@ -1142,10 +1142,10 @@ MonoBehaviour:
     gridPositionY: 13
     parentNodeId: node_-7_12
     cost: 62
+    distanceFromOrigin: 17
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 17
   - nodeId: node_-6_8
     displayName: Node 10
     displayDescription: Node 10... the description!
@@ -1153,10 +1153,10 @@ MonoBehaviour:
     gridPositionY: 8
     parentNodeId: node_-5_7
     cost: 28
+    distanceFromOrigin: 10
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 10
   - nodeId: node_-6_9
     displayName: Node 11
     displayDescription: Node 11... the description!
@@ -1164,10 +1164,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_-6_8
     cost: 32
+    distanceFromOrigin: 11
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 11
   - nodeId: node_-6_10
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -1175,10 +1175,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_-6_9
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_-6_11
     displayName: Node 13
     displayDescription: Node 13... the description!
@@ -1186,10 +1186,10 @@ MonoBehaviour:
     gridPositionY: 11
     parentNodeId: node_-6_10
     cost: 39
+    distanceFromOrigin: 13
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 13
   - nodeId: node_-6_12
     displayName: Node 14
     displayDescription: Node 14... the description!
@@ -1197,10 +1197,10 @@ MonoBehaviour:
     gridPositionY: 12
     parentNodeId: node_-6_11
     cost: 44
+    distanceFromOrigin: 14
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 14
   - nodeId: node_-6_13
     displayName: Node 15
     displayDescription: Node 15... the description!
@@ -1208,10 +1208,10 @@ MonoBehaviour:
     gridPositionY: 13
     parentNodeId: node_-6_12
     cost: 49
+    distanceFromOrigin: 15
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 15
   - nodeId: node_-5_8
     displayName: Node 10
     displayDescription: Node 10... the description!
@@ -1219,10 +1219,10 @@ MonoBehaviour:
     gridPositionY: 8
     parentNodeId: node_-5_7
     cost: 28
+    distanceFromOrigin: 10
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 10
   - nodeId: node_-5_9
     displayName: Node 11
     displayDescription: Node 11... the description!
@@ -1230,10 +1230,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_-5_8
     cost: 32
+    distanceFromOrigin: 11
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 11
   - nodeId: node_-5_10
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -1241,10 +1241,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_-5_9
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_-5_11
     displayName: Node 13
     displayDescription: Node 13... the description!
@@ -1252,10 +1252,10 @@ MonoBehaviour:
     gridPositionY: 11
     parentNodeId: node_-5_10
     cost: 39
+    distanceFromOrigin: 13
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 13
   - nodeId: node_-5_12
     displayName: Node 14
     displayDescription: Node 14... the description!
@@ -1263,10 +1263,10 @@ MonoBehaviour:
     gridPositionY: 12
     parentNodeId: node_-5_11
     cost: 44
+    distanceFromOrigin: 14
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 14
   - nodeId: node_-5_13
     displayName: Node 15
     displayDescription: Node 15... the description!
@@ -1274,10 +1274,10 @@ MonoBehaviour:
     gridPositionY: 13
     parentNodeId: node_-5_12
     cost: 49
+    distanceFromOrigin: 15
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 15
   - nodeId: node_-4_6
     displayName: Node 7
     displayDescription: Node 7... the description!
@@ -1285,10 +1285,10 @@ MonoBehaviour:
     gridPositionY: 6
     parentNodeId: node_-4_5
     cost: 20
+    distanceFromOrigin: 7
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 7
   - nodeId: node_-4_7
     displayName: Node 8
     displayDescription: Node 8... the description!
@@ -1296,10 +1296,10 @@ MonoBehaviour:
     gridPositionY: 7
     parentNodeId: node_-4_6
     cost: 23
+    distanceFromOrigin: 8
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 8
   - nodeId: node_-3_6
     displayName: Node 6
     displayDescription: Node 6... the description!
@@ -1307,10 +1307,10 @@ MonoBehaviour:
     gridPositionY: 6
     parentNodeId: node_-3_5
     cost: 18
+    distanceFromOrigin: 6
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 6
   - nodeId: node_-3_7
     displayName: Node 7
     displayDescription: Node 7... the description!
@@ -1318,10 +1318,10 @@ MonoBehaviour:
     gridPositionY: 7
     parentNodeId: node_-3_6
     cost: 20
+    distanceFromOrigin: 7
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 7
   - nodeId: node_-3_8
     displayName: Node 8
     displayDescription: Node 8... the description!
@@ -1329,10 +1329,10 @@ MonoBehaviour:
     gridPositionY: 8
     parentNodeId: node_-3_7
     cost: 23
+    distanceFromOrigin: 8
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 8
   - nodeId: node_-3_9
     displayName: Node 9
     displayDescription: Node 9... the description!
@@ -1340,10 +1340,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_-3_8
     cost: 25
+    distanceFromOrigin: 9
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 9
   - nodeId: node_-3_10
     displayName: Node 10
     displayDescription: Node 10... the description!
@@ -1351,10 +1351,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_-3_9
     cost: 28
+    distanceFromOrigin: 10
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 10
   - nodeId: node_-3_11
     displayName: Node 11
     displayDescription: Node 11... the description!
@@ -1362,10 +1362,10 @@ MonoBehaviour:
     gridPositionY: 11
     parentNodeId: node_-3_10
     cost: 32
+    distanceFromOrigin: 11
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 11
   - nodeId: node_-4_11
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -1373,10 +1373,10 @@ MonoBehaviour:
     gridPositionY: 11
     parentNodeId: node_-3_11
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_-4_10
     displayName: Node 13
     displayDescription: Node 13... the description!
@@ -1384,10 +1384,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_-4_11
     cost: 39
+    distanceFromOrigin: 13
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 13
   - nodeId: node_-4_9
     displayName: Node 14
     displayDescription: Node 14... the description!
@@ -1395,10 +1395,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_-4_10
     cost: 44
+    distanceFromOrigin: 14
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 14
   - nodeId: node_-4_8
     displayName: Node 9
     displayDescription: Node 9... the description!
@@ -1406,10 +1406,10 @@ MonoBehaviour:
     gridPositionY: 8
     parentNodeId: node_-3_8
     cost: 25
+    distanceFromOrigin: 9
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 9
   - nodeId: node_-2_6
     displayName: Node 6
     displayDescription: Node 6... the description!
@@ -1417,10 +1417,10 @@ MonoBehaviour:
     gridPositionY: 6
     parentNodeId: node_-2_5
     cost: 18
+    distanceFromOrigin: 6
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 6
   - nodeId: node_-2_7
     displayName: Node 7
     displayDescription: Node 7... the description!
@@ -1428,10 +1428,10 @@ MonoBehaviour:
     gridPositionY: 7
     parentNodeId: node_-2_6
     cost: 20
+    distanceFromOrigin: 7
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 7
   - nodeId: node_-2_8
     displayName: Node 8
     displayDescription: Node 8... the description!
@@ -1439,10 +1439,10 @@ MonoBehaviour:
     gridPositionY: 8
     parentNodeId: node_-2_7
     cost: 23
+    distanceFromOrigin: 8
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 8
   - nodeId: node_-2_9
     displayName: Node 9
     displayDescription: Node 9... the description!
@@ -1450,10 +1450,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_-2_8
     cost: 25
+    distanceFromOrigin: 9
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 9
   - nodeId: node_-2_10
     displayName: Node 10
     displayDescription: Node 10... the description!
@@ -1461,10 +1461,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_-2_9
     cost: 28
+    distanceFromOrigin: 10
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 10
   - nodeId: node_-2_11
     displayName: Node 11
     displayDescription: Node 11... the description!
@@ -1472,10 +1472,10 @@ MonoBehaviour:
     gridPositionY: 11
     parentNodeId: node_-2_10
     cost: 32
+    distanceFromOrigin: 11
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 11
   - nodeId: node_-2_12
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -1483,10 +1483,10 @@ MonoBehaviour:
     gridPositionY: 12
     parentNodeId: node_-2_11
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_-1_8
     displayName: Node 9
     displayDescription: Node 9... the description!
@@ -1494,10 +1494,10 @@ MonoBehaviour:
     gridPositionY: 8
     parentNodeId: node_-2_8
     cost: 25
+    distanceFromOrigin: 9
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 9
   - nodeId: node_0_8
     displayName: Node 10
     displayDescription: Node 10... the description!
@@ -1505,10 +1505,10 @@ MonoBehaviour:
     gridPositionY: 8
     parentNodeId: node_-1_8
     cost: 28
+    distanceFromOrigin: 10
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 10
   - nodeId: node_1_8
     displayName: Node 11
     displayDescription: Node 11... the description!
@@ -1516,10 +1516,10 @@ MonoBehaviour:
     gridPositionY: 8
     parentNodeId: node_0_8
     cost: 32
+    distanceFromOrigin: 11
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 11
   - nodeId: node_2_8
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -1527,10 +1527,10 @@ MonoBehaviour:
     gridPositionY: 8
     parentNodeId: node_1_8
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_-1_9
     displayName: Node 9
     displayDescription: Node 9... the description!
@@ -1538,10 +1538,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_-2_8
     cost: 25
+    distanceFromOrigin: 9
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 9
   - nodeId: node_0_10
     displayName: Node 10
     displayDescription: Node 10... the description!
@@ -1549,10 +1549,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_-1_9
     cost: 28
+    distanceFromOrigin: 10
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 10
   - nodeId: node_1_11
     displayName: Node 11
     displayDescription: Node 11... the description!
@@ -1560,10 +1560,10 @@ MonoBehaviour:
     gridPositionY: 11
     parentNodeId: node_0_10
     cost: 32
+    distanceFromOrigin: 11
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 11
   - nodeId: node_2_12
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -1571,10 +1571,10 @@ MonoBehaviour:
     gridPositionY: 12
     parentNodeId: node_1_11
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_-1_10
     displayName: Node 10
     displayDescription: Node 10... the description!
@@ -1582,10 +1582,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_-1_9
     cost: 28
+    distanceFromOrigin: 10
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 10
   - nodeId: node_-1_11
     displayName: Node 11
     displayDescription: Node 11... the description!
@@ -1593,10 +1593,10 @@ MonoBehaviour:
     gridPositionY: 11
     parentNodeId: node_-1_10
     cost: 32
+    distanceFromOrigin: 11
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 11
   - nodeId: node_-1_12
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -1604,10 +1604,10 @@ MonoBehaviour:
     gridPositionY: 12
     parentNodeId: node_-1_11
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_0_9
     displayName: Node 10
     displayDescription: Node 10... the description!
@@ -1615,10 +1615,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_-1_9
     cost: 28
+    distanceFromOrigin: 10
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 10
   - nodeId: node_1_9
     displayName: Node 11
     displayDescription: Node 11... the description!
@@ -1626,10 +1626,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_0_9
     cost: 32
+    distanceFromOrigin: 11
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 11
   - nodeId: node_2_9
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -1637,10 +1637,10 @@ MonoBehaviour:
     gridPositionY: 9
     parentNodeId: node_1_9
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_0_11
     displayName: Node 11
     displayDescription: Node 11... the description!
@@ -1648,10 +1648,10 @@ MonoBehaviour:
     gridPositionY: 11
     parentNodeId: node_0_10
     cost: 32
+    distanceFromOrigin: 11
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 11
   - nodeId: node_0_12
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -1659,10 +1659,10 @@ MonoBehaviour:
     gridPositionY: 12
     parentNodeId: node_0_11
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_1_10
     displayName: Node 11
     displayDescription: Node 11... the description!
@@ -1670,10 +1670,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_0_10
     cost: 32
+    distanceFromOrigin: 11
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 11
   - nodeId: node_2_10
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -1681,10 +1681,10 @@ MonoBehaviour:
     gridPositionY: 10
     parentNodeId: node_1_10
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_1_12
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -1692,10 +1692,10 @@ MonoBehaviour:
     gridPositionY: 12
     parentNodeId: node_1_11
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
   - nodeId: node_2_11
     displayName: Node 12
     displayDescription: Node 12... the description!
@@ -1703,7 +1703,7 @@ MonoBehaviour:
     gridPositionY: 11
     parentNodeId: node_1_11
     cost: 35
+    distanceFromOrigin: 12
     increaseLevelOfAllWedges: 0
     increaseLevelOfAllRedWedges: 0
     increaseLevelOfAllBlackWedges: 0
-    distanceFromOrigin: 12
