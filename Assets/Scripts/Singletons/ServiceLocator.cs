@@ -8,15 +8,18 @@ public class ServiceLocator : SingletonMonoBehaviour<ServiceLocator>
 {
     // MonoBehavior backed systems
     // They must self-register
-    //[HideInInspector]
+    //[Sirenix.OdinInspector.ReadOnly]
 
-    [HideInInspector]
+    [Sirenix.OdinInspector.ReadOnly]
     public SaveSystem SaveSystem;
 
-    [HideInInspector]
+    [Sirenix.OdinInspector.ReadOnly]
     public OverlayScreenManager OverlayScreenManager;
 
-    [HideInInspector]
+    [Sirenix.OdinInspector.ReadOnly]
+    public TooltipManager TooltipManager;
+
+    [Sirenix.OdinInspector.ReadOnly]
     public SteamStatsAndAchievements SteamStatsAndAchievements;
 
     #region platformAndSteamRelatedStuff
@@ -134,5 +137,10 @@ public class ServiceLocator : SingletonMonoBehaviour<ServiceLocator>
     public void Register(OverlayScreenManager overlayScreenManager)
     {
         OverlayScreenManager = overlayScreenManager;
+    }
+
+    public void Register(TooltipManager tooltipManager)
+    {
+        TooltipManager = tooltipManager;
     }
 }

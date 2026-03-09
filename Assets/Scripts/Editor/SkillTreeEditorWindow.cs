@@ -18,6 +18,7 @@ public class SkillTreeEditorWindow : EditorWindow
     private const string LineSuffix = "_Line";
 
     // ── Serialized state ────────────────────────────────────────────────────
+    private const string skillTreeDataDefaultPath = "Assets/ScriptableObjects/SkillTreeData";
     private SkillTreeData skillTreeData;
     private bool shouldGenerateDefaultCosts;
     private Color lineColor = new Color(0.9f, 0.8f, 0.2f, 1f);
@@ -376,7 +377,7 @@ public class SkillTreeEditorWindow : EditorWindow
         {
             // Reset distance from origin for later.
             nodeEntry.distanceFromOrigin = -1;
-            CreateLevelUpButton(buttonsGO, levelUpButtonPrefab, nodeEntry, spawnedButtons);
+            LevelUpButton.CreateLevelUpButton(buttonsGO, levelUpButtonPrefab, nodeEntry, spawnedButtons);
         }
 
         foreach (SkillTreeNodeEntry nodeEntry in skillTreeData.nodes)
@@ -439,24 +440,6 @@ public class SkillTreeEditorWindow : EditorWindow
     public static GameObject GetLevelUpButtonPrefab()
     {
         return AssetDatabase.LoadAssetAtPath<GameObject>(LevelUpButton.LevelUpButtonPrefabPath);
-    }
-
-    public static void CreateLevelUpButton(GameObject buttonsGO, GameObject prefab, SkillTreeNodeEntry nodeEntry, Dictionary<string, LevelUpButton> spawnedButtons)
-    {
-        GameObject instance = (GameObject)PrefabUtility.InstantiatePrefab(prefab, buttonsGO.transform);
-        Undo.RegisterCreatedObjectUndo(instance, "Instantiate LevelUpButton");
-        instance.name = $"LevelUpButton_{nodeEntry.nodeId}";
-
-        RectTransform rt = instance.GetComponent<RectTransform>();
-        rt.anchoredPosition = new Vector2(nodeEntry.gridPositionX * LevelUpButton.CellWidth, nodeEntry.gridPositionY * LevelUpButton.CellHeight);
-
-        LevelUpButton levelUpButton = instance.GetComponent<LevelUpButton>();
-        levelUpButton.node = nodeEntry;
-
-        if (spawnedButtons != null)
-        {
-            spawnedButtons[nodeEntry.nodeId] = levelUpButton;
-        }
     }
 
     private void ClearGeneratedNodes()

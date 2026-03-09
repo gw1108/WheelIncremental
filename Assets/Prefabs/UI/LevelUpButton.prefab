@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4794034252780489210}
   - component: {fileID: 3826295180219864053}
   - component: {fileID: 8414354552155600369}
+  - component: {fileID: 3561918661364684484}
   m_Layer: 5
   m_Name: LevelUpButton
   m_TagString: Untagged
@@ -134,6 +135,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a93890a9bb183b4a88976464595cd20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelUpButton
+  parentButton: {fileID: 0}
+  node:
+    nodeId: 
+    displayName: 
+    displayDescription: 
+    gridPositionX: 0
+    gridPositionY: 0
+    parentNodeId: 
+    cost: 0
+    increaseLevelOfAllWedges: 0
+    increaseLevelOfAllRedWedges: 0
+    increaseLevelOfAllBlackWedges: 0
+    distanceFromOrigin: 0
+--- !u!114 &3561918661364684484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811108883193728528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0558862fe4726454db5960da87cd4a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tooltip
+  tooltipMessage: 
+  tooltipHeader: 
 --- !u!1 &5238870906785219654
 GameObject:
   m_ObjectHideFlags: 0

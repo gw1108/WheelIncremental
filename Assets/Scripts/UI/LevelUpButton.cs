@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -129,7 +130,7 @@ public class LevelUpButton : MonoBehaviour
         entry.distanceFromOrigin = node.distanceFromOrigin + 1;
         entry.cost = entry.GetDefaultCost(entry.distanceFromOrigin);
 
-        LevelUpButton button = CreateLevelUpButton(parentOfButtons, prefabToInstantiate, entry);
+        LevelUpButton button = CreateLevelUpButton(parentOfButtons, prefabToInstantiate, entry, null);
         CreateLine(button, this, Color.yellow);
         return button;
     }
@@ -165,7 +166,7 @@ public class LevelUpButton : MonoBehaviour
         rt.offsetMax = Vector2.zero;
     }
 
-    public static LevelUpButton CreateLevelUpButton(GameObject buttonsGO, GameObject prefab, SkillTreeNodeEntry nodeEntry)
+    public static LevelUpButton CreateLevelUpButton(GameObject buttonsGO, GameObject prefab, SkillTreeNodeEntry nodeEntry, Dictionary<string, LevelUpButton> spawnedButtons)
     {
         GameObject instance = (GameObject)PrefabUtility.InstantiatePrefab(prefab, buttonsGO.transform);
         Undo.RegisterCreatedObjectUndo(instance, "Instantiate LevelUpButton");
@@ -176,6 +177,18 @@ public class LevelUpButton : MonoBehaviour
 
         LevelUpButton levelUpButton = instance.GetComponent<LevelUpButton>();
         levelUpButton.node = nodeEntry;
+
+        Tooltip tooltip = instance.GetComponent<Tooltip>();
+        if (tooltip != null)
+        {
+            tooltip.tooltipMessage = nodeEntry.displayDescription;
+            tooltip.tooltipHeader = nodeEntry.displayName;
+        }
+
+        if (spawnedButtons != null)
+        {
+            spawnedButtons[nodeEntry.nodeId] = levelUpButton;
+        }
         return levelUpButton;
     }
 

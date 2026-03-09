@@ -25,8 +25,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 0
   - nodeId: node_0_1
-    displayName: 
-    displayDescription: 
+    displayName: Node 1
+    displayDescription: Node 1... the description!
     gridPositionX: 0
     gridPositionY: 1
     parentNodeId: node_0_0
@@ -36,8 +36,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 1
   - nodeId: node_1_2
-    displayName: 
-    displayDescription: 
+    displayName: Node 2
+    displayDescription: Node 2... the description!
     gridPositionX: 1
     gridPositionY: 2
     parentNodeId: node_0_1
@@ -47,8 +47,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 2
   - nodeId: node_1_3
-    displayName: 
-    displayDescription: 
+    displayName: Node 3
+    displayDescription: Node 3... the description!
     gridPositionX: 1
     gridPositionY: 3
     parentNodeId: node_1_2
@@ -58,8 +58,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 3
   - nodeId: node_1_4
-    displayName: 
-    displayDescription: 
+    displayName: Node 4
+    displayDescription: Node 4... the description!
     gridPositionX: 1
     gridPositionY: 4
     parentNodeId: node_1_3
@@ -69,8 +69,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 4
   - nodeId: node_0_4
-    displayName: 
-    displayDescription: 
+    displayName: Node 5
+    displayDescription: Node 5... the description!
     gridPositionX: 0
     gridPositionY: 4
     parentNodeId: node_1_4
@@ -80,8 +80,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 5
   - nodeId: node_1_5
-    displayName: 
-    displayDescription: 
+    displayName: Node 5
+    displayDescription: Node 5... the description!
     gridPositionX: 1
     gridPositionY: 5
     parentNodeId: node_1_4
@@ -91,8 +91,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 5
   - nodeId: node_2_2
-    displayName: 
-    displayDescription: 
+    displayName: Node 3
+    displayDescription: Node 3... the description!
     gridPositionX: 2
     gridPositionY: 2
     parentNodeId: node_1_2
@@ -102,8 +102,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 3
   - nodeId: node_2_3
-    displayName: 
-    displayDescription: 
+    displayName: Node 4
+    displayDescription: Node 4... the description!
     gridPositionX: 2
     gridPositionY: 3
     parentNodeId: node_2_2
@@ -113,8 +113,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 4
   - nodeId: node_2_4
-    displayName: 
-    displayDescription: 
+    displayName: Node 5
+    displayDescription: Node 5... the description!
     gridPositionX: 2
     gridPositionY: 4
     parentNodeId: node_2_3
@@ -124,8 +124,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 5
   - nodeId: node_2_5
-    displayName: 
-    displayDescription: 
+    displayName: Node 6
+    displayDescription: Node 6... the description!
     gridPositionX: 2
     gridPositionY: 5
     parentNodeId: node_2_4
@@ -135,8 +135,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 6
   - nodeId: node_2_6
-    displayName: 
-    displayDescription: 
+    displayName: Node 7
+    displayDescription: Node 7... the description!
     gridPositionX: 2
     gridPositionY: 6
     parentNodeId: node_2_5
@@ -146,8 +146,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 7
   - nodeId: node_3_5
-    displayName: 
-    displayDescription: 
+    displayName: Node 6
+    displayDescription: Node 6... the description!
     gridPositionX: 3
     gridPositionY: 5
     parentNodeId: node_2_4
@@ -157,8 +157,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 6
   - nodeId: node_4_6
-    displayName: 
-    displayDescription: 
+    displayName: Node 7
+    displayDescription: Node 7... the description!
     gridPositionX: 4
     gridPositionY: 6
     parentNodeId: node_3_5
@@ -168,8 +168,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 7
   - nodeId: node_4_7
-    displayName: 
-    displayDescription: 
+    displayName: Node 8
+    displayDescription: Node 8... the description!
     gridPositionX: 4
     gridPositionY: 7
     parentNodeId: node_4_6
@@ -179,8 +179,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 8
   - nodeId: node_4_8
-    displayName: 
-    displayDescription: 
+    displayName: Node 9
+    displayDescription: Node 9... the description!
     gridPositionX: 4
     gridPositionY: 8
     parentNodeId: node_4_7
@@ -190,8 +190,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 9
   - nodeId: node_4_9
-    displayName: 
-    displayDescription: 
+    displayName: Node 10
+    displayDescription: Node 10... the description!
     gridPositionX: 4
     gridPositionY: 9
     parentNodeId: node_4_8
@@ -201,8 +201,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 10
   - nodeId: node_4_10
-    displayName: 
-    displayDescription: 
+    displayName: Node 11
+    displayDescription: Node 11... the description!
     gridPositionX: 4
     gridPositionY: 10
     parentNodeId: node_4_9
@@ -212,8 +212,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 11
   - nodeId: node_4_11
-    displayName: 
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: 4
     gridPositionY: 11
     parentNodeId: node_4_10
@@ -223,8 +223,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_4_12
-    displayName: 
-    displayDescription: 
+    displayName: Node 13
+    displayDescription: Node 13... the description!
     gridPositionX: 4
     gridPositionY: 12
     parentNodeId: node_4_11
@@ -234,8 +234,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 13
   - nodeId: node_5_11
-    displayName: 
-    displayDescription: 
+    displayName: Node 13
+    displayDescription: Node 13... the description!
     gridPositionX: 5
     gridPositionY: 11
     parentNodeId: node_4_11
@@ -245,8 +245,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 13
   - nodeId: node_5_12
-    displayName: 
-    displayDescription: 
+    displayName: Node 13
+    displayDescription: Node 13... the description!
     gridPositionX: 5
     gridPositionY: 12
     parentNodeId: node_4_11
@@ -256,8 +256,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 13
   - nodeId: node_5_10
-    displayName: 
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: 5
     gridPositionY: 10
     parentNodeId: node_4_10
@@ -267,8 +267,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_5_9
-    displayName: 
-    displayDescription: 
+    displayName: Node 13
+    displayDescription: Node 13... the description!
     gridPositionX: 5
     gridPositionY: 9
     parentNodeId: node_5_10
@@ -278,8 +278,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 13
   - nodeId: node_5_8
-    displayName: 
-    displayDescription: 
+    displayName: Node 14
+    displayDescription: Node 14... the description!
     gridPositionX: 5
     gridPositionY: 8
     parentNodeId: node_5_9
@@ -289,8 +289,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 14
   - nodeId: node_6_10
-    displayName: 
-    displayDescription: 
+    displayName: Node 13
+    displayDescription: Node 13... the description!
     gridPositionX: 6
     gridPositionY: 10
     parentNodeId: node_5_10
@@ -300,8 +300,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 13
   - nodeId: node_6_11
-    displayName: 
-    displayDescription: 
+    displayName: Node 14
+    displayDescription: Node 14... the description!
     gridPositionX: 6
     gridPositionY: 11
     parentNodeId: node_6_10
@@ -311,8 +311,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 14
   - nodeId: node_6_12
-    displayName: 
-    displayDescription: 
+    displayName: Node 15
+    displayDescription: Node 15... the description!
     gridPositionX: 6
     gridPositionY: 12
     parentNodeId: node_6_11
@@ -322,8 +322,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 15
   - nodeId: node_7_12
-    displayName: 
-    displayDescription: 
+    displayName: Node 15
+    displayDescription: Node 15... the description!
     gridPositionX: 7
     gridPositionY: 12
     parentNodeId: node_6_11
@@ -333,8 +333,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 15
   - nodeId: node_7_11
-    displayName: 
-    displayDescription: 
+    displayName: Node 15
+    displayDescription: Node 15... the description!
     gridPositionX: 7
     gridPositionY: 11
     parentNodeId: node_6_11
@@ -344,8 +344,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 15
   - nodeId: node_7_10
-    displayName: 
-    displayDescription: 
+    displayName: Node 14
+    displayDescription: Node 14... the description!
     gridPositionX: 7
     gridPositionY: 10
     parentNodeId: node_6_10
@@ -355,8 +355,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 14
   - nodeId: node_6_9
-    displayName: 
-    displayDescription: 
+    displayName: Node 14
+    displayDescription: Node 14... the description!
     gridPositionX: 6
     gridPositionY: 9
     parentNodeId: node_6_10
@@ -366,8 +366,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 14
   - nodeId: node_7_8
-    displayName: 
-    displayDescription: 
+    displayName: Node 15
+    displayDescription: Node 15... the description!
     gridPositionX: 7
     gridPositionY: 8
     parentNodeId: node_6_9
@@ -377,8 +377,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 15
   - nodeId: node_7_9
-    displayName: 
-    displayDescription: 
+    displayName: Node 15
+    displayDescription: Node 15... the description!
     gridPositionX: 7
     gridPositionY: 9
     parentNodeId: node_6_9
@@ -388,8 +388,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 15
   - nodeId: node_5_6
-    displayName: 
-    displayDescription: 
+    displayName: Node 8
+    displayDescription: Node 8... the description!
     gridPositionX: 5
     gridPositionY: 6
     parentNodeId: node_4_6
@@ -399,8 +399,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 8
   - nodeId: node_5_7
-    displayName: 
-    displayDescription: 
+    displayName: Node 9
+    displayDescription: Node 9... the description!
     gridPositionX: 5
     gridPositionY: 7
     parentNodeId: node_5_6
@@ -410,8 +410,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 9
   - nodeId: node_6_7
-    displayName: 
-    displayDescription: 
+    displayName: Node 10
+    displayDescription: Node 10... the description!
     gridPositionX: 6
     gridPositionY: 7
     parentNodeId: node_5_7
@@ -421,8 +421,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 10
   - nodeId: node_6_6
-    displayName: 
-    displayDescription: 
+    displayName: Node 9
+    displayDescription: Node 9... the description!
     gridPositionX: 6
     gridPositionY: 6
     parentNodeId: node_5_6
@@ -432,8 +432,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 9
   - nodeId: node_7_6
-    displayName: 
-    displayDescription: 
+    displayName: Node 10
+    displayDescription: Node 10... the description!
     gridPositionX: 7
     gridPositionY: 6
     parentNodeId: node_6_6
@@ -443,8 +443,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 10
   - nodeId: node_8_6
-    displayName: 
-    displayDescription: 
+    displayName: Node 11
+    displayDescription: Node 11... the description!
     gridPositionX: 8
     gridPositionY: 6
     parentNodeId: node_7_6
@@ -454,8 +454,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 11
   - nodeId: node_8_7
-    displayName: 
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: 8
     gridPositionY: 7
     parentNodeId: node_8_6
@@ -465,8 +465,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_7_7
-    displayName: 
-    displayDescription: 
+    displayName: Node 13
+    displayDescription: Node 13... the description!
     gridPositionX: 7
     gridPositionY: 7
     parentNodeId: node_8_7
@@ -476,8 +476,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 13
   - nodeId: node_9_6
-    displayName: 
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: 9
     gridPositionY: 6
     parentNodeId: node_8_6
@@ -487,8 +487,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_9_7
-    displayName: 
-    displayDescription: 
+    displayName: Node 13
+    displayDescription: Node 13... the description!
     gridPositionX: 9
     gridPositionY: 7
     parentNodeId: node_9_6
@@ -498,8 +498,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 13
   - nodeId: node_10_6
-    displayName: 
-    displayDescription: 
+    displayName: Node 13
+    displayDescription: Node 13... the description!
     gridPositionX: 10
     gridPositionY: 6
     parentNodeId: node_9_6
@@ -509,8 +509,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 13
   - nodeId: node_11_6
-    displayName: 
-    displayDescription: 
+    displayName: Node 14
+    displayDescription: Node 14... the description!
     gridPositionX: 11
     gridPositionY: 6
     parentNodeId: node_10_6
@@ -520,8 +520,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 14
   - nodeId: node_11_7
-    displayName: 
-    displayDescription: 
+    displayName: Node 15
+    displayDescription: Node 15... the description!
     gridPositionX: 11
     gridPositionY: 7
     parentNodeId: node_11_6
@@ -531,8 +531,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 15
   - nodeId: node_10_7
-    displayName: 
-    displayDescription: 
+    displayName: Node 14
+    displayDescription: Node 14... the description!
     gridPositionX: 10
     gridPositionY: 7
     parentNodeId: node_10_6
@@ -542,8 +542,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 14
   - nodeId: node_10_8
-    displayName: 
-    displayDescription: 
+    displayName: Node 15
+    displayDescription: Node 15... the description!
     gridPositionX: 10
     gridPositionY: 8
     parentNodeId: node_10_7
@@ -553,8 +553,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 15
   - nodeId: node_9_8
-    displayName: 
-    displayDescription: 
+    displayName: Node 16
+    displayDescription: Node 16... the description!
     gridPositionX: 9
     gridPositionY: 8
     parentNodeId: node_10_8
@@ -564,8 +564,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 16
   - nodeId: node_8_8
-    displayName: 
-    displayDescription: 
+    displayName: Node 17
+    displayDescription: Node 17... the description!
     gridPositionX: 8
     gridPositionY: 8
     parentNodeId: node_9_8
@@ -575,8 +575,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 17
   - nodeId: node_9_9
-    displayName: 
-    displayDescription: 
+    displayName: Node 17
+    displayDescription: Node 17... the description!
     gridPositionX: 9
     gridPositionY: 9
     parentNodeId: node_9_8
@@ -586,8 +586,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 17
   - nodeId: node_8_9
-    displayName: 
-    displayDescription: 
+    displayName: Node 18
+    displayDescription: Node 18... the description!
     gridPositionX: 8
     gridPositionY: 9
     parentNodeId: node_9_9
@@ -597,8 +597,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 18
   - nodeId: node_8_10
-    displayName: 
-    displayDescription: 
+    displayName: Node 18
+    displayDescription: Node 18... the description!
     gridPositionX: 8
     gridPositionY: 10
     parentNodeId: node_9_9
@@ -608,8 +608,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 18
   - nodeId: node_10_9
-    displayName: 
-    displayDescription: 
+    displayName: Node 16
+    displayDescription: Node 16... the description!
     gridPositionX: 10
     gridPositionY: 9
     parentNodeId: node_10_8
@@ -619,8 +619,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 16
   - nodeId: node_11_9
-    displayName: 
-    displayDescription: 
+    displayName: Node 17
+    displayDescription: Node 17... the description!
     gridPositionX: 11
     gridPositionY: 9
     parentNodeId: node_10_9
@@ -630,8 +630,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 17
   - nodeId: node_9_10
-    displayName: 
-    displayDescription: 
+    displayName: Node 17
+    displayDescription: Node 17... the description!
     gridPositionX: 9
     gridPositionY: 10
     parentNodeId: node_10_9
@@ -641,8 +641,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 17
   - nodeId: node_11_10
-    displayName: 
-    displayDescription: 
+    displayName: Node 17
+    displayDescription: Node 17... the description!
     gridPositionX: 11
     gridPositionY: 10
     parentNodeId: node_10_9
@@ -652,8 +652,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 17
   - nodeId: node_10_10
-    displayName: 
-    displayDescription: 
+    displayName: Node 17
+    displayDescription: Node 17... the description!
     gridPositionX: 10
     gridPositionY: 10
     parentNodeId: node_10_9
@@ -663,8 +663,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 17
   - nodeId: node_-1_2
-    displayName: 
-    displayDescription: 
+    displayName: Node 2
+    displayDescription: Node 2... the description!
     gridPositionX: -1
     gridPositionY: 2
     parentNodeId: node_0_1
@@ -674,8 +674,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 2
   - nodeId: node_-2_3
-    displayName: 
-    displayDescription: 
+    displayName: Node 3
+    displayDescription: Node 3... the description!
     gridPositionX: -2
     gridPositionY: 3
     parentNodeId: node_-1_2
@@ -685,8 +685,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 3
   - nodeId: node_-3_3
-    displayName: 
-    displayDescription: 
+    displayName: Node 4
+    displayDescription: Node 4... the description!
     gridPositionX: -3
     gridPositionY: 3
     parentNodeId: node_-2_3
@@ -696,8 +696,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 4
   - nodeId: node_-4_3
-    displayName: 
-    displayDescription: 
+    displayName: Node 5
+    displayDescription: Node 5... the description!
     gridPositionX: -4
     gridPositionY: 3
     parentNodeId: node_-3_3
@@ -707,8 +707,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 5
   - nodeId: node_-5_3
-    displayName: 
-    displayDescription: 
+    displayName: Node 6
+    displayDescription: Node 6... the description!
     gridPositionX: -5
     gridPositionY: 3
     parentNodeId: node_-4_3
@@ -718,8 +718,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 6
   - nodeId: node_-6_3
-    displayName: 
-    displayDescription: 
+    displayName: Node 7
+    displayDescription: Node 7... the description!
     gridPositionX: -6
     gridPositionY: 3
     parentNodeId: node_-5_3
@@ -729,8 +729,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 7
   - nodeId: node_-7_3
-    displayName: 
-    displayDescription: 
+    displayName: Node 8
+    displayDescription: Node 8... the description!
     gridPositionX: -7
     gridPositionY: 3
     parentNodeId: node_-6_3
@@ -740,8 +740,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 8
   - nodeId: node_-8_3
-    displayName: 
-    displayDescription: 
+    displayName: Node 9
+    displayDescription: Node 9... the description!
     gridPositionX: -8
     gridPositionY: 3
     parentNodeId: node_-7_3
@@ -751,8 +751,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 9
   - nodeId: node_-9_3
-    displayName: 
-    displayDescription: 
+    displayName: Node 10
+    displayDescription: Node 10... the description!
     gridPositionX: -9
     gridPositionY: 3
     parentNodeId: node_-8_3
@@ -762,8 +762,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 10
   - nodeId: node_-4_4
-    displayName: 
-    displayDescription: 
+    displayName: Node 5
+    displayDescription: Node 5... the description!
     gridPositionX: -4
     gridPositionY: 4
     parentNodeId: node_-3_3
@@ -773,8 +773,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 5
   - nodeId: node_-5_4
-    displayName: 
-    displayDescription: 
+    displayName: Node 6
+    displayDescription: Node 6... the description!
     gridPositionX: -5
     gridPositionY: 4
     parentNodeId: node_-4_4
@@ -784,8 +784,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 6
   - nodeId: node_-6_4
-    displayName: 
-    displayDescription: 
+    displayName: Node 7
+    displayDescription: Node 7... the description!
     gridPositionX: -6
     gridPositionY: 4
     parentNodeId: node_-5_4
@@ -795,8 +795,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 7
   - nodeId: node_-7_4
-    displayName: 
-    displayDescription: 
+    displayName: Node 8
+    displayDescription: Node 8... the description!
     gridPositionX: -7
     gridPositionY: 4
     parentNodeId: node_-6_4
@@ -806,8 +806,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 8
   - nodeId: node_-8_5
-    displayName: 
-    displayDescription: 
+    displayName: Node 9
+    displayDescription: Node 9... the description!
     gridPositionX: -8
     gridPositionY: 5
     parentNodeId: node_-7_4
@@ -817,8 +817,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 9
   - nodeId: node_-9_6
-    displayName: 
-    displayDescription: 
+    displayName: Node 10
+    displayDescription: Node 10... the description!
     gridPositionX: -9
     gridPositionY: 6
     parentNodeId: node_-8_5
@@ -828,8 +828,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 10
   - nodeId: node_-10_6
-    displayName: 
-    displayDescription: 
+    displayName: Node 11
+    displayDescription: Node 11... the description!
     gridPositionX: -10
     gridPositionY: 6
     parentNodeId: node_-9_6
@@ -839,8 +839,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 11
   - nodeId: node_-11_7
-    displayName: 
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: -11
     gridPositionY: 7
     parentNodeId: node_-10_6
@@ -850,8 +850,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_-11_6
-    displayName: 
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: -11
     gridPositionY: 6
     parentNodeId: node_-10_6
@@ -861,8 +861,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_-6_5
-    displayName: 
-    displayDescription: 
+    displayName: Node 8
+    displayDescription: Node 8... the description!
     gridPositionX: -6
     gridPositionY: 5
     parentNodeId: node_-6_4
@@ -872,8 +872,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 8
   - nodeId: node_-7_6
-    displayName: 
-    displayDescription: 
+    displayName: Node 9
+    displayDescription: Node 9... the description!
     gridPositionX: -7
     gridPositionY: 6
     parentNodeId: node_-6_5
@@ -883,8 +883,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 9
   - nodeId: node_-8_7
-    displayName: 
-    displayDescription: 
+    displayName: Node 10
+    displayDescription: Node 10... the description!
     gridPositionX: -8
     gridPositionY: 7
     parentNodeId: node_-7_6
@@ -894,8 +894,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 10
   - nodeId: node_-2_4
-    displayName: 
-    displayDescription: 
+    displayName: Node 4
+    displayDescription: Node 4... the description!
     gridPositionX: -2
     gridPositionY: 4
     parentNodeId: node_-2_3
@@ -905,8 +905,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 4
   - nodeId: node_-3_5
-    displayName: 
-    displayDescription: 
+    displayName: Node 5
+    displayDescription: Node 5... the description!
     gridPositionX: -3
     gridPositionY: 5
     parentNodeId: node_-2_4
@@ -916,8 +916,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 5
   - nodeId: node_-2_5
-    displayName: 
-    displayDescription: 
+    displayName: Node 5
+    displayDescription: Node 5... the description!
     gridPositionX: -2
     gridPositionY: 5
     parentNodeId: node_-2_4
@@ -927,8 +927,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 5
   - nodeId: node_-4_5
-    displayName: 
-    displayDescription: 
+    displayName: Node 6
+    displayDescription: Node 6... the description!
     gridPositionX: -4
     gridPositionY: 5
     parentNodeId: node_-3_5
@@ -938,8 +938,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 6
   - nodeId: node_-5_5
-    displayName: 
-    displayDescription: 
+    displayName: Node 7
+    displayDescription: Node 7... the description!
     gridPositionX: -5
     gridPositionY: 5
     parentNodeId: node_-4_5
@@ -949,8 +949,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 7
   - nodeId: node_-5_6
-    displayName: 
-    displayDescription: 
+    displayName: Node 8
+    displayDescription: Node 8... the description!
     gridPositionX: -5
     gridPositionY: 6
     parentNodeId: node_-5_5
@@ -960,8 +960,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 8
   - nodeId: node_-5_7
-    displayName: 
-    displayDescription: 
+    displayName: Node 9
+    displayDescription: Node 9... the description!
     gridPositionX: -5
     gridPositionY: 7
     parentNodeId: node_-5_6
@@ -971,8 +971,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 9
   - nodeId: node_-6_7
-    displayName: 
-    displayDescription: 
+    displayName: Node 10
+    displayDescription: Node 10... the description!
     gridPositionX: -6
     gridPositionY: 7
     parentNodeId: node_-5_7
@@ -982,8 +982,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 10
   - nodeId: node_-7_7
-    displayName: 
-    displayDescription: 
+    displayName: Node 11
+    displayDescription: Node 11... the description!
     gridPositionX: -7
     gridPositionY: 7
     parentNodeId: node_-6_7
@@ -993,8 +993,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 11
   - nodeId: node_-8_8
-    displayName: 
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: -8
     gridPositionY: 8
     parentNodeId: node_-7_7
@@ -1004,8 +1004,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_-9_9
-    displayName: 
-    displayDescription: 
+    displayName: Node 13
+    displayDescription: Node 13... the description!
     gridPositionX: -9
     gridPositionY: 9
     parentNodeId: node_-8_8
@@ -1015,8 +1015,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 13
   - nodeId: node_-9_10
-    displayName: 
-    displayDescription: 
+    displayName: Node 14
+    displayDescription: Node 14... the description!
     gridPositionX: -9
     gridPositionY: 10
     parentNodeId: node_-9_9
@@ -1026,8 +1026,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 14
   - nodeId: node_-8_9
-    displayName: 
-    displayDescription: 
+    displayName: Node 13
+    displayDescription: Node 13... the description!
     gridPositionX: -8
     gridPositionY: 9
     parentNodeId: node_-8_8
@@ -1037,8 +1037,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 13
   - nodeId: node_-8_10
-    displayName: 
-    displayDescription: 
+    displayName: Node 14
+    displayDescription: Node 14... the description!
     gridPositionX: -8
     gridPositionY: 10
     parentNodeId: node_-8_9
@@ -1048,8 +1048,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 14
   - nodeId: node_-8_11
-    displayName: 
-    displayDescription: 
+    displayName: Node 15
+    displayDescription: Node 15... the description!
     gridPositionX: -8
     gridPositionY: 11
     parentNodeId: node_-8_10
@@ -1059,8 +1059,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 15
   - nodeId: node_-8_12
-    displayName: 
-    displayDescription: 
+    displayName: Node 16
+    displayDescription: Node 16... the description!
     gridPositionX: -8
     gridPositionY: 12
     parentNodeId: node_-8_11
@@ -1070,8 +1070,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 16
   - nodeId: node_-8_13
-    displayName: 
-    displayDescription: 
+    displayName: Node 17
+    displayDescription: Node 17... the description!
     gridPositionX: -8
     gridPositionY: 13
     parentNodeId: node_-8_12
@@ -1081,8 +1081,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 17
   - nodeId: node_-7_8
-    displayName: 
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: -7
     gridPositionY: 8
     parentNodeId: node_-7_7
@@ -1092,8 +1092,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_-7_9
-    displayName: 
-    displayDescription: 
+    displayName: Node 13
+    displayDescription: Node 13... the description!
     gridPositionX: -7
     gridPositionY: 9
     parentNodeId: node_-7_8
@@ -1103,8 +1103,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 13
   - nodeId: node_-7_10
-    displayName: 
-    displayDescription: 
+    displayName: Node 14
+    displayDescription: Node 14... the description!
     gridPositionX: -7
     gridPositionY: 10
     parentNodeId: node_-7_9
@@ -1114,8 +1114,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 14
   - nodeId: node_-7_11
-    displayName: 
-    displayDescription: 
+    displayName: Node 15
+    displayDescription: Node 15... the description!
     gridPositionX: -7
     gridPositionY: 11
     parentNodeId: node_-7_10
@@ -1125,8 +1125,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 15
   - nodeId: node_-7_12
-    displayName: 
-    displayDescription: 
+    displayName: Node 16
+    displayDescription: Node 16... the description!
     gridPositionX: -7
     gridPositionY: 12
     parentNodeId: node_-7_11
@@ -1136,8 +1136,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 16
   - nodeId: node_-7_13
-    displayName: 
-    displayDescription: 
+    displayName: Node 17
+    displayDescription: Node 17... the description!
     gridPositionX: -7
     gridPositionY: 13
     parentNodeId: node_-7_12
@@ -1147,8 +1147,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 17
   - nodeId: node_-6_8
-    displayName: 
-    displayDescription: 
+    displayName: Node 10
+    displayDescription: Node 10... the description!
     gridPositionX: -6
     gridPositionY: 8
     parentNodeId: node_-5_7
@@ -1158,8 +1158,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 10
   - nodeId: node_-6_9
-    displayName: 
-    displayDescription: 
+    displayName: Node 11
+    displayDescription: Node 11... the description!
     gridPositionX: -6
     gridPositionY: 9
     parentNodeId: node_-6_8
@@ -1169,8 +1169,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 11
   - nodeId: node_-6_10
-    displayName: 
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: -6
     gridPositionY: 10
     parentNodeId: node_-6_9
@@ -1180,8 +1180,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_-6_11
-    displayName: 
-    displayDescription: 
+    displayName: Node 13
+    displayDescription: Node 13... the description!
     gridPositionX: -6
     gridPositionY: 11
     parentNodeId: node_-6_10
@@ -1191,8 +1191,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 13
   - nodeId: node_-6_12
-    displayName: 
-    displayDescription: 
+    displayName: Node 14
+    displayDescription: Node 14... the description!
     gridPositionX: -6
     gridPositionY: 12
     parentNodeId: node_-6_11
@@ -1202,8 +1202,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 14
   - nodeId: node_-6_13
-    displayName: 
-    displayDescription: 
+    displayName: Node 15
+    displayDescription: Node 15... the description!
     gridPositionX: -6
     gridPositionY: 13
     parentNodeId: node_-6_12
@@ -1213,8 +1213,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 15
   - nodeId: node_-5_8
-    displayName: 
-    displayDescription: 
+    displayName: Node 10
+    displayDescription: Node 10... the description!
     gridPositionX: -5
     gridPositionY: 8
     parentNodeId: node_-5_7
@@ -1224,8 +1224,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 10
   - nodeId: node_-5_9
-    displayName: 
-    displayDescription: 
+    displayName: Node 11
+    displayDescription: Node 11... the description!
     gridPositionX: -5
     gridPositionY: 9
     parentNodeId: node_-5_8
@@ -1235,8 +1235,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 11
   - nodeId: node_-5_10
-    displayName: 
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: -5
     gridPositionY: 10
     parentNodeId: node_-5_9
@@ -1246,8 +1246,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_-5_11
-    displayName: 
-    displayDescription: 
+    displayName: Node 13
+    displayDescription: Node 13... the description!
     gridPositionX: -5
     gridPositionY: 11
     parentNodeId: node_-5_10
@@ -1257,8 +1257,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 13
   - nodeId: node_-5_12
-    displayName: 
-    displayDescription: 
+    displayName: Node 14
+    displayDescription: Node 14... the description!
     gridPositionX: -5
     gridPositionY: 12
     parentNodeId: node_-5_11
@@ -1268,8 +1268,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 14
   - nodeId: node_-5_13
-    displayName: 
-    displayDescription: 
+    displayName: Node 15
+    displayDescription: Node 15... the description!
     gridPositionX: -5
     gridPositionY: 13
     parentNodeId: node_-5_12
@@ -1279,8 +1279,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 15
   - nodeId: node_-4_6
-    displayName: 
-    displayDescription: 
+    displayName: Node 7
+    displayDescription: Node 7... the description!
     gridPositionX: -4
     gridPositionY: 6
     parentNodeId: node_-4_5
@@ -1290,8 +1290,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 7
   - nodeId: node_-4_7
-    displayName: 
-    displayDescription: 
+    displayName: Node 8
+    displayDescription: Node 8... the description!
     gridPositionX: -4
     gridPositionY: 7
     parentNodeId: node_-4_6
@@ -1301,8 +1301,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 8
   - nodeId: node_-3_6
-    displayName: 
-    displayDescription: 
+    displayName: Node 6
+    displayDescription: Node 6... the description!
     gridPositionX: -3
     gridPositionY: 6
     parentNodeId: node_-3_5
@@ -1312,8 +1312,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 6
   - nodeId: node_-3_7
-    displayName: 
-    displayDescription: 
+    displayName: Node 7
+    displayDescription: Node 7... the description!
     gridPositionX: -3
     gridPositionY: 7
     parentNodeId: node_-3_6
@@ -1323,8 +1323,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 7
   - nodeId: node_-3_8
-    displayName: 
-    displayDescription: 
+    displayName: Node 8
+    displayDescription: Node 8... the description!
     gridPositionX: -3
     gridPositionY: 8
     parentNodeId: node_-3_7
@@ -1334,8 +1334,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 8
   - nodeId: node_-3_9
-    displayName: 
-    displayDescription: 
+    displayName: Node 9
+    displayDescription: Node 9... the description!
     gridPositionX: -3
     gridPositionY: 9
     parentNodeId: node_-3_8
@@ -1345,8 +1345,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 9
   - nodeId: node_-3_10
-    displayName: 
-    displayDescription: 
+    displayName: Node 10
+    displayDescription: Node 10... the description!
     gridPositionX: -3
     gridPositionY: 10
     parentNodeId: node_-3_9
@@ -1356,8 +1356,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 10
   - nodeId: node_-3_11
-    displayName: 
-    displayDescription: 
+    displayName: Node 11
+    displayDescription: Node 11... the description!
     gridPositionX: -3
     gridPositionY: 11
     parentNodeId: node_-3_10
@@ -1367,8 +1367,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 11
   - nodeId: node_-4_11
-    displayName: 
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: -4
     gridPositionY: 11
     parentNodeId: node_-3_11
@@ -1378,8 +1378,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_-4_10
-    displayName: node_-4_10
-    displayDescription: 
+    displayName: Node 13
+    displayDescription: Node 13... the description!
     gridPositionX: -4
     gridPositionY: 10
     parentNodeId: node_-4_11
@@ -1389,8 +1389,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 13
   - nodeId: node_-4_9
-    displayName: node_-4_9
-    displayDescription: 
+    displayName: Node 14
+    displayDescription: Node 14... the description!
     gridPositionX: -4
     gridPositionY: 9
     parentNodeId: node_-4_10
@@ -1400,8 +1400,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 14
   - nodeId: node_-4_8
-    displayName: node_-4_8
-    displayDescription: 
+    displayName: Node 9
+    displayDescription: Node 9... the description!
     gridPositionX: -4
     gridPositionY: 8
     parentNodeId: node_-3_8
@@ -1411,8 +1411,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 9
   - nodeId: node_-2_6
-    displayName: node_-2_6
-    displayDescription: 
+    displayName: Node 6
+    displayDescription: Node 6... the description!
     gridPositionX: -2
     gridPositionY: 6
     parentNodeId: node_-2_5
@@ -1422,8 +1422,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 6
   - nodeId: node_-2_7
-    displayName: node_-2_7
-    displayDescription: 
+    displayName: Node 7
+    displayDescription: Node 7... the description!
     gridPositionX: -2
     gridPositionY: 7
     parentNodeId: node_-2_6
@@ -1433,8 +1433,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 7
   - nodeId: node_-2_8
-    displayName: node_-2_8
-    displayDescription: 
+    displayName: Node 8
+    displayDescription: Node 8... the description!
     gridPositionX: -2
     gridPositionY: 8
     parentNodeId: node_-2_7
@@ -1444,8 +1444,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 8
   - nodeId: node_-2_9
-    displayName: node_-2_9
-    displayDescription: 
+    displayName: Node 9
+    displayDescription: Node 9... the description!
     gridPositionX: -2
     gridPositionY: 9
     parentNodeId: node_-2_8
@@ -1455,8 +1455,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 9
   - nodeId: node_-2_10
-    displayName: node_-2_10
-    displayDescription: 
+    displayName: Node 10
+    displayDescription: Node 10... the description!
     gridPositionX: -2
     gridPositionY: 10
     parentNodeId: node_-2_9
@@ -1466,8 +1466,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 10
   - nodeId: node_-2_11
-    displayName: node_-2_11
-    displayDescription: 
+    displayName: Node 11
+    displayDescription: Node 11... the description!
     gridPositionX: -2
     gridPositionY: 11
     parentNodeId: node_-2_10
@@ -1477,8 +1477,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 11
   - nodeId: node_-2_12
-    displayName: node_-2_12
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: -2
     gridPositionY: 12
     parentNodeId: node_-2_11
@@ -1488,8 +1488,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_-1_8
-    displayName: node_-1_8
-    displayDescription: 
+    displayName: Node 9
+    displayDescription: Node 9... the description!
     gridPositionX: -1
     gridPositionY: 8
     parentNodeId: node_-2_8
@@ -1499,8 +1499,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 9
   - nodeId: node_0_8
-    displayName: node_0_8
-    displayDescription: 
+    displayName: Node 10
+    displayDescription: Node 10... the description!
     gridPositionX: 0
     gridPositionY: 8
     parentNodeId: node_-1_8
@@ -1510,8 +1510,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 10
   - nodeId: node_1_8
-    displayName: node_1_8
-    displayDescription: 
+    displayName: Node 11
+    displayDescription: Node 11... the description!
     gridPositionX: 1
     gridPositionY: 8
     parentNodeId: node_0_8
@@ -1521,8 +1521,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 11
   - nodeId: node_2_8
-    displayName: node_2_8
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: 2
     gridPositionY: 8
     parentNodeId: node_1_8
@@ -1532,8 +1532,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_-1_9
-    displayName: node_-1_9
-    displayDescription: 
+    displayName: Node 9
+    displayDescription: Node 9... the description!
     gridPositionX: -1
     gridPositionY: 9
     parentNodeId: node_-2_8
@@ -1543,8 +1543,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 9
   - nodeId: node_0_10
-    displayName: node_0_10
-    displayDescription: 
+    displayName: Node 10
+    displayDescription: Node 10... the description!
     gridPositionX: 0
     gridPositionY: 10
     parentNodeId: node_-1_9
@@ -1554,8 +1554,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 10
   - nodeId: node_1_11
-    displayName: node_1_11
-    displayDescription: 
+    displayName: Node 11
+    displayDescription: Node 11... the description!
     gridPositionX: 1
     gridPositionY: 11
     parentNodeId: node_0_10
@@ -1565,8 +1565,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 11
   - nodeId: node_2_12
-    displayName: node_2_12
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: 2
     gridPositionY: 12
     parentNodeId: node_1_11
@@ -1576,8 +1576,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_-1_10
-    displayName: node_-1_10
-    displayDescription: 
+    displayName: Node 10
+    displayDescription: Node 10... the description!
     gridPositionX: -1
     gridPositionY: 10
     parentNodeId: node_-1_9
@@ -1587,8 +1587,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 10
   - nodeId: node_-1_11
-    displayName: node_-1_11
-    displayDescription: 
+    displayName: Node 11
+    displayDescription: Node 11... the description!
     gridPositionX: -1
     gridPositionY: 11
     parentNodeId: node_-1_10
@@ -1598,8 +1598,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 11
   - nodeId: node_-1_12
-    displayName: node_-1_12
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: -1
     gridPositionY: 12
     parentNodeId: node_-1_11
@@ -1609,8 +1609,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_0_9
-    displayName: node_0_9
-    displayDescription: 
+    displayName: Node 10
+    displayDescription: Node 10... the description!
     gridPositionX: 0
     gridPositionY: 9
     parentNodeId: node_-1_9
@@ -1620,8 +1620,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 10
   - nodeId: node_1_9
-    displayName: node_1_9
-    displayDescription: 
+    displayName: Node 11
+    displayDescription: Node 11... the description!
     gridPositionX: 1
     gridPositionY: 9
     parentNodeId: node_0_9
@@ -1631,8 +1631,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 11
   - nodeId: node_2_9
-    displayName: node_2_9
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: 2
     gridPositionY: 9
     parentNodeId: node_1_9
@@ -1642,8 +1642,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_0_11
-    displayName: node_0_11
-    displayDescription: 
+    displayName: Node 11
+    displayDescription: Node 11... the description!
     gridPositionX: 0
     gridPositionY: 11
     parentNodeId: node_0_10
@@ -1653,8 +1653,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 11
   - nodeId: node_0_12
-    displayName: node_0_12
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: 0
     gridPositionY: 12
     parentNodeId: node_0_11
@@ -1664,8 +1664,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_1_10
-    displayName: node_1_10
-    displayDescription: 
+    displayName: Node 11
+    displayDescription: Node 11... the description!
     gridPositionX: 1
     gridPositionY: 10
     parentNodeId: node_0_10
@@ -1675,8 +1675,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 11
   - nodeId: node_2_10
-    displayName: node_2_10
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: 2
     gridPositionY: 10
     parentNodeId: node_1_10
@@ -1686,8 +1686,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_1_12
-    displayName: node_1_12
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: 1
     gridPositionY: 12
     parentNodeId: node_1_11
@@ -1697,8 +1697,8 @@ MonoBehaviour:
     increaseLevelOfAllBlackWedges: 0
     distanceFromOrigin: 12
   - nodeId: node_2_11
-    displayName: node_2_11
-    displayDescription: 
+    displayName: Node 12
+    displayDescription: Node 12... the description!
     gridPositionX: 2
     gridPositionY: 11
     parentNodeId: node_1_11
