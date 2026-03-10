@@ -476,6 +476,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +30% multi on blue accumulator
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 20
@@ -737,6 +741,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +50% of red betting pool added to wedge prize
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 28
@@ -869,6 +877,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +15% multi on purple accumulator
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -1067,6 +1079,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +30 to purple accumulator per spin.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 13
@@ -1264,6 +1280,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% multi when landing on any accumulator.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 15
@@ -1396,6 +1416,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: All Black Wedges +2
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -1702,6 +1726,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: Shared Betting Pool
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +25% of red betting pool added to wedge prize
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 23
@@ -1967,6 +1999,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% of the round's earnings are copied to the purple accumulator when
+        landing on a non-accumulator.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 20
@@ -2172,6 +2209,14 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: Extra Black Bet
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10 to black bet pool
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -2483,6 +2528,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +2% increased global multi
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 16
@@ -2615,6 +2664,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +20% multi when betting on black
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -2888,6 +2941,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +1% permanent global multi when betting on black
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -3483,6 +3540,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: Red Bet Multi
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +5% multi on red bets
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 20
@@ -3619,6 +3684,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +50 bankruptcy insurance for purple accumulator.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -3816,6 +3885,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: High wedges grant +10
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -4147,6 +4220,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +2 Bankruptcy insurance.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 12
@@ -4403,6 +4480,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10 to all accumulators per spin.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -5093,6 +5174,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +35% bankruptcy insurance for the blue accumulator.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 23
@@ -5353,6 +5438,14 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: Red Multi
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% multi on red wedges.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -5785,6 +5878,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: Black high wedges grant +20
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 32
@@ -5922,6 +6019,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% multi on high black wedge
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -6344,6 +6445,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: Multi on Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +15% multi on red.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 23
@@ -6481,6 +6590,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +25% bet multi for all colors
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 25
@@ -6613,6 +6726,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10 to all wedges. Wheel is faster.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -6750,6 +6867,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +8% increased global multi
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -6947,6 +7068,14 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: All Bets Everywhere
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: Red bet multi applies to multi
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -7148,6 +7277,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +8% increased global multi
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -7474,6 +7607,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +50% bet multi for all colors
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 28
@@ -7607,6 +7744,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +30 to purple accumulator per spin.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 15
@@ -7739,6 +7880,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +100 bankruptcy insurance for purple accumulator.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -8170,6 +8315,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: All wedges grant +2.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 16
@@ -8302,6 +8451,11 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: Unlocks purple accumulator wedge. Each spin add $10 to the purple accumulator.
+        Collect all earnings on landing on it.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -8625,6 +8779,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +5% increased global multi
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 20
@@ -8757,6 +8915,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +15% multi for all wedges
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -8954,6 +9116,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +1% increased global multi
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -9536,6 +9702,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +8 cash if you end the round without bankruptcy.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 16
@@ -9961,6 +10131,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: Bankruptcy Insurance
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +1 Bankruptcy insurance. Gain 1$ when going bankrupt for each bankruptcy
+        insurance.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 10
@@ -10094,6 +10273,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: All wedges grant +2.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -10307,6 +10490,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +15% multi on purple accumulator.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 18
@@ -10439,6 +10626,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +2% multi per spin
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -10573,6 +10764,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +20% multi when landing on any accumulator.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 16
@@ -10705,6 +10900,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +5% multi for all wedges
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -10967,6 +11166,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +2% increased global multi
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 15
@@ -11163,6 +11366,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +2% multi per spin
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -11361,6 +11568,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +2 cash if you end the round without bankruptcy.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 13
@@ -11558,6 +11769,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: Spinning ball also counts for bets.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 20
@@ -11746,6 +11961,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +20% multi on blue accumulator
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -11943,6 +12162,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +1 spin
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -12437,6 +12660,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% multi when landing on any accumulator.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -13335,6 +13562,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +1 spin
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 13
@@ -13724,6 +13955,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +1% global multi per spin
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 18
@@ -13985,6 +14220,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% multi on black
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 23
@@ -14208,6 +14447,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +5% multi per spin
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -14671,6 +14914,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +25% bankruptcy insurance for the blue accumulator.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 18
@@ -14867,6 +15114,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% multi for all wedges
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -15260,6 +15511,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: Unlocks blue accumulator wedge. Failed bets are instead multiplied by
+        1.2 and moved to the blue wedge for later collection.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 15
@@ -15394,6 +15650,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% bankruptcy insurance for the blue accumulator.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 16
@@ -15527,6 +15787,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +15% bet multi for all colors
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 23
@@ -15659,6 +15923,14 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: Black Multi
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% multi on black
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -15972,6 +16244,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: Spinning ball cannot cause bankruptcy.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 15
@@ -16169,6 +16445,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10 to all accumulators per spin.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 12
@@ -16301,6 +16581,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: All Black Wedges +4
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -16435,6 +16719,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +2% global multi per spin
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 20
@@ -16568,6 +16856,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: Wheel is even slower.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 15
@@ -16696,6 +16988,14 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: Extra Black Bet
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +20 to black bet pool
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -16897,6 +17197,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +45 to purple accumulator per spin.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -17360,6 +17664,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: Multi on Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +12% multi on red.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 18
@@ -17731,6 +18043,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +20% blue accumulator pool per spin.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 23
@@ -17990,11 +18306,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipHeader
-      value: All Red Wedges +3
+      value: Place your bets
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipMessage
-      value: All red wedges grant +3.
+      value: You can now bet on red or black. Receive 1.25x your bet if it lands
+        on your color.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -18152,6 +18469,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +1 spin
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -18462,6 +18783,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: Unlock a spinning ball
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 18
@@ -18723,6 +19048,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% bet multi for all colors
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 20
@@ -18855,6 +19184,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +15% Bankruptcy insurance.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -18989,6 +19322,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% Bankruptcy insurance.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 16
@@ -19122,6 +19459,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +1% increased global multi
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 13
@@ -19254,6 +19595,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +13% multi on high red wedge
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -19525,6 +19870,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: Black Safety
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +40% insurance when betting on black
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 23
@@ -19790,6 +20143,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: Red Multi
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% multi on red wedges.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 20
@@ -19991,6 +20352,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: Multi on Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +12% multi on red.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 20
@@ -20191,6 +20560,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: Timestop costs -1 spin.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -20453,6 +20826,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% of the round's earnings are copied to the purple accumulator when
+        landing on a non-accumulator.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 18
@@ -20587,6 +20965,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +2 spin
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 18
@@ -20719,6 +21101,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +15% blue accumulator pool per spin.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -20913,6 +21299,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: Red high wedges grant +9
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 28
@@ -21051,6 +21441,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +60 to purple accumulator per spin.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 18
@@ -21183,6 +21577,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: All wedges grant +2.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -21458,6 +21856,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: High wedges grant +4
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 20
@@ -21587,6 +21989,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +4 Bankruptcy insurance.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 13
@@ -21715,6 +22121,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: High wedges grant +4
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -22073,6 +22483,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: Red Bet Multi
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% multi on red bets
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 23
@@ -22337,6 +22755,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +25% multi on purple accumulator.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -22928,6 +23350,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +13% multi on high red wedge
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 28
@@ -23439,6 +23865,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: High wedges grant +4
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -23989,6 +24419,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10 to all wedges. Wheel is faster.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 15
@@ -24126,6 +24560,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +20% of the round's earnings are copied to the purple accumulator when
+        landing on a non-accumulator.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 23
@@ -24260,6 +24699,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +15% Bankruptcy insurance.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 20
@@ -24393,6 +24836,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% multi on blue accumulator
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 16
@@ -24525,6 +24972,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +25% of red betting pool added to wedge prize
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -24787,6 +25238,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +200 bankruptcy insurance for purple accumulator.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 18
@@ -25029,6 +25484,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% multi on any high wedge
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 23
@@ -25161,6 +25620,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +16% multi on black
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -25295,6 +25758,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +7% multi for all wedges
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 16
@@ -25427,6 +25894,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: High wedges grant +4
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -25621,6 +26092,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: Timestop costs -1 spin.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 12
@@ -25754,6 +26229,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +15% global multi for the last spin
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 28
@@ -25886,6 +26365,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: Black high wedges grant +10
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -26084,6 +26567,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% blue accumulator pool per spin.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 18
@@ -26215,11 +26702,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipHeader
-      value: Node 8
+      value: All Red Wedges +5
       objectReference: {fileID: 0}
     - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: tooltipMessage
-      value: Node 8... the description!
+      value: All red wedges grant +5.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -26586,6 +27073,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10 Bankruptcy insurance.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 15
@@ -26945,6 +27436,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +5% increased global multi
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 18
@@ -27141,6 +27636,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: Unlock timestop. Stop the wheel early with spacebar. Costs 3 spins.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -27399,6 +27898,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: All Black Wedges +4
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 18
@@ -27596,6 +28099,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: Black high wedges grant +10
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 28
@@ -27728,6 +28235,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +20% multi on any high wedge
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -27926,6 +28437,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +15% increased global multi
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 28
@@ -28122,6 +28637,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: All Black Wedges +8
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -28382,6 +28901,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +1% global multi per spin
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 16
@@ -28514,6 +29037,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +20% multi when betting on black
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -28834,6 +29361,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% multi on black
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 20
@@ -28966,6 +29497,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +0.5% permanent global multi when going bankrupt.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -29223,6 +29758,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: Red high wedges grant +9
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -29626,6 +30165,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: Wheel is slower.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 13
@@ -29883,6 +30426,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +4 cash if you end the round without bankruptcy.
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 15
@@ -30016,6 +30563,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% multi on high black wedge
+      objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
       value: 32
@@ -30148,6 +30699,14 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipHeader
+      value: Red Bet Multi
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +15% multi on red bets
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -30413,6 +30972,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +10% global multi for the last spin
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost
@@ -30738,6 +31301,10 @@ PrefabInstance:
     - target: {fileID: 2006432799597606901, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561918661364684484, guid: 24002be93114b4c44af28d2563382e76, type: 3}
+      propertyPath: tooltipMessage
+      value: +30% bankruptcy insurance for the blue accumulator.
       objectReference: {fileID: 0}
     - target: {fileID: 8414354552155600369, guid: 24002be93114b4c44af28d2563382e76, type: 3}
       propertyPath: node.cost

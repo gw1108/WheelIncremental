@@ -1,155 +1,135 @@
-nodeId,displayName,displayDescription,gridPositionX,gridPositionY,parentNodeId,cost,increaseLevelOfAllWedges,increaseLevelOfAllRedWedges,increaseLevelOfAllBlackWedges,distanceFromOrigin
+﻿nodeId,displayName,displayDescription,gridPositionX,gridPositionY,parentNodeId,cost,increaseLevelOfAllWedges,increaseLevelOfAllRedWedges,increaseLevelOfAllBlackWedges,distanceFromOrigin
 node_0_0,The beginning,Start your wheel spinning journey.,0,0,,9,0,0,0,0
-node_0_1,Node 1,Node 1... the description!,0,1,node_0_0,10,0,0,0,1
-node_1_2,Node 2,Node 2... the description!,1,2,node_0_1,12,0,0,0,2
-node_1_3,Node 3,Node 3... the description!,1,3,node_1_2,13,0,0,0,3
-node_1_4,Node 4,Node 4... the description!,1,4,node_1_3,15,0,0,0,4
-node_0_4,Node 5,Node 5... the description!,0,4,node_1_4,16,0,0,0,5
-node_1_5,Node 5,Node 5... the description!,1,5,node_1_4,16,0,0,0,5
-node_2_2,Node 3,Node 3... the description!,2,2,node_1_2,13,0,0,0,3
-node_2_3,Node 4,Node 4... the description!,2,3,node_2_2,15,0,0,0,4
-node_2_4,Node 5,Node 5... the description!,2,4,node_2_3,16,0,0,0,5
-node_2_5,Node 6,Node 6... the description!,2,5,node_2_4,18,0,0,0,6
-node_2_6,Node 7,Node 7... the description!,2,6,node_2_5,20,0,0,0,7
-node_3_5,Node 6,Node 6... the description!,3,5,node_2_4,18,0,0,0,6
-node_4_6,Node 7,Node 7... the description!,4,6,node_3_5,20,0,0,0,7
-node_4_7,Node 8,Node 8... the description!,4,7,node_4_6,23,0,0,0,8
-node_4_8,Node 9,Node 9... the description!,4,8,node_4_7,25,0,0,0,9
-node_4_9,Node 10,Node 10... the description!,4,9,node_4_8,28,0,0,0,10
-node_4_10,Node 11,Node 11... the description!,4,10,node_4_9,32,0,0,0,11
-node_4_11,Node 12,Node 12... the description!,4,11,node_4_10,35,0,0,0,12
-node_4_12,Node 13,Node 13... the description!,4,12,node_4_11,39,0,0,0,13
-node_5_11,Node 13,Node 13... the description!,5,11,node_4_11,39,0,0,0,13
-node_5_12,Node 13,Node 13... the description!,5,12,node_4_11,39,0,0,0,13
-node_5_10,Node 12,Node 12... the description!,5,10,node_4_10,35,0,0,0,12
-node_5_9,Node 13,Node 13... the description!,5,9,node_5_10,39,0,0,0,13
-node_5_8,Node 14,Node 14... the description!,5,8,node_5_9,44,0,0,0,14
-node_6_10,Node 13,Node 13... the description!,6,10,node_5_10,39,0,0,0,13
-node_6_11,Node 14,Node 14... the description!,6,11,node_6_10,44,0,0,0,14
-node_6_12,Node 15,Node 15... the description!,6,12,node_6_11,49,0,0,0,15
-node_7_12,Node 15,Node 15... the description!,7,12,node_6_11,49,0,0,0,15
-node_7_11,Node 15,Node 15... the description!,7,11,node_6_11,49,0,0,0,15
-node_7_10,Node 14,Node 14... the description!,7,10,node_6_10,44,0,0,0,14
-node_6_9,Node 14,Node 14... the description!,6,9,node_6_10,44,0,0,0,14
-node_7_8,Node 15,Node 15... the description!,7,8,node_6_9,49,0,0,0,15
-node_7_9,Node 15,Node 15... the description!,7,9,node_6_9,49,0,0,0,15
-node_5_6,Node 8,Node 8... the description!,5,6,node_4_6,23,0,0,0,8
-node_5_7,Node 9,Node 9... the description!,5,7,node_5_6,25,0,0,0,9
-node_6_7,Node 10,Node 10... the description!,6,7,node_5_7,28,0,0,0,10
-node_6_6,Node 9,Node 9... the description!,6,6,node_5_6,25,0,0,0,9
-node_7_6,Node 10,Node 10... the description!,7,6,node_6_6,28,0,0,0,10
-node_8_6,Node 11,Node 11... the description!,8,6,node_7_6,32,0,0,0,11
-node_8_7,Node 12,Node 12... the description!,8,7,node_8_6,35,0,0,0,12
-node_7_7,Node 13,Node 13... the description!,7,7,node_8_7,39,0,0,0,13
-node_9_6,Node 12,Node 12... the description!,9,6,node_8_6,35,0,0,0,12
-node_9_7,Node 13,Node 13... the description!,9,7,node_9_6,39,0,0,0,13
-node_10_6,Node 13,Node 13... the description!,10,6,node_9_6,39,0,0,0,13
-node_11_6,Node 14,Node 14... the description!,11,6,node_10_6,44,0,0,0,14
-node_11_7,Node 15,Node 15... the description!,11,7,node_11_6,49,0,0,0,15
-node_10_7,Node 14,Node 14... the description!,10,7,node_10_6,44,0,0,0,14
-node_10_8,Node 15,Node 15... the description!,10,8,node_10_7,49,0,0,0,15
-node_9_8,Node 16,Node 16... the description!,9,8,node_10_8,55,0,0,0,16
-node_8_8,Node 17,Node 17... the description!,8,8,node_9_8,62,0,0,0,17
-node_9_9,Node 17,Node 17... the description!,9,9,node_9_8,62,0,0,0,17
-node_8_9,Node 18,Node 18... the description!,8,9,node_9_9,69,0,0,0,18
-node_8_10,Node 18,Node 18... the description!,8,10,node_9_9,69,0,0,0,18
-node_10_9,Node 16,Node 16... the description!,10,9,node_10_8,55,0,0,0,16
-node_11_9,Node 17,Node 17... the description!,11,9,node_10_9,62,0,0,0,17
-node_9_10,Node 17,Node 17... the description!,9,10,node_10_9,62,0,0,0,17
-node_11_10,Node 17,Node 17... the description!,11,10,node_10_9,62,0,0,0,17
-node_10_10,Node 17,Node 17... the description!,10,10,node_10_9,62,0,0,0,17
-node_-1_2,Node 2,Node 2... the description!,-1,2,node_0_1,12,0,0,0,2
-node_-2_3,Node 3,Node 3... the description!,-2,3,node_-1_2,13,0,0,0,3
-node_-3_3,Node 4,Node 4... the description!,-3,3,node_-2_3,15,0,0,0,4
-node_-4_3,Node 5,Node 5... the description!,-4,3,node_-3_3,16,0,0,0,5
-node_-5_3,Node 6,Node 6... the description!,-5,3,node_-4_3,18,0,0,0,6
-node_-6_3,Node 7,Node 7... the description!,-6,3,node_-5_3,20,0,0,0,7
-node_-7_3,Node 8,Node 8... the description!,-7,3,node_-6_3,23,0,0,0,8
-node_-8_3,Node 9,Node 9... the description!,-8,3,node_-7_3,25,0,0,0,9
-node_-9_3,Node 10,Node 10... the description!,-9,3,node_-8_3,28,0,0,0,10
-node_-4_4,Node 5,Node 5... the description!,-4,4,node_-3_3,16,0,0,0,5
-node_-5_4,Node 6,Node 6... the description!,-5,4,node_-4_4,18,0,0,0,6
-node_-6_4,Node 7,Node 7... the description!,-6,4,node_-5_4,20,0,0,0,7
-node_-7_4,Node 8,Node 8... the description!,-7,4,node_-6_4,23,0,0,0,8
-node_-8_5,Node 9,Node 9... the description!,-8,5,node_-7_4,25,0,0,0,9
-node_-9_6,Node 10,Node 10... the description!,-9,6,node_-8_5,28,0,0,0,10
-node_-10_6,Node 11,Node 11... the description!,-10,6,node_-9_6,32,0,0,0,11
-node_-11_7,Node 12,Node 12... the description!,-11,7,node_-10_6,35,0,0,0,12
-node_-11_6,Node 12,Node 12... the description!,-11,6,node_-10_6,35,0,0,0,12
-node_-6_5,Node 8,Node 8... the description!,-6,5,node_-6_4,23,0,0,0,8
-node_-7_6,Node 9,Node 9... the description!,-7,6,node_-6_5,25,0,0,0,9
-node_-8_7,Node 10,Node 10... the description!,-8,7,node_-7_6,28,0,0,0,10
-node_-2_4,Node 4,Node 4... the description!,-2,4,node_-2_3,15,0,0,0,4
-node_-3_5,Node 5,Node 5... the description!,-3,5,node_-2_4,16,0,0,0,5
-node_-2_5,Node 5,Node 5... the description!,-2,5,node_-2_4,16,0,0,0,5
-node_-4_5,Node 6,Node 6... the description!,-4,5,node_-3_5,18,0,0,0,6
-node_-5_5,Node 7,Node 7... the description!,-5,5,node_-4_5,20,0,0,0,7
-node_-5_6,Node 8,Node 8... the description!,-5,6,node_-5_5,23,0,0,0,8
-node_-5_7,Node 9,Node 9... the description!,-5,7,node_-5_6,25,0,0,0,9
-node_-6_7,Node 10,Node 10... the description!,-6,7,node_-5_7,28,0,0,0,10
-node_-7_7,Node 11,Node 11... the description!,-7,7,node_-6_7,32,0,0,0,11
-node_-8_8,Node 12,Node 12... the description!,-8,8,node_-7_7,35,0,0,0,12
-node_-9_9,Node 13,Node 13... the description!,-9,9,node_-8_8,39,0,0,0,13
-node_-9_10,Node 14,Node 14... the description!,-9,10,node_-9_9,44,0,0,0,14
-node_-8_9,Node 13,Node 13... the description!,-8,9,node_-8_8,39,0,0,0,13
-node_-8_10,Node 14,Node 14... the description!,-8,10,node_-8_9,44,0,0,0,14
-node_-8_11,Node 15,Node 15... the description!,-8,11,node_-8_10,49,0,0,0,15
-node_-8_12,Node 16,Node 16... the description!,-8,12,node_-8_11,55,0,0,0,16
-node_-8_13,Node 17,Node 17... the description!,-8,13,node_-8_12,62,0,0,0,17
-node_-7_8,Node 12,Node 12... the description!,-7,8,node_-7_7,35,0,0,0,12
-node_-7_9,Node 13,Node 13... the description!,-7,9,node_-7_8,39,0,0,0,13
-node_-7_10,Node 14,Node 14... the description!,-7,10,node_-7_9,44,0,0,0,14
-node_-7_11,Node 15,Node 15... the description!,-7,11,node_-7_10,49,0,0,0,15
-node_-7_12,Node 16,Node 16... the description!,-7,12,node_-7_11,55,0,0,0,16
-node_-7_13,Node 17,Node 17... the description!,-7,13,node_-7_12,62,0,0,0,17
-node_-6_8,Node 10,Node 10... the description!,-6,8,node_-5_7,28,0,0,0,10
-node_-6_9,Node 11,Node 11... the description!,-6,9,node_-6_8,32,0,0,0,11
-node_-6_10,Node 12,Node 12... the description!,-6,10,node_-6_9,35,0,0,0,12
-node_-6_11,Node 13,Node 13... the description!,-6,11,node_-6_10,39,0,0,0,13
-node_-6_12,Node 14,Node 14... the description!,-6,12,node_-6_11,44,0,0,0,14
-node_-6_13,Node 15,Node 15... the description!,-6,13,node_-6_12,49,0,0,0,15
-node_-5_8,Node 10,Node 10... the description!,-5,8,node_-5_7,28,0,0,0,10
-node_-5_9,Node 11,Node 11... the description!,-5,9,node_-5_8,32,0,0,0,11
-node_-5_10,Node 12,Node 12... the description!,-5,10,node_-5_9,35,0,0,0,12
-node_-5_11,Node 13,Node 13... the description!,-5,11,node_-5_10,39,0,0,0,13
-node_-5_12,Node 14,Node 14... the description!,-5,12,node_-5_11,44,0,0,0,14
-node_-5_13,Node 15,Node 15... the description!,-5,13,node_-5_12,49,0,0,0,15
-node_-4_6,Node 7,Node 7... the description!,-4,6,node_-4_5,20,0,0,0,7
-node_-4_7,Node 8,Node 8... the description!,-4,7,node_-4_6,23,0,0,0,8
-node_-3_6,Node 6,Node 6... the description!,-3,6,node_-3_5,18,0,0,0,6
-node_-3_7,Node 7,Node 7... the description!,-3,7,node_-3_6,20,0,0,0,7
-node_-3_8,Node 8,Node 8... the description!,-3,8,node_-3_7,23,0,0,0,8
-node_-3_9,Node 9,Node 9... the description!,-3,9,node_-3_8,25,0,0,0,9
-node_-3_10,Node 10,Node 10... the description!,-3,10,node_-3_9,28,0,0,0,10
-node_-3_11,Node 11,Node 11... the description!,-3,11,node_-3_10,32,0,0,0,11
-node_-4_11,Node 12,Node 12... the description!,-4,11,node_-3_11,35,0,0,0,12
-node_-4_10,Node 13,Node 13... the description!,-4,10,node_-4_11,39,0,0,0,13
-node_-4_9,Node 14,Node 14... the description!,-4,9,node_-4_10,44,0,0,0,14
-node_-4_8,Node 9,Node 9... the description!,-4,8,node_-3_8,25,0,0,0,9
-node_-2_6,Node 6,Node 6... the description!,-2,6,node_-2_5,18,0,0,0,6
-node_-2_7,Node 7,Node 7... the description!,-2,7,node_-2_6,20,0,0,0,7
-node_-2_8,Node 8,Node 8... the description!,-2,8,node_-2_7,23,0,0,0,8
-node_-2_9,Node 9,Node 9... the description!,-2,9,node_-2_8,25,0,0,0,9
-node_-2_10,Node 10,Node 10... the description!,-2,10,node_-2_9,28,0,0,0,10
-node_-2_11,Node 11,Node 11... the description!,-2,11,node_-2_10,32,0,0,0,11
-node_-2_12,Node 12,Node 12... the description!,-2,12,node_-2_11,35,0,0,0,12
-node_-1_8,Node 9,Node 9... the description!,-1,8,node_-2_8,25,0,0,0,9
-node_0_8,Node 10,Node 10... the description!,0,8,node_-1_8,28,0,0,0,10
-node_1_8,Node 11,Node 11... the description!,1,8,node_0_8,32,0,0,0,11
-node_2_8,Node 12,Node 12... the description!,2,8,node_1_8,35,0,0,0,12
-node_-1_9,Node 9,Node 9... the description!,-1,9,node_-2_8,25,0,0,0,9
-node_0_10,Node 10,Node 10... the description!,0,10,node_-1_9,28,0,0,0,10
-node_1_11,Node 11,Node 11... the description!,1,11,node_0_10,32,0,0,0,11
-node_2_12,Node 12,Node 12... the description!,2,12,node_1_11,35,0,0,0,12
-node_-1_10,Node 10,Node 10... the description!,-1,10,node_-1_9,28,0,0,0,10
-node_-1_11,Node 11,Node 11... the description!,-1,11,node_-1_10,32,0,0,0,11
-node_-1_12,Node 12,Node 12... the description!,-1,12,node_-1_11,35,0,0,0,12
-node_0_9,Node 10,Node 10... the description!,0,9,node_-1_9,28,0,0,0,10
-node_1_9,Node 11,Node 11... the description!,1,9,node_0_9,32,0,0,0,11
-node_2_9,Node 12,Node 12... the description!,2,9,node_1_9,35,0,0,0,12
-node_0_11,Node 11,Node 11... the description!,0,11,node_0_10,32,0,0,0,11
-node_0_12,Node 12,Node 12... the description!,0,12,node_0_11,35,0,0,0,12
-node_1_10,Node 11,Node 11... the description!,1,10,node_0_10,32,0,0,0,11
-node_2_10,Node 12,Node 12... the description!,2,10,node_1_10,35,0,0,0,12
-node_1_12,Node 12,Node 12... the description!,1,12,node_1_11,35,0,0,0,12
-node_2_11,Node 12,Node 12... the description!,2,11,node_1_11,35,0,0,0,12
+node_0_1,All Wedges +1,All wedges grant +1.,0,1,node_0_0,10,1,0,0,1
+node_-1_2,All Wedges +1,All wedges grant +1.,-1,2,node_0_1,12,1,0,0,2
+node_-2_3,All Wedges +2,All wedges grant +2.,-2,3,node_-1_2,13,2,0,0,3
+node_-3_3,Place your bets,You can now bet on red or black. Receive 1.25x your bet if it lands on your color.,-3,3,node_-2_3,15,0,0,0,4
+node_-4_3,All Red Wedges +3,All red wedges grant +3.,-4,3,node_-3_3,16,0,3,0,5
+node_-5_3,All Red Wedges +3,All red wedges grant +3.,-5,3,node_-4_3,18,0,3,0,6
+node_-6_3,All Red Wedges +3,All red wedges grant +3.,-6,3,node_-5_3,20,0,0,0,7
+node_-7_3,All Red Wedges +5,All red wedges grant +5.,-7,3,node_-6_3,23,0,0,0,8
+node_-4_2,Red Multi,+10% multi on red wedges.,-4,2,node_-4_3,18,0,0,0,6
+node_-5_2,Red Multi,+10% multi on red wedges.,-5,2,node_-4_2,20,0,0,0,7
+node_-6_2,Red Bet Multi,+5% multi on red bets,-6,2,node_-5_3,20,0,0,0,7
+node_-7_2,Red Bet Multi,+10% multi on red bets,-7,2,node_-6_2,23,0,0,0,8
+node_-8_2,Red Bet Multi,+15% multi on red bets,-8,2,node_-7_2,25,0,0,0,9
+node_-4_4,Multi on Red,+12% multi on red.,-4,4,node_-4_3,18,0,0,0,6
+node_-5_4,Multi on Red,+12% multi on red.,-5,4,node_-4_4,20,0,0,0,7
+node_-6_4,Multi on Red,+15% multi on red.,-6,4,node_-5_4,23,0,0,0,8
+node_-3_4,All Black Wedges +2,,-3,4,node_-3_3,16,0,0,0,5
+node_-4_5,All Black Wedges +4,,-4,5,node_-3_4,18,0,0,0,6
+node_-5_6,All Black Wedges +4,,-5,6,node_-4_5,20,0,0,0,7
+node_-6_7,All Black Wedges +8,,-6,7,node_-5_6,23,0,0,0,8
+node_-6_6,Black Safety,+40% insurance when betting on black,-6,6,node_-5_6,23,0,0,0,8
+node_-4_6,Extra Black Bet,+10 to black bet pool,-4,6,node_-4_5,20,0,0,0,7
+node_-5_7,Extra Black Bet,+20 to black bet pool,-5,7,node_-4_6,23,0,0,0,8
+node_-3_5,Black Multi,+10% multi on black,-3,5,node_-3_4,18,0,0,0,6
+node_-3_6,,+10% multi on black,-3,6,node_-3_5,20,0,0,0,7
+node_-3_7,,+10% multi on black,-3,7,node_-3_6,23,0,0,0,8
+node_-3_8,,+16% multi on black,-3,8,node_-3_7,25,0,0,0,9
+node_-4_8,,+20% multi when betting on black,-4,8,node_-3_7,25,0,0,0,9
+node_-5_8,,+20% multi when betting on black,-5,8,node_-4_8,28,0,0,0,10
+node_-6_8,,+1% permanent global multi when betting on black,-6,8,node_-5_8,32,0,0,0,11
+node_-7_4,Shared Betting Pool,+25% of red betting pool added to wedge prize,-7,4,node_-6_3,23,0,0,0,8
+node_-8_4,,+25% of red betting pool added to wedge prize,-8,4,node_-7_4,25,0,0,0,9
+node_-9_4,,+50% of red betting pool added to wedge prize,-9,4,node_-8_4,28,0,0,0,10
+node_-7_5,All Bets Everywhere,Red bet multi applies to multi,-7,5,node_-7_4,25,0,0,0,9
+node_-1_4,,All wedges grant +2.,-1,4,node_-2_3,15,0,0,0,4
+node_-2_4,,All wedges grant +2.,-2,4,node_-1_4,16,0,0,0,5
+node_-1_5,,All wedges grant +2.,-1,5,node_-1_4,16,0,0,0,5
+node_0_6,,High wedges grant +4,0,6,node_-1_5,18,0,0,0,6
+node_0_7,,High wedges grant +4,0,7,node_0_6,20,0,0,0,7
+node_0_8,,High wedges grant +4,0,8,node_0_7,23,0,0,0,8
+node_0_9,,High wedges grant +4,0,9,node_0_8,25,0,0,0,9
+node_0_10,,High wedges grant +10,0,10,node_0_9,28,0,0,0,10
+node_-2_5,,Unlock a spinning ball,-2,5,node_-1_5,18,0,0,0,6
+node_-2_6,,Spinning ball also counts for bets.,-2,6,node_-2_5,20,0,0,0,7
+node_-1_9,,Red high wedges grant +9,-1,9,node_0_8,25,0,0,0,9
+node_-2_10,,Red high wedges grant +9,-2,10,node_-1_9,28,0,0,0,10
+node_-2_9,,+13% multi on high red wedge,-2,9,node_-1_9,28,0,0,0,10
+node_-3_9,,+13% multi on high red wedge,-3,9,node_-2_9,32,0,0,0,11
+node_1_9,,Black high wedges grant +10,1,9,node_0_8,25,0,0,0,9
+node_2_10,,Black high wedges grant +10,2,10,node_1_9,28,0,0,0,10
+node_3_11,,Black high wedges grant +20,3,11,node_2_10,32,0,0,0,11
+node_1_10,,+10% multi on high black wedge,1,10,node_1_9,28,0,0,0,10
+node_1_11,,+10% multi on high black wedge,1,11,node_1_10,32,0,0,0,11
+node_1_2,,+1% increased global multi,1,2,node_0_1,12,0,0,0,2
+node_2_3,,+1% increased global multi,2,3,node_1_2,13,0,0,0,3
+node_3_4,,+2% increased global multi,3,4,node_2_3,15,0,0,0,4
+node_4_5,,+2% increased global multi,4,5,node_3_4,16,0,0,0,5
+node_5_6,,+5% increased global multi,5,6,node_4_5,18,0,0,0,6
+node_6_7,,+5% increased global multi,6,7,node_5_6,20,0,0,0,7
+node_7_8,,+8% increased global multi,7,8,node_6_7,23,0,0,0,8
+node_8_9,,+8% increased global multi,8,9,node_7_8,25,0,0,0,9
+node_9_10,,+15% increased global multi,9,10,node_8_9,28,0,0,0,10
+node_1_3,,+1 spin,1,3,node_1_2,13,0,0,0,3
+node_0_3,,+1 spin,0,3,node_1_3,15,0,0,0,4
+node_0_4,,+1 spin,0,4,node_0_3,16,0,0,0,5
+node_1_4,,+2 spin,1,4,node_0_4,18,0,0,0,6
+node_4_4,,+1% global multi per spin,4,4,node_3_4,16,0,0,0,5
+node_5_4,,+1% global multi per spin,5,4,node_4_4,18,0,0,0,6
+node_6_4,,+2% global multi per spin,6,4,node_5_4,20,0,0,0,7
+node_3_3,,+5% multi for all wedges,3,3,node_2_3,15,0,0,0,4
+node_3_2,,+7% multi for all wedges,3,2,node_3_3,16,0,0,0,5
+node_4_3,,+2% multi per spin,4,3,node_3_3,16,0,0,0,5
+node_4_2,,+10% multi for all wedges,4,2,node_3_2,18,0,0,0,6
+node_5_3,,+2% multi per spin,5,3,node_4_3,18,0,0,0,6
+node_6_3,,+5% multi per spin,6,3,node_5_3,20,0,0,0,7
+node_5_2,,+15% multi for all wedges,5,2,node_4_2,20,0,0,0,7
+node_4_7,,+10% bet multi for all colors,4,7,node_5_6,20,0,0,0,7
+node_3_6,,+15% bet multi for all colors,3,6,node_4_7,23,0,0,0,8
+node_2_7,,+25% bet multi for all colors,2,7,node_3_6,25,0,0,0,9
+node_3_8,,+50% bet multi for all colors,3,8,node_2_7,28,0,0,0,10
+node_6_9,,+10% global multi for the last spin,6,9,node_7_8,25,0,0,0,9
+node_5_9,,+15% global multi for the last spin,5,9,node_6_9,28,0,0,0,10
+node_7_6,,+10% multi on any high wedge,7,6,node_6_7,23,0,0,0,8
+node_8_6,,+20% multi on any high wedge,8,6,node_7_6,25,0,0,0,9
+node_1_0,Bankruptcy Insurance,+1 Bankruptcy insurance. Gain 1$ when going bankrupt for each bankruptcy insurance.,1,0,node_0_0,10,0,0,0,1
+node_2_0,,+2 Bankruptcy insurance.,2,0,node_1_0,12,0,0,0,2
+node_3_0,,+4 Bankruptcy insurance.,3,0,node_2_0,13,0,0,0,3
+node_4_0,,+10 Bankruptcy insurance.,4,0,node_3_0,15,0,0,0,4
+node_5_0,,+0.5% permanent global multi when going bankrupt.,5,0,node_4_0,16,0,0,0,5
+node_2_-1,,+2 cash if you end the round without bankruptcy.,2,-1,node_2_0,13,0,0,0,3
+node_3_-2,,+4 cash if you end the round without bankruptcy.,3,-2,node_2_-1,15,0,0,0,4
+node_3_-3,,+8 cash if you end the round without bankruptcy.,3,-3,node_3_-2,16,0,0,0,5
+node_4_-1,,+10% Bankruptcy insurance.,4,-1,node_4_0,16,0,0,0,5
+node_4_-2,,+15% Bankruptcy insurance.,4,-2,node_4_-1,18,0,0,0,6
+node_5_-3,,+15% Bankruptcy insurance.,5,-3,node_4_-2,20,0,0,0,7
+node_3_-1,,Spinning ball cannot cause bankruptcy.,3,-1,node_3_0,15,0,0,0,4
+node_-1_0,,Unlocks purple accumulator wedge. Each spin add $10 to the purple accumulator. Collect all earnings on landing on it.,-1,0,node_0_0,10,0,0,0,1
+node_-2_-1,,+10 to all accumulators per spin.,-2,-1,node_-1_0,12,0,0,0,2
+node_-3_-1,,+10 to all accumulators per spin.,-3,-1,node_-2_-1,13,0,0,0,3
+node_-4_-1,,Unlocks blue accumulator wedge. Failed bets are instead multiplied by 1.2 and moved to the blue wedge for later collection.,-4,-1,node_-3_-1,15,0,0,0,4
+node_-5_-1,,+10% multi on blue accumulator,-5,-1,node_-4_-1,16,0,0,0,5
+node_-6_-1,,+20% multi on blue accumulator,-6,-1,node_-5_-1,18,0,0,0,6
+node_-7_-1,,+30% multi on blue accumulator,-7,-1,node_-6_-1,20,0,0,0,7
+node_-5_0,,+10% blue accumulator pool per spin.,-5,0,node_-5_-1,18,0,0,0,6
+node_-6_0,,+15% blue accumulator pool per spin.,-6,0,node_-5_0,20,0,0,0,7
+node_-7_0,,+20% blue accumulator pool per spin.,-7,0,node_-6_0,23,0,0,0,8
+node_-4_-2,,+10% bankruptcy insurance for the blue accumulator.,-4,-2,node_-4_-1,16,0,0,0,5
+node_-5_-2,,+25% bankruptcy insurance for the blue accumulator.,-5,-2,node_-4_-2,18,0,0,0,6
+node_-6_-2,,+30% bankruptcy insurance for the blue accumulator.,-6,-2,node_-5_-2,20,0,0,0,7
+node_-7_-2,,+35% bankruptcy insurance for the blue accumulator.,-7,-2,node_-6_-2,23,0,0,0,8
+node_-3_-2,,+30 to purple accumulator per spin.,-3,-2,node_-2_-1,13,0,0,0,3
+node_-4_-3,,+30 to purple accumulator per spin.,-4,-3,node_-3_-2,15,0,0,0,4
+node_-5_-4,,+45 to purple accumulator per spin.,-5,-4,node_-4_-3,16,0,0,0,5
+node_-6_-5,,+60 to purple accumulator per spin.,-6,-5,node_-5_-4,18,0,0,0,6
+node_-2_-3,,+50 bankruptcy insurance for purple accumulator.,-2,-3,node_-3_-2,15,0,0,0,4
+node_-2_-4,,+100 bankruptcy insurance for purple accumulator.,-2,-4,node_-2_-3,16,0,0,0,5
+node_-2_-5,,+200 bankruptcy insurance for purple accumulator.,-2,-5,node_-2_-4,18,0,0,0,6
+node_-4_-4,,+15% multi on purple accumulator,-4,-4,node_-4_-3,16,0,0,0,5
+node_-3_-4,,+15% multi on purple accumulator.,-3,-4,node_-4_-4,18,0,0,0,6
+node_-3_-5,,+25% multi on purple accumulator.,-3,-5,node_-3_-4,20,0,0,0,7
+node_-4_-5,,+10% of the round's earnings are copied to the purple accumulator when landing on a non-accumulator.,-4,-5,node_-5_-4,18,0,0,0,6
+node_-4_-6,,+10% of the round's earnings are copied to the purple accumulator when landing on a non-accumulator.,-4,-6,node_-4_-5,20,0,0,0,7
+node_-5_-6,,+20% of the round's earnings are copied to the purple accumulator when landing on a non-accumulator.,-5,-6,node_-4_-6,23,0,0,0,8
+node_-1_-1,,+10% multi when landing on any accumulator.,-1,-1,node_-2_-1,13,0,0,0,3
+node_-1_-2,,+10% multi when landing on any accumulator.,-1,-2,node_-1_-1,15,0,0,0,4
+node_-2_-2,,+20% multi when landing on any accumulator.,-2,-2,node_-1_-2,16,0,0,0,5
+node_0_-1,,Unlock timestop. Stop the wheel early with spacebar. Costs 3 spins.,0,-1,node_0_0,10,0,0,0,1
+node_1_-2,,Timestop costs -1 spin.,1,-2,node_0_-1,12,0,0,0,2
+node_0_-3,,Wheel is slower.,0,-3,node_1_-2,13,0,0,0,3
+node_2_-3,,Timestop costs -1 spin.,2,-3,node_1_-2,13,0,0,0,3
+node_1_-3,,+10 to all wedges. Wheel is faster.,1,-3,node_1_-2,13,10,0,0,3
+node_1_-4,,+10 to all wedges. Wheel is faster.,1,-4,node_1_-3,15,10,0,0,4
+node_0_-4,,Wheel is even slower.,0,-4,node_0_-3,15,0,0,0,4
