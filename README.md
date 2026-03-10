@@ -25,7 +25,7 @@ config.autoSyncPersistentDataPath = true;
 Then zip up the build contents.
 
 ## Miro board
-https://miro.com/app/board/ - None
+https://miro.com/app/board/uXjVG0jKJSw=/ - Skill Tree.
 
 ## Trello board
 https://trello.com/invite/b/69990f21ba569e1483ee5b3a/ATTI33ceac27673dba72550b2c032f5d50694F769353/wheel-incremental
