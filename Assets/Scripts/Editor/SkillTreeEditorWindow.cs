@@ -553,6 +553,11 @@ public class SkillTreeEditorWindow : EditorWindow
         foreach (LevelUpButton button in sceneButtons)
         {
             SkillTreeNodeEntry sourceNode = button.node;
+            if (sourceNode == null)
+            {
+                Debug.LogWarning("Import from scene failed to import null sourceNode: " + button.gameObject.name);
+                continue;
+            }
             string nodeId = buttonToNodeId[button];
 
             string parentNodeId = string.Empty;
@@ -565,34 +570,13 @@ public class SkillTreeEditorWindow : EditorWindow
                 parentNodeId = parentId;
             }
 
-            RectTransform rt = button.GetComponent<RectTransform>();
-            int gridX = sourceNode?.gridPositionX ?? 0;
-            int gridY = sourceNode?.gridPositionY ?? 0;
-
-            // If the node has no explicit grid position, derive it from the anchored position and cell size.
-            if (sourceNode == null || (sourceNode.gridPositionX == 0 && sourceNode.gridPositionY == 0))
+            sourceNode.nodeId = nodeId;
+            sourceNode.parentNodeId = parentNodeId;
+            if (shouldGenerateDefaultCosts && sourceNode.cost == 0)
             {
-                if (rt != null && (LevelUpButton.CellWidth > 0f && LevelUpButton.CellHeight > 0f))
-                {
-                    gridX = Mathf.RoundToInt(rt.anchoredPosition.x / LevelUpButton.CellWidth);
-                    gridY = Mathf.RoundToInt(rt.anchoredPosition.y / LevelUpButton.CellHeight);
-                }
+                sourceNode.cost = sourceNode.GetDefaultCost(sourceNode.distanceFromOrigin);
             }
-
-            importedNodes.Add(new SkillTreeNodeEntry
-            {
-                nodeId = nodeId,
-                displayName = sourceNode?.displayName ?? nodeId,
-                displayDescription = sourceNode?.displayDescription ?? string.Empty,
-                gridPositionX = gridX,
-                gridPositionY = gridY,
-                parentNodeId = parentNodeId,
-                cost = shouldGenerateDefaultCosts ? sourceNode.GetDefaultCost(sourceNode?.distanceFromOrigin ?? 0) : sourceNode?.cost ?? 0f,
-                increaseLevelOfAllWedges = sourceNode?.increaseLevelOfAllWedges ?? 0,
-                increaseLevelOfAllRedWedges = sourceNode?.increaseLevelOfAllRedWedges ?? 0,
-                increaseLevelOfAllBlackWedges = sourceNode?.increaseLevelOfAllBlackWedges ?? 0,
-                distanceFromOrigin = sourceNode?.distanceFromOrigin ?? 0
-            });
+            importedNodes.Add(sourceNode);
         }
 
         bool confirmed = EditorUtility.DisplayDialog("Import from Scene",
@@ -669,10 +653,9 @@ public class SkillTreeEditorWindow : EditorWindow
         {
             EditorGUI.indentLevel++;
 
+            var helpBoxHeaders = string.Join(',', CsvHeader());
             EditorGUILayout.HelpBox(
-                "CSV columns (order matters):\n" +
-                "nodeId, displayName, displayDescription, gridPositionX, gridPositionY, parentNodeId, " +
-                "cost, increaseLevelOfAllWedges, increaseLevelOfAllRedWedges, increaseLevelOfAllBlackWedges, distanceFromOrigin",
+                "CSV columns (order matters):\n" + helpBoxHeaders,
                 MessageType.None);
 
             EditorGUILayout.BeginHorizontal();
@@ -736,9 +719,9 @@ public class SkillTreeEditorWindow : EditorWindow
             if (string.IsNullOrEmpty(line)) continue;
 
             string[] cols = ParseCsvLine(line);
-            if (cols.Length < 11)
+            if (cols.Length < expectedHeader.Length)
             {
-                errors.Add($"Line {i + 1}: expected 11 columns, got {cols.Length}. Skipped.");
+                errors.Add($"Line {i + 1}: expected {expectedHeader.Length} columns, got {cols.Length}. Skipped.");
                 continue;
             }
 
@@ -756,12 +739,60 @@ public class SkillTreeEditorWindow : EditorWindow
 
             float.TryParse(cols[6].Trim(), System.Globalization.NumberStyles.Float,
                 System.Globalization.CultureInfo.InvariantCulture, out float cost);
-            int.TryParse(cols[7].Trim(), out int increaseAll);
-            int.TryParse(cols[8].Trim(), out int increaseRed);
-            int.TryParse(cols[9].Trim(), out int increaseBlack);
-            int.TryParse(cols[10].Trim(), out int distanceFromOrigin);
+            int.TryParse(cols[7].Trim(), out int distanceFromOrigin);
 
-            imported.Add(new SkillTreeNodeEntry
+            bool.TryParse(cols[8].Trim(), out bool unlocksPurpleAccumulator);
+            bool.TryParse(cols[9].Trim(), out bool unlocksBlueAccumulator);
+            bool.TryParse(cols[10].Trim(), out bool unlocksTimeStop);
+            bool.TryParse(cols[11].Trim(), out bool unlocksSpinningBall);
+            bool.TryParse(cols[12].Trim(), out bool unlocksBlackRedBetting);
+            bool.TryParse(cols[13].Trim(), out bool unlocksRedBetMultiAlsoRedMulti);
+
+            int.TryParse(cols[14].Trim(), out int increaseLevelOfAllWedges);
+            int.TryParse(cols[15].Trim(), out int increaseLevelOfAllRedWedges);
+            int.TryParse(cols[16].Trim(), out int increaseLevelOfAllBlackWedges);
+            int.TryParse(cols[17].Trim(), out int allAccumulators);
+            int.TryParse(cols[18].Trim(), out int allColorMulti);
+            int.TryParse(cols[19].Trim(), out int allColorMultiPerSpin);
+            int.TryParse(cols[20].Trim(), out int allColorsBetMulti);
+            int.TryParse(cols[21].Trim(), out int allColorsHighWedgeMulti);
+            int.TryParse(cols[22].Trim(), out int bankruptcyBlackBetInsurance);
+            int.TryParse(cols[23].Trim(), out int bankruptcyInsurance);
+            int.TryParse(cols[24].Trim(), out int bankruptcyInsurancePercent);
+            int.TryParse(cols[25].Trim(), out int blueAccumulatorBankruptcyInsurance);
+            int.TryParse(cols[26].Trim(), out int cashPurpleAccumulatorPerSpin);
+            int.TryParse(cols[27].Trim(), out int extraSpin);
+            int.TryParse(cols[28].Trim(), out int globalMulti);
+            int.TryParse(cols[29].Trim(), out int globalMultiLastSpin);
+            int.TryParse(cols[30].Trim(), out int globalMultiPerSpin);
+            int.TryParse(cols[31].Trim(), out int interestGrowthBlueAccumulatorPerSpin);
+            int.TryParse(cols[32].Trim(), out int levelOfAllHighWedges);
+            int.TryParse(cols[33].Trim(), out int levelOfBlackBetPool);
+            int.TryParse(cols[34].Trim(), out int levelOfBlackHighWedges);
+            int.TryParse(cols[35].Trim(), out int levelOfRedHighWedges);
+            int.TryParse(cols[36].Trim(), out int multiAllAccumulators);
+            int.TryParse(cols[37].Trim(), out int multiBlackBets);
+            int.TryParse(cols[38].Trim(), out int multiBlackHighWedge);
+            int.TryParse(cols[39].Trim(), out int multiBlackWedge);
+            int.TryParse(cols[40].Trim(), out int multiBlackWedgeWhenBettingOnBlack);
+            int.TryParse(cols[41].Trim(), out int multiBlueAccumulator);
+            int.TryParse(cols[42].Trim(), out int multiPurpleAccumulator);
+            int.TryParse(cols[43].Trim(), out int multiRedBets);
+            int.TryParse(cols[44].Trim(), out int multiRedHighWedge);
+            int.TryParse(cols[45].Trim(), out int multiRedWedge);
+            int.TryParse(cols[46].Trim(), out int nonBankruptCashOut);
+            float.TryParse(cols[47].Trim(), System.Globalization.NumberStyles.Float,
+                System.Globalization.CultureInfo.InvariantCulture, out float permanentGlobalMultiBankruptcyInsurance);
+            int.TryParse(cols[48].Trim(), out int permanentGlobalMultiOnBlackBet);
+            int.TryParse(cols[49].Trim(), out int purpleAccumulatorBankruptcyInsurance);
+            int.TryParse(cols[50].Trim(), out int purpleAccumulatorCopyWinnings);
+            int.TryParse(cols[51].Trim(), out int sharedRedBettingPool);
+            int.TryParse(cols[52].Trim(), out int slowerWheel);
+            int.TryParse(cols[53].Trim(), out int spinningBallCannotBankrupt);
+            int.TryParse(cols[54].Trim(), out int spinningBallIsAlsoBet);
+            int.TryParse(cols[55].Trim(), out int timestopPriceMod);
+
+            SkillTreeNodeEntry newNode = new SkillTreeNodeEntry
             {
                 nodeId = cols[0].Trim(),
                 displayName = cols[1].Trim(),
@@ -770,11 +801,62 @@ public class SkillTreeEditorWindow : EditorWindow
                 gridPositionY = gridY,
                 parentNodeId = cols[5].Trim(),
                 cost = cost,
-                increaseLevelOfAllWedges = increaseAll,
-                increaseLevelOfAllRedWedges = increaseRed,
-                increaseLevelOfAllBlackWedges = increaseBlack,
-                distanceFromOrigin = distanceFromOrigin
-            });
+                distanceFromOrigin = distanceFromOrigin,
+
+                unlocksPurpleAccumulator = unlocksPurpleAccumulator,
+                unlocksBlueAccumulator = unlocksBlueAccumulator,
+                unlocksTimeStop = unlocksTimeStop,
+                unlocksSpinningBall = unlocksSpinningBall,
+                unlocksBlackRedBetting = unlocksBlackRedBetting,
+                unlocksRedBetMultiAlsoRedMulti = unlocksRedBetMultiAlsoRedMulti,
+
+                increaseLevelOfAllWedges = increaseLevelOfAllWedges,
+                increaseLevelOfAllRedWedges = increaseLevelOfAllRedWedges,
+                increaseLevelOfAllBlackWedges = increaseLevelOfAllBlackWedges,
+                allAccumulators = allAccumulators,
+                allColorMulti = allColorMulti,
+                allColorMultiPerSpin = allColorMultiPerSpin,
+                allColorsBetMulti = allColorsBetMulti,
+                allColorsHighWedgeMulti = allColorsHighWedgeMulti,
+                bankruptcyBlackBetInsurance = bankruptcyBlackBetInsurance,
+                bankruptcyInsurance = bankruptcyInsurance,
+                bankruptcyInsurancePercent = bankruptcyInsurancePercent,
+                blueAccumulatorBankruptcyInsurance = blueAccumulatorBankruptcyInsurance,
+                cashPurpleAccumulatorPerSpin = cashPurpleAccumulatorPerSpin,
+                extraSpin = extraSpin,
+                globalMulti = globalMulti,
+                globalMultiLastSpin = globalMultiLastSpin,
+                globalMultiPerSpin = globalMultiPerSpin,
+                interestGrowthBlueAccumulatorPerSpin = interestGrowthBlueAccumulatorPerSpin,
+                levelOfAllHighWedges = levelOfAllHighWedges,
+                levelOfBlackBetPool = levelOfBlackBetPool,
+                levelOfBlackHighWedges = levelOfBlackHighWedges,
+                levelOfRedHighWedges = levelOfRedHighWedges,
+                multiAllAccumulators = multiAllAccumulators,
+                multiBlackBets = multiBlackBets,
+                multiBlackHighWedge = multiBlackHighWedge,
+                multiBlackWedge = multiBlackWedge,
+                multiBlackWedgeWhenBettingOnBlack = multiBlackWedgeWhenBettingOnBlack,
+                multiBlueAccumulator = multiBlueAccumulator,
+                multiPurpleAccumulator = multiPurpleAccumulator,
+                multiRedBets = multiRedBets,
+                multiRedHighWedge = multiRedHighWedge,
+                multiRedWedge = multiRedWedge,
+                nonBankruptCashOut = nonBankruptCashOut,
+                permanentGlobalMultiBankruptcyInsurance = permanentGlobalMultiBankruptcyInsurance,
+                permanentGlobalMultiOnBlackBet = permanentGlobalMultiOnBlackBet,
+                purpleAccumulatorBankruptcyInsurance = purpleAccumulatorBankruptcyInsurance,
+                purpleAccumulatorCopyWinnings = purpleAccumulatorCopyWinnings,
+                sharedRedBettingPool = sharedRedBettingPool,
+                slowerWheel = slowerWheel,
+                spinningBallCannotBankrupt = spinningBallCannotBankrupt,
+                spinningBallIsAlsoBet = spinningBallIsAlsoBet,
+                timestopPriceMod = timestopPriceMod,
+            };
+            //Debug.Log("Created new node: " + newNode.ToString());
+            //Debug.Log("Created new node from: " + string.Join(',', cols));
+
+            imported.Add(newNode);
         }
 
         if (errors.Count > 0)
@@ -807,7 +889,7 @@ public class SkillTreeEditorWindow : EditorWindow
 
         foreach (SkillTreeNodeEntry node in skillTreeData.nodes)
         {
-            sb.AppendLine(string.Join(",", new[]
+            sb.AppendLine(string.Join(",", new string[]
             {
                 EscapeCsvField(node.nodeId),
                 EscapeCsvField(node.displayName),
@@ -816,10 +898,54 @@ public class SkillTreeEditorWindow : EditorWindow
                 node.gridPositionY.ToString(),
                 EscapeCsvField(node.parentNodeId),
                 node.cost.ToString(System.Globalization.CultureInfo.InvariantCulture),
-                node.increaseLevelOfAllWedges.ToString(),
-                node.increaseLevelOfAllRedWedges.ToString(),
+                node.distanceFromOrigin.ToString(),node.unlocksBlackRedBetting.ToString(),
+                node.unlocksBlueAccumulator.ToString(),
+                node.unlocksPurpleAccumulator.ToString(),
+                node.unlocksRedBetMultiAlsoRedMulti.ToString(),
+                node.unlocksSpinningBall.ToString(),
+                node.unlocksTimeStop.ToString(),
+                node.allAccumulators.ToString(),
+                node.allColorMulti.ToString(),
+                node.allColorMultiPerSpin.ToString(),
+                node.allColorsBetMulti.ToString(),
+                node.allColorsHighWedgeMulti.ToString(),
+                node.bankruptcyBlackBetInsurance.ToString(),
+                node.bankruptcyInsurance.ToString(),
+                node.bankruptcyInsurancePercent.ToString(),
+                node.blueAccumulatorBankruptcyInsurance.ToString(),
+                node.cashPurpleAccumulatorPerSpin.ToString(),
+                node.extraSpin.ToString(),
+                node.globalMulti.ToString(),
+                node.globalMultiLastSpin.ToString(),
+                node.globalMultiPerSpin.ToString(),
                 node.increaseLevelOfAllBlackWedges.ToString(),
-                node.distanceFromOrigin.ToString()
+                node.increaseLevelOfAllRedWedges.ToString(),
+                node.increaseLevelOfAllWedges.ToString(),
+                node.interestGrowthBlueAccumulatorPerSpin.ToString(),
+                node.levelOfAllHighWedges.ToString(),
+                node.levelOfBlackBetPool.ToString(),
+                node.levelOfBlackHighWedges.ToString(),
+                node.levelOfRedHighWedges.ToString(),
+                node.multiAllAccumulators.ToString(),
+                node.multiBlackBets.ToString(),
+                node.multiBlackHighWedge.ToString(),
+                node.multiBlackWedge.ToString(),
+                node.multiBlackWedgeWhenBettingOnBlack.ToString(),
+                node.multiBlueAccumulator.ToString(),
+                node.multiPurpleAccumulator.ToString(),
+                node.multiRedBets.ToString(),
+                node.multiRedHighWedge.ToString(),
+                node.multiRedWedge.ToString(),
+                node.nonBankruptCashOut.ToString(),
+                node.permanentGlobalMultiBankruptcyInsurance.ToString(),
+                node.permanentGlobalMultiOnBlackBet.ToString(),
+                node.purpleAccumulatorBankruptcyInsurance.ToString(),
+                node.purpleAccumulatorCopyWinnings.ToString(),
+                node.sharedRedBettingPool.ToString(),
+                node.slowerWheel.ToString(),
+                node.spinningBallCannotBankrupt.ToString(),
+                node.spinningBallIsAlsoBet.ToString(),
+                node.timestopPriceMod.ToString(),
             }));
         }
 
@@ -840,8 +966,55 @@ public class SkillTreeEditorWindow : EditorWindow
     private static string[] CsvHeader() => new[]
     {
         "nodeId", "displayName", "displayDescription", "gridPositionX", "gridPositionY", "parentNodeId",
-        "cost", "increaseLevelOfAllWedges", "increaseLevelOfAllRedWedges", "increaseLevelOfAllBlackWedges",
-        "distanceFromOrigin"
+        "cost", "distanceFromOrigin",
+        "unlocksPurpleAccumulator",
+        "unlocksBlueAccumulator",
+        "unlocksTimeStop",
+        "unlocksSpinningBall",
+        "unlocksBlackRedBetting",
+        "unlocksRedBetMultiAlsoRedMulti",
+        "increaseLevelOfAllWedges",
+        "increaseLevelOfAllRedWedges",
+        "increaseLevelOfAllBlackWedges",
+        "allAccumulators",
+        "allColorMulti",
+        "allColorMultiPerSpin",
+        "allColorsBetMulti",
+        "allColorsHighWedgeMulti",
+        "bankruptcyBlackBetInsurance",
+        "bankruptcyInsurance",
+        "bankruptcyInsurancePercent",
+        "blueAccumulatorBankruptcyInsurance",
+        "cashPurpleAccumulatorPerSpin",
+        "extraSpin",
+        "globalMulti",
+        "globalMultiLastSpin",
+        "globalMultiPerSpin",
+        "interestGrowthBlueAccumulatorPerSpin",
+        "levelOfAllHighWedges",
+        "levelOfBlackBetPool",
+        "levelOfBlackHighWedges",
+        "levelOfRedHighWedges",
+        "multiAllAccumulators",
+        "multiBlackBets",
+        "multiBlackHighWedge",
+        "multiBlackWedge",
+        "multiBlackWedgeWhenBettingOnBlack",
+        "multiBlueAccumulator",
+        "multiPurpleAccumulator",
+        "multiRedBets",
+        "multiRedHighWedge",
+        "multiRedWedge",
+        "nonBankruptCashOut",
+        "permanentGlobalMultiBankruptcyInsurance",
+        "permanentGlobalMultiOnBlackBet",
+        "purpleAccumulatorBankruptcyInsurance",
+        "purpleAccumulatorCopyWinnings",
+        "sharedRedBettingPool",
+        "slowerWheel",
+        "spinningBallCannotBankrupt",
+        "spinningBallIsAlsoBet",
+        "timestopPriceMod",
     };
 
     /// <summary>Parses a single CSV line, respecting double-quoted fields that may contain commas.</summary>

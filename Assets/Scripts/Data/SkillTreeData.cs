@@ -1,4 +1,3 @@
-using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +5,5 @@ using UnityEngine;
 public class SkillTreeData : ScriptableObject
 {
     [Tooltip("All nodes that make up the skill tree.")]
-    [TableList]
     public List<SkillTreeNodeEntry> nodes = new List<SkillTreeNodeEntry>();
 }

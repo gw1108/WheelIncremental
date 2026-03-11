@@ -12,10 +12,74 @@ public class Player : SingletonMonoBehaviour<Player>
     public List<int> DefaultWheelValues;
 
     #region levelUpStuff
-    public int levelOfAllWedges = 0;
-    public int levelOfAllRedWedges = 0;
-    public int levelOfAllBlackWedges = 0;
+    public bool unlocksBlackRedBetting;
+    public bool unlocksBlueAccumulator;
+    public bool unlocksPurpleAccumulator;
+    public bool unlocksRedBetMultiAlsoRedMulti;
+    public bool unlocksSpinningBall;
+    public bool unlocksTimeStop;
+
+    public bool IsRedBetPoolAddedToPrize
+    {
+        get
+        {
+            return sharedRedBettingPool > 0;
+        }
+    }
+
+    public int allAccumulators;
+    public int allColorMulti;
+    public int allColorMultiPerSpin;
+    public int allColorsBetMulti;
+    public int allColorsHighWedgeMulti;
+    public int bankruptcyBlackBetInsurance;
+    public int bankruptcyInsurance;
+    public int bankruptcyInsurancePercent;
+    public int blueAccumulatorBankruptcyInsurance;
+    public int cashPurpleAccumulatorPerSpin;
+    public int extraSpin;
+    public int globalMulti;
+    public int globalMultiLastSpin;
+    public int globalMultiPerSpin;
+    public int increaseLevelOfAllBlackWedges;
+    public int increaseLevelOfAllRedWedges;
+    public int increaseLevelOfAllWedges;
+    public int interestGrowthBlueAccumulatorPerSpin;
+    public int levelOfAllHighWedges;
+    public int levelOfBlackBetPool;
+    public int levelOfBlackHighWedges;
+    public int levelOfRedHighWedges;
+    public int multiAllAccumulators;
+    public int multiBlackBets;
+    public int multiBlackHighWedge;
+    public int multiBlackWedge;
+    public int multiBlackWedgeWhenBettingOnBlack;
+    public int multiBlueAccumulator;
+    public int multiPurpleAccumulator;
+    public int multiRedBets;
+    public int multiRedHighWedge;
+    public int multiRedWedge;
+    public int nonBankruptCashOut;
+    public float permanentGlobalMultiBankruptcyInsurance;
+    public int permanentGlobalMultiOnBlackBet;
+    public int purpleAccumulatorBankruptcyInsurance;
+    public int purpleAccumulatorCopyWinnings;
+    public int sharedRedBettingPool;
+    public int slowerWheel;
+    public int spinningBallCannotBankrupt;
+    public int spinningBallIsAlsoBet;
+    public int timestopPriceMod;
     #endregion
+
+    public int GetTimeStopSpinCost
+    {
+        get
+        {
+            return 3 + timestopPriceMod;
+        }
+    }
+
+    private float permanentGlobalMultiAccumulated = 0f;
 
     private const string HUD_MoneyLabelStringFormat = "Current: ${0}";
     private const string HUD_SpinsLeftStringFormat = "Spins Left: {0}";
@@ -57,7 +121,13 @@ public class Player : SingletonMonoBehaviour<Player>
 
     public TextMeshProUGUI HUD_MoneyLabel;
     public TextMeshProUGUI HUD_SpinsLeftLabel;
-    public int SpinsOnNewGame = 1;
+    public int SpinsOnNewGame
+    {
+        get
+        {
+            return 1 + extraSpin;
+        }
+    }
 
     private int m_currentRoundMoney = 0;
     private int m_currentSpinsLeft = 1;
@@ -112,7 +182,7 @@ public class Player : SingletonMonoBehaviour<Player>
     /// <returns></returns>
     public List<WheelSegmentData> GetWheelSegmentData()
     {
-        int indexOfLargestRedWedges, indexOfLargestBlackWedges, largestRedWedge = 0, largestBlackWedge = 0;
+        int indexOfLargestRedWedges = 0, indexOfLargestBlackWedges = 0, largestRedWedge = 0, largestBlackWedge = 0;
         List<WheelSegmentData> wheel = new List<WheelSegmentData>();
         for (int i = 0; i < DefaultWheelValues.Count; i++)
         {
@@ -140,19 +210,32 @@ public class Player : SingletonMonoBehaviour<Player>
                 indexOfLargestRedWedges = i;
             }
         }
+        wheel[indexOfLargestBlackWedges].isHighWedge = true;
+        wheel[indexOfLargestRedWedges].isHighWedge = true;
 
         // Level up stuff.
         for (int i = 0; i < DefaultWheelValues.Count; i++)
         {
-            wheel[i].cashPrize += levelOfAllWedges;
+            wheel[i].cashPrize += increaseLevelOfAllWedges;
             if (wheel[i].segmentColor == Color.red)
             {
-                wheel[i].cashPrize += levelOfAllRedWedges;
+                wheel[i].cashPrize += increaseLevelOfAllRedWedges;
+                if (wheel[i].isHighWedge)
+                {
+                    wheel[i].cashPrize += levelOfRedHighWedges;
+                    wheel[i].cashPrize += levelOfAllHighWedges;
+                }
             }
             else if (wheel[i].segmentColor == Color.black)
             {
-                wheel[i].cashPrize += levelOfAllBlackWedges;
+                wheel[i].cashPrize += increaseLevelOfAllBlackWedges;
+                if (wheel[i].isHighWedge)
+                {
+                    wheel[i].cashPrize += levelOfBlackHighWedges;
+                    wheel[i].cashPrize += levelOfAllHighWedges;
+                }
             }
+
             wheel[i].prizeName = wheel[i].cashPrize.ToString();
         }
         return wheel;
@@ -161,9 +244,126 @@ public class Player : SingletonMonoBehaviour<Player>
     public void BuyShopNodeUpgrade(SkillTreeNodeEntry node)
     {
         purchasedUpgrades.Add(node.nodeId);
-        levelOfAllWedges += node.increaseLevelOfAllWedges;
-        levelOfAllBlackWedges += node.increaseLevelOfAllBlackWedges;
-        levelOfAllRedWedges += node.increaseLevelOfAllRedWedges;
+        unlocksBlackRedBetting = node.unlocksBlackRedBetting;
+        unlocksBlueAccumulator = node.unlocksBlueAccumulator;
+        unlocksPurpleAccumulator = node.unlocksPurpleAccumulator;
+        unlocksRedBetMultiAlsoRedMulti = node.unlocksRedBetMultiAlsoRedMulti;
+        unlocksSpinningBall = node.unlocksSpinningBall;
+        unlocksTimeStop = node.unlocksTimeStop;
+        allAccumulators += node.allAccumulators;
+        allColorMulti += node.allColorMulti;
+        allColorMultiPerSpin += node.allColorMultiPerSpin;
+        allColorsBetMulti += node.allColorsBetMulti;
+        allColorsHighWedgeMulti += node.allColorsHighWedgeMulti;
+        bankruptcyBlackBetInsurance += node.bankruptcyBlackBetInsurance;
+        bankruptcyInsurance += node.bankruptcyInsurance;
+        bankruptcyInsurancePercent += node.bankruptcyInsurancePercent;
+        blueAccumulatorBankruptcyInsurance += node.blueAccumulatorBankruptcyInsurance;
+        cashPurpleAccumulatorPerSpin += node.cashPurpleAccumulatorPerSpin;
+        extraSpin += node.extraSpin;
+        globalMulti += node.globalMulti;
+        globalMultiLastSpin += node.globalMultiLastSpin;
+        globalMultiPerSpin += node.globalMultiPerSpin;
+        increaseLevelOfAllBlackWedges += node.increaseLevelOfAllBlackWedges;
+        increaseLevelOfAllRedWedges += node.increaseLevelOfAllRedWedges;
+        increaseLevelOfAllWedges += node.increaseLevelOfAllWedges;
+        interestGrowthBlueAccumulatorPerSpin += node.interestGrowthBlueAccumulatorPerSpin;
+        levelOfAllHighWedges += node.levelOfAllHighWedges;
+        levelOfBlackBetPool += node.levelOfBlackBetPool;
+        levelOfBlackHighWedges += node.levelOfBlackHighWedges;
+        levelOfRedHighWedges += node.levelOfRedHighWedges;
+        multiAllAccumulators += node.multiAllAccumulators;
+        multiBlackBets += node.multiBlackBets;
+        multiBlackHighWedge += node.multiBlackHighWedge;
+        multiBlackWedge += node.multiBlackWedge;
+        multiBlackWedgeWhenBettingOnBlack += node.multiBlackWedgeWhenBettingOnBlack;
+        multiBlueAccumulator += node.multiBlueAccumulator;
+        multiPurpleAccumulator += node.multiPurpleAccumulator;
+        multiRedBets += node.multiRedBets;
+        multiRedHighWedge += node.multiRedHighWedge;
+        multiRedWedge += node.multiRedWedge;
+        nonBankruptCashOut += node.nonBankruptCashOut;
+        permanentGlobalMultiBankruptcyInsurance += node.permanentGlobalMultiBankruptcyInsurance;
+        permanentGlobalMultiOnBlackBet += node.permanentGlobalMultiOnBlackBet;
+        purpleAccumulatorBankruptcyInsurance += node.purpleAccumulatorBankruptcyInsurance;
+        purpleAccumulatorCopyWinnings += node.purpleAccumulatorCopyWinnings;
+        sharedRedBettingPool += node.sharedRedBettingPool;
+        slowerWheel += node.slowerWheel;
+        spinningBallCannotBankrupt += node.spinningBallCannotBankrupt;
+        spinningBallIsAlsoBet += node.spinningBallIsAlsoBet;
+        timestopPriceMod += node.timestopPriceMod;
+    }
+
+    public float GetCurrentMulti()
+    {
+        float multi = 1f;
+        multi += allColorMulti / 100f;
+        return multi;
+    }
+
+    public float GetCurrentMulti(Color color, bool isHighWedge, bool isLastSpin, bool isBettingOnBlack)
+    {
+        float multi = 1f;
+        multi += allColorMulti / 100f;
+        if (isHighWedge)
+        {
+            multi += allColorsHighWedgeMulti / 100f;
+        }
+
+        if (color == Color.black)
+        {
+            multi += multiBlackWedge / 100f;
+            if (isHighWedge)
+            {
+                multi += multiBlackHighWedge / 100f;
+            }
+            if (isBettingOnBlack)
+            {
+                multi += multiBlackWedgeWhenBettingOnBlack;
+            }
+        }
+
+        if (color == Color.red)
+        {
+            multi += multiRedWedge / 100f;
+            if (isHighWedge)
+            {
+                multi += multiRedHighWedge / 100f;
+            }
+        }
+
+        if (color == Color.purple || color == Color.blue)
+        {
+            multi += multiAllAccumulators / 100f;
+            if (color == Color.blue)
+            {
+                multi += multiBlueAccumulator / 100f;
+            }
+            if (color == Color.purple)
+            {
+                multi += multiPurpleAccumulator / 100f;
+            }
+        }
+
+        return multi;
+    }
+
+    public float GetGlobalMulti()
+    {
+        float globalMulti = 1f;
+        globalMulti += this.globalMulti / 100f;
+        return globalMulti;
+    }
+
+    public float GetCurrentGlobalMulti(Color color, bool isHighWedge, bool isLastSpin, bool isBettingOnBlack)
+    {
+        float globalMulti = 1f;
+        globalMulti += this.globalMulti / 100f;
+        if (isLastSpin)
+        {
+            globalMulti += this.globalMultiLastSpin / 100f;
+        }
+        return globalMulti;
     }
 
     private void GameOver()

@@ -6,6 +6,7 @@ public class TooltipManager : MonoBehaviour
 {
     public TextMeshProUGUI tooltipTextLabel;
     public TextMeshProUGUI tooltipHeaderLabel;
+    //public TextMeshProUGUI altTooltipTextLabel;
     public bool UseMousePosition = true;
     public float XOffset;
     public float YOffset;

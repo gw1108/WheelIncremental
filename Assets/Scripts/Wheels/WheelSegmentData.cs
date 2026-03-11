@@ -19,6 +19,8 @@ namespace Wheels
         /// </summary>
         public float weight = 1f;
 
+        public bool isHighWedge = false;
+
         /*
         public WheelSegmentData(string prizeName, Color segmentColor, float weight = 1f)
         {
