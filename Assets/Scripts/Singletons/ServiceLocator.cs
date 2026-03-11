@@ -20,6 +20,9 @@ public class ServiceLocator : SingletonMonoBehaviour<ServiceLocator>
     public TooltipManager TooltipManager;
 
     [Sirenix.OdinInspector.ReadOnly]
+    public CheatManager CheatManager;
+
+    [Sirenix.OdinInspector.ReadOnly]
     public SteamStatsAndAchievements SteamStatsAndAchievements;
 
     #region platformAndSteamRelatedStuff
@@ -142,5 +145,10 @@ public class ServiceLocator : SingletonMonoBehaviour<ServiceLocator>
     public void Register(TooltipManager tooltipManager)
     {
         TooltipManager = tooltipManager;
+    }
+
+    public void Register(CheatManager cheatManager)
+    {
+        CheatManager = cheatManager;
     }
 }

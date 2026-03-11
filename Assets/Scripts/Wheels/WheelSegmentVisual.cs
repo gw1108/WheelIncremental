@@ -85,7 +85,7 @@ namespace Wheels
             }
 
             _labelText.MinFontSize = 0.5f;
-            _labelText.MaxFontSize = 16f;
+            _labelText.MaxFontSize = 10.7f;
 
             float midAngle = startAngle + (sweepAngle * 0.5f);
             float angleRad = midAngle * Mathf.Deg2Rad;

@@ -1,4 +1,3 @@
-using Sirenix.OdinInspector;
 using System;
 using System.Collections.Generic;
 using TMPro;
@@ -12,12 +11,6 @@ namespace Wheels
         [SerializeField] private float wheelRadius = 4f;
         [SerializeField] private Material segmentMaterial;
         [SerializeField] private TMP_FontAsset font;
-
-        [Header("Segments")]
-        [Tooltip("Fill this in with the initial segments this wheel will have on Start.")]
-        [SerializeField]
-        [TableList]
-        private List<WheelSegmentData> initialSegments = new List<WheelSegmentData>();
 
         public Action<Wheel, WheelSegmentData> OnWheelSpinCompleted;
 
@@ -137,6 +130,23 @@ namespace Wheels
             return _spinCoroutine != null;
         }
 
+        public void ForceStopWheel()
+        {
+            if (_spinCoroutine == null)
+            {
+                Debug.LogWarning("Tried to force stop wheel that wasn't spinning.");
+                return;
+            }
+            StopCoroutine(_spinCoroutine);
+            int selectedIndex = DetermineSelectedSegment();
+            Debug.Log($"Force stopped on: {_segments[selectedIndex].prizeName}");
+
+            _spinCoroutine = null;
+
+            OnWheelSpinCompleted?.Invoke(this, _segments[selectedIndex]);
+            Player.Instance.OnWheelSpinComplete(_segments[selectedIndex]);
+        }
+
         public void SpinWheel(float spinSpeed = 720f)
         {
             // Don't spin if you're already spinning
@@ -148,9 +158,26 @@ namespace Wheels
             _spinCoroutine = StartCoroutine(SpinCoroutine(spinSpeed));
         }
 
+        private float currentSpeed
+        {
+            get
+            {
+                if (ServiceLocator.Instance.CheatManager.SmoothWheelEnabled)
+                {
+                    return 100f;
+                }
+                return m_currentSpeed;
+            }
+            set
+            {
+                m_currentSpeed = value;
+            }
+        }
+        private float m_currentSpeed;
+
         private System.Collections.IEnumerator SpinCoroutine(float initialSpeed)
         {
-            float currentSpeed = initialSpeed;
+            currentSpeed = initialSpeed;
             float deceleration = initialSpeed / 3f;
 
             while (currentSpeed > 10f)
