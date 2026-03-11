@@ -190,13 +190,24 @@ public class Player : SingletonMonoBehaviour<Player>
             wheel[i].cashPrize = DefaultWheelValues[i];
             // is not accumulator slice.
             Color segmentColor;
-            if (i % 2 == 0)
+            if (DefaultWheelValues[i] <= 0)
             {
-                segmentColor = Color.red;
+                //if (DefaultWheelValues[i] == 0)
+                {
+                    // bankrupt
+                    segmentColor = Color.green;
+                }
             }
             else
             {
-                segmentColor = Color.black;
+                if (i % 2 == 0)
+                {
+                    segmentColor = Color.red;
+                }
+                else
+                {
+                    segmentColor = Color.black;
+                }
             }
             wheel[i].segmentColor = segmentColor;
             if (wheel[i].segmentColor == Color.black && wheel[i].cashPrize >= largestBlackWedge)
@@ -235,8 +246,20 @@ public class Player : SingletonMonoBehaviour<Player>
                     wheel[i].cashPrize += levelOfAllHighWedges;
                 }
             }
+            else if (wheel[i].segmentColor == Color.green)
+            {
+                // bankruptcy tile
+                wheel[i].cashPrize = 0;
+            }
 
-            wheel[i].prizeName = wheel[i].cashPrize.ToString();
+            if (wheel[i].cashPrize > 0)
+            {
+                wheel[i].prizeName = wheel[i].cashPrize.ToString();
+            }
+            else if (wheel[i].segmentColor == Color.green)
+            {
+                wheel[i].prizeName = "💀";
+            }
         }
         return wheel;
     }

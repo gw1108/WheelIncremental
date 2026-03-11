@@ -1,4 +1,6 @@
+using LightSide;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Wheels
@@ -16,12 +18,16 @@ namespace Wheels
 
         private float _labelDistanceFromCenter = 0.6f;
         private Color _labelColor = Color.white;
+        /// <summary>
+        /// TODO convert to UniText FontStack.
+        /// </summary>
         private TMP_FontAsset _labelFont;
 
         private MeshFilter _meshFilter;
         private MeshRenderer _meshRenderer;
         private WheelSegmentData _segmentData;
-        private TextMeshPro _labelText;
+        //private TextMeshPro _labelText;
+        private UniText _labelText;
 
         private void Awake()
         {
@@ -55,22 +61,31 @@ namespace Wheels
         {
             GameObject labelObj = new GameObject("Label");
             labelObj.transform.SetParent(transform, false);
+            float scale = 16f;
+            float labelLocalScale = 1 / scale;
+            labelObj.transform.localScale = new Vector3(labelLocalScale, labelLocalScale, labelLocalScale);
 
-            _labelText = labelObj.AddComponent<TextMeshPro>();
+            RectTransform labelRect = labelObj.transform.AddComponent<RectTransform>();
 
-            _labelText.text = _segmentData.prizeName;
-            _labelText.alignment = TextAlignmentOptions.Center;
-            _labelText.fontSize = 8f;
+            Bounds meshBounds = _meshFilter.mesh.bounds;
+            labelRect.sizeDelta = new Vector2(meshBounds.size.x * scale, meshBounds.size.y * scale);
+
+            _labelText = labelObj.AddComponent<UniText>();
+
+            _labelText.Text = _segmentData.prizeName;
+            _labelText.HorizontalAlignment = HorizontalAlignment.Center;
+            _labelText.VerticalAlignment = VerticalAlignment.Middle;
+            _labelText.AutoSize = true;
+            _labelText.FontSize = 1.3f;
             _labelText.color = _labelColor;
 
             if (_labelFont != null)
             {
-                _labelText.font = _labelFont;
+                //_labelText.FontStack = _labelFont;
             }
 
-            _labelText.enableAutoSizing = true;
-            _labelText.fontSizeMin = 4f;
-            _labelText.fontSizeMax = 13f;
+            _labelText.MinFontSize = 0.5f;
+            _labelText.MaxFontSize = 16f;
 
             float midAngle = startAngle + (sweepAngle * 0.5f);
             float angleRad = midAngle * Mathf.Deg2Rad;
