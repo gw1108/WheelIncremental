@@ -12,17 +12,25 @@ namespace Wheels
         [SerializeField] private Material segmentMaterial;
         [SerializeField] private TMP_FontAsset font;
 
+        [SerializeField] private WheelSegmentData purpleSegmentData;
+        [SerializeField] private WheelSegmentData blueSegmentData;
+
+        [SerializeField] private Transform rouletteBall;
+
         public Action<Wheel, WheelSegmentData> OnWheelSpinCompleted;
 
         private readonly List<WheelSegmentData> _segments = new List<WheelSegmentData>();
         private readonly List<WheelSegmentVisual> _segmentVisuals = new List<WheelSegmentVisual>();
         private float _currentRotation = 0f;
+        private float _ballRotation = 0f;
+        private Vector3 ballPositionVector;
         private Coroutine _spinCoroutine;
 
         private float FinalRotationSpeed = 10f;
 
         private void Start()
         {
+            ballPositionVector = rouletteBall.localPosition;
             FullRebuildWheel();
         }
 
@@ -30,7 +38,22 @@ namespace Wheels
         {
             _segments.Clear();
             _segments.AddRange(Player.Instance.GetWheelSegmentData());
+            if (Player.Instance.unlocksPurpleAccumulator)
+            {
+                purpleSegmentData.segmentColor = Color.purple;
+                purpleSegmentData.wedgeTypeColor = WheelColor.purple;
+                _segments.Insert(Player.Instance.IndexOfPurpleAccumulator, purpleSegmentData);
+            }
+            if (Player.Instance.unlocksBlueAccumulator)
+            {
+                blueSegmentData.segmentColor = Color.blue;
+                purpleSegmentData.wedgeTypeColor = WheelColor.blue;
+                _segments.Insert(Player.Instance.IndexOfBlueAccumulator, blueSegmentData);
+            }
             RebuildWheel();
+
+            rouletteBall.localPosition = ballPositionVector;
+            rouletteBall.rotation = Quaternion.identity;
         }
 
         private void RebuildWheel()
@@ -147,7 +170,7 @@ namespace Wheels
             Player.Instance.OnWheelSpinComplete(_segments[selectedIndex]);
         }
 
-        public void SpinWheel(float spinSpeed = 720f)
+        public void SpinWheel(float spinSpeed, float ballSpeed)
         {
             // Don't spin if you're already spinning
             if (IsSpinning())
@@ -155,7 +178,7 @@ namespace Wheels
                 return;
             }
 
-            _spinCoroutine = StartCoroutine(SpinCoroutine(spinSpeed));
+            _spinCoroutine = StartCoroutine(SpinCoroutine(spinSpeed, ballSpeed));
         }
 
         private float currentSpeed
@@ -174,47 +197,85 @@ namespace Wheels
             }
         }
         private float m_currentSpeed;
+        private float currentBallSpeed
+        {
+            get
+            {
+                if (ServiceLocator.Instance.CheatManager.SmoothWheelEnabled)
+                {
+                    return 100f;
+                }
+                return m_ballSpeed;
+            }
+            set
+            {
+                m_ballSpeed = value;
+            }
+        }
+        private float m_ballSpeed;
 
-        private System.Collections.IEnumerator SpinCoroutine(float initialSpeed)
+        private System.Collections.IEnumerator SpinCoroutine(float initialSpeed, float initialBallSpeed)
         {
             currentSpeed = initialSpeed;
+            currentBallSpeed = initialBallSpeed;
             float deceleration = initialSpeed / 3f;
+
+            _ballRotation = 270f;
+            rouletteBall.localPosition = Quaternion.AngleAxis(_ballRotation, Vector3.forward) * ballPositionVector;
 
             while (currentSpeed > 10f)
             {
                 _currentRotation += currentSpeed * Time.deltaTime;
                 transform.rotation = Quaternion.Euler(0, 0, _currentRotation);
 
+                if (rouletteBall != null)
+                {
+                    _ballRotation -= currentBallSpeed * Time.deltaTime;
+                    rouletteBall.localPosition = Quaternion.AngleAxis(_ballRotation, Vector3.forward) * ballPositionVector;
+                    //rouletteBall.rotation = Quaternion.Euler(0, 0, _ballRotation);
+                }
+
                 currentSpeed -= deceleration * Time.deltaTime;
+                currentBallSpeed -= deceleration * Time.deltaTime;
                 yield return null;
             }
 
             // Lock in the winning segment, then compute the rotation that centres the pointer on it.
             int selectedIndex = DetermineSelectedSegment();
+            int ballIndex = 0;
             float segmentCenterAngle = CalculateSegmentCenterAngle(selectedIndex);
 
             // Invert the pointer formula: pointerAngle = (450 - normalizedRotation) % 360
             // => normalizedRotation = (450 - segmentCenterAngle + 360) % 360
             float desiredNormalized = (450f - segmentCenterAngle + 360f) % 360f;
-            float currentNormalized = (_currentRotation % 360f + 360f) % 360f;
+            _currentRotation = (_currentRotation % 360f + 360f) % 360f;
+            _ballRotation = (_ballRotation % 360f + 360f) % 360f;
 
-            float delta = desiredNormalized - currentNormalized;
+            float delta = desiredNormalized - _currentRotation;
             if (delta > 180f) delta -= 360f;
             if (delta < -180f) delta += 360f;
 
             float targetAngle = _currentRotation + delta;
+            float targetBallAngle = _ballRotation - delta;
 
             while (Mathf.Abs(_currentRotation - targetAngle) > 0.05f)
             {
                 _currentRotation = Mathf.Lerp(_currentRotation, targetAngle, Time.deltaTime * FinalRotationSpeed);
                 transform.rotation = Quaternion.Euler(0, 0, _currentRotation);
+
                 yield return null;
             }
 
             _currentRotation = targetAngle;
             transform.rotation = Quaternion.Euler(0, 0, _currentRotation);
 
+            if (rouletteBall != null)
+            {
+                ballIndex = DetermineSelectedSegmentFromBall();
+            }
+
             Debug.Log($"Landed on: {_segments[selectedIndex].prizeName}");
+            Debug.Log($"Ball landed on: {ballIndex}, which has prizeName: {_segments[ballIndex].prizeName}");
 
             _spinCoroutine = null;
 
@@ -247,6 +308,37 @@ namespace Wheels
         {
             float normalizedRotation = (_currentRotation % 360f + 360f) % 360f;
             float pointerAngle = (450f - normalizedRotation) % 360f;
+
+            float totalWeight = CalculateTotalWeight();
+            float currentAngle = 0f;
+
+            for (int i = 0; i < _segments.Count; i++)
+            {
+                float sweepAngle = 360f * (_segments[i].weight / totalWeight);
+                float endAngle = currentAngle + sweepAngle;
+
+                if (pointerAngle >= currentAngle && pointerAngle < endAngle)
+                {
+                    return i;
+                }
+
+                currentAngle = endAngle;
+            }
+
+            return 0;
+        }
+
+        /// <summary>
+        /// Determines the selected segment based on the roulette ball's position relative to the wheel.
+        /// The ball orbits in the parent's local space, so its angle must be offset by the wheel's
+        /// current rotation to arrive at segment-space, matching the convention used by DetermineSelectedSegment.
+        /// </summary>
+        private int DetermineSelectedSegmentFromBall()
+        {
+            float ballAngleDeg = Mathf.Atan2(rouletteBall.localPosition.y, rouletteBall.localPosition.x) * Mathf.Rad2Deg;
+            float wheelNormalized = (_currentRotation % 360f + 360f) % 360f;
+            float pointerAngle = ((ballAngleDeg - wheelNormalized + 360f) % 360f + 360f) % 360f;
+            Debug.Log($"Ball segment-space angle: {pointerAngle} (ballAngle: {ballAngleDeg}, wheelRotation: {wheelNormalized})");
 
             float totalWeight = CalculateTotalWeight();
             float currentAngle = 0f;

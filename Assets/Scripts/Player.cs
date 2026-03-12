@@ -10,6 +10,8 @@ public class Player : SingletonMonoBehaviour<Player>
     public int WheelSize = 6;
     public int GlobalWheelLevel = 0;
     public List<int> DefaultWheelValues;
+    public int IndexOfPurpleAccumulator = 0;
+    public int IndexOfBlueAccumulator = 5;
 
     #region levelUpStuff
     public bool unlocksBlackRedBetting;
@@ -79,6 +81,8 @@ public class Player : SingletonMonoBehaviour<Player>
         }
     }
 
+    private float accumulatedPurpleCash = 0f;
+    private float accumulatedBlueCash = 0f;
     private float permanentGlobalMultiAccumulated = 0f;
 
     private const string HUD_MoneyLabelStringFormat = "Current: ${0}";
@@ -119,6 +123,9 @@ public class Player : SingletonMonoBehaviour<Player>
         }
     }
 
+    [Sirenix.OdinInspector.ReadOnly]
+    public PlayerAdditionalAbilitiesUI additionalPlayerUI;
+
     public TextMeshProUGUI HUD_MoneyLabel;
     public TextMeshProUGUI HUD_SpinsLeftLabel;
     public int SpinsOnNewGame
@@ -148,8 +155,8 @@ public class Player : SingletonMonoBehaviour<Player>
 
         if (Keyboard.current.spaceKey.wasPressedThisFrame && CurrentSpinsLeft > 0)
         {
-            ActiveWheel.SpinWheel(Random.Range(720f, 1440f));
             CurrentSpinsLeft--;
+            ActiveWheel.SpinWheel(Random.Range(720f, 1440f), Random.Range(720f, 1440f));
         }
     }
 
@@ -160,15 +167,41 @@ public class Player : SingletonMonoBehaviour<Player>
         CurrentSpinsLeft = SpinsOnNewGame;
         CurrentRoundMoney = 0;
         ActiveWheel.FullRebuildWheel();
+        if (additionalPlayerUI != null)
+        {
+            additionalPlayerUI.OnNewRound();
+        }
     }
 
     public void OnWheelSpinComplete(WheelSegmentData wheelSegmentData)
     {
         // identify base cash
-        int moneyGained = wheelSegmentData.cashPrize;
+        float moneyGained = wheelSegmentData.cashPrize;
+        switch (wheelSegmentData.wedgeTypeColor)
+        {
+            case WheelColor.green:
+                // bankruptcy
+                moneyGained = 0f;
+                break;
+            case WheelColor.purple:
+                moneyGained = accumulatedPurpleCash;
+                break;
+            case WheelColor.blue:
+                moneyGained = accumulatedBlueCash;
+                break;
+            case WheelColor.black:
+                moneyGained = wheelSegmentData.cashPrize;
+                break;
+            case WheelColor.red:
+                moneyGained = wheelSegmentData.cashPrize;
+                break;
+            default:
+                Debug.LogWarning("Somehow landed on a wedge that has color: " + wheelSegmentData.wedgeTypeColor);
+                break;
+        }
         // multiply by current multiplier
         // multiply by running multiplier
-        CurrentRoundMoney += moneyGained;
+        CurrentRoundMoney += Mathf.RoundToInt(moneyGained);
 
         if (CurrentSpinsLeft <= 0)
         {
@@ -196,6 +229,7 @@ public class Player : SingletonMonoBehaviour<Player>
                 {
                     // bankrupt
                     segmentColor = Color.green;
+                    wheel[i].wedgeTypeColor = WheelColor.green;
                 }
             }
             else
@@ -203,19 +237,21 @@ public class Player : SingletonMonoBehaviour<Player>
                 if (i % 2 == 0)
                 {
                     segmentColor = Color.red;
+                    wheel[i].wedgeTypeColor = WheelColor.red;
                 }
                 else
                 {
                     segmentColor = Color.black;
+                    wheel[i].wedgeTypeColor = WheelColor.black;
                 }
             }
             wheel[i].segmentColor = segmentColor;
-            if (wheel[i].segmentColor == Color.black && wheel[i].cashPrize >= largestBlackWedge)
+            if (wheel[i].wedgeTypeColor == WheelColor.black && wheel[i].cashPrize >= largestBlackWedge)
             {
                 largestBlackWedge = wheel[i].cashPrize;
                 indexOfLargestBlackWedges = i;
             }
-            else if (wheel[i].segmentColor == Color.red && wheel[i].cashPrize >= largestRedWedge)
+            else if (wheel[i].wedgeTypeColor == WheelColor.red && wheel[i].cashPrize >= largestRedWedge)
             {
                 largestRedWedge = wheel[i].cashPrize;
                 indexOfLargestRedWedges = i;
@@ -228,37 +264,34 @@ public class Player : SingletonMonoBehaviour<Player>
         for (int i = 0; i < DefaultWheelValues.Count; i++)
         {
             wheel[i].cashPrize += increaseLevelOfAllWedges;
-            if (wheel[i].segmentColor == Color.red)
+            switch (wheel[i].wedgeTypeColor)
             {
-                wheel[i].cashPrize += increaseLevelOfAllRedWedges;
-                if (wheel[i].isHighWedge)
-                {
-                    wheel[i].cashPrize += levelOfRedHighWedges;
-                    wheel[i].cashPrize += levelOfAllHighWedges;
-                }
-            }
-            else if (wheel[i].segmentColor == Color.black)
-            {
-                wheel[i].cashPrize += increaseLevelOfAllBlackWedges;
-                if (wheel[i].isHighWedge)
-                {
-                    wheel[i].cashPrize += levelOfBlackHighWedges;
-                    wheel[i].cashPrize += levelOfAllHighWedges;
-                }
-            }
-            else if (wheel[i].segmentColor == Color.green)
-            {
-                // bankruptcy tile
-                wheel[i].cashPrize = 0;
+                case WheelColor.red:
+                    wheel[i].cashPrize += increaseLevelOfAllRedWedges;
+                    if (wheel[i].isHighWedge)
+                    {
+                        wheel[i].cashPrize += levelOfRedHighWedges;
+                        wheel[i].cashPrize += levelOfAllHighWedges;
+                    }
+                    break;
+                case WheelColor.black:
+                    wheel[i].cashPrize += increaseLevelOfAllBlackWedges;
+                    if (wheel[i].isHighWedge)
+                    {
+                        wheel[i].cashPrize += levelOfBlackHighWedges;
+                        wheel[i].cashPrize += levelOfAllHighWedges;
+                    }
+                    break;
+                case WheelColor.green:
+                    wheel[i].cashPrize = 0;
+                    wheel[i].prizeName = "💀";
+                    break;
             }
 
             if (wheel[i].cashPrize > 0)
             {
+                //wheel[i].prizeName = $"i:{i}_" + wheel[i].cashPrize.ToString();
                 wheel[i].prizeName = wheel[i].cashPrize.ToString();
-            }
-            else if (wheel[i].segmentColor == Color.green)
-            {
-                wheel[i].prizeName = "💀";
             }
         }
         return wheel;
@@ -267,12 +300,12 @@ public class Player : SingletonMonoBehaviour<Player>
     public void BuyShopNodeUpgrade(SkillTreeNodeEntry node)
     {
         purchasedUpgrades.Add(node.nodeId);
-        unlocksBlackRedBetting = node.unlocksBlackRedBetting;
-        unlocksBlueAccumulator = node.unlocksBlueAccumulator;
-        unlocksPurpleAccumulator = node.unlocksPurpleAccumulator;
-        unlocksRedBetMultiAlsoRedMulti = node.unlocksRedBetMultiAlsoRedMulti;
-        unlocksSpinningBall = node.unlocksSpinningBall;
-        unlocksTimeStop = node.unlocksTimeStop;
+        unlocksBlackRedBetting |= node.unlocksBlackRedBetting;
+        unlocksBlueAccumulator |= node.unlocksBlueAccumulator;
+        unlocksPurpleAccumulator |= node.unlocksPurpleAccumulator;
+        unlocksRedBetMultiAlsoRedMulti |= node.unlocksRedBetMultiAlsoRedMulti;
+        unlocksSpinningBall |= node.unlocksSpinningBall;
+        unlocksTimeStop |= node.unlocksTimeStop;
         allAccumulators += node.allAccumulators;
         allColorMulti += node.allColorMulti;
         allColorMultiPerSpin += node.allColorMultiPerSpin;

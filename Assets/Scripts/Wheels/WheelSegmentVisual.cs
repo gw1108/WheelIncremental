@@ -68,7 +68,7 @@ namespace Wheels
             RectTransform labelRect = labelObj.transform.AddComponent<RectTransform>();
 
             Bounds meshBounds = _meshFilter.mesh.bounds;
-            labelRect.sizeDelta = new Vector2(meshBounds.size.x * scale, meshBounds.size.y * scale);
+            labelRect.sizeDelta = new Vector2(meshBounds.size.x * (scale / 2f), meshBounds.size.y * scale * 1.1f);
 
             _labelText = labelObj.AddComponent<UniText>();
 
